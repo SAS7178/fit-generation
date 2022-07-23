@@ -32,6 +32,7 @@ export const Login = () => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
+                <Link className="navbar__link" to="/">Home</Link>
                     <h1>Fit Generation</h1>
                     <h2>Please sign in</h2>
                     <fieldset>

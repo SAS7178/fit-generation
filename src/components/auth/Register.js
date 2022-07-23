@@ -1,39 +1,39 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./Login.css"
 
-export const Register = (props) => {
-    const [user, setUser] = useState({
+export const Register = () => {
+    const [customer, setCustomer] = useState({
+        name: "",
         email: "",
-        fullName: "",
-        isStaff: false
+        phoneNumber: ""
     })
     let navigate = useNavigate()
 
-    const registerNewUser = () => {
-        return fetch("http://localhost:8088/users", {
+    const registerNewCustomer = () => {
+        return fetch("http://localhost:8088/customers", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(user)
+            body: JSON.stringify(customer)
         })
             .then(res => res.json())
-            .then(createdUser => {
-                if (createdUser.hasOwnProperty("id")) {
-                    localStorage.setItem("kandy_user", JSON.stringify({
-                        id: createdUser.id,
-                        staff: createdUser.isStaff
+            .then(createdCustomer => {
+                if (createdCustomer.hasOwnProperty("id")) {
+                    localStorage.setItem("fit_customer", JSON.stringify({
+                        id: createdCustomer.id,
+                        email: createdCustomer.email
                     }))
 
-                    navigate("/")
+                    navigate("/register")
                 }
             })
     }
 
     const handleRegister = (e) => {
         e.preventDefault()
-        return fetch(`http://localhost:8088/users?email=${user.email}`)
+        return fetch(`http://localhost:8088/customers?email=${customer.email}`)
             .then(res => res.json())
             .then(response => {
                 if (response.length > 0) {
@@ -42,44 +42,48 @@ export const Register = (props) => {
                 }
                 else {
                     // Good email, create user.
-                    registerNewUser()
+                    registerNewCustomer()
                 }
             })
     }
 
-    const updateUser = (evt) => {
-        const copy = {...user}
+    const updateCustomer = (evt) => {
+        const copy = {...customer}
         copy[evt.target.id] = evt.target.value
-        setUser(copy)
+        setCustomer(copy)
     }
 
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Kandy Korner</h1>
+                <nav>
+                <Link className="navbar__link" to="/">Home</Link>
+                </nav>
+                <h1 className="h3 mb-3 font-weight-normal">Please Register for Fit Generation</h1>
                 <fieldset>
-                    <label htmlFor="fullName"> Full Name </label>
-                    <input onChange={updateUser}
+                    <label htmlFor="fullName"> Name </label>
+                    <input onChange={updateCustomer}
                            type="text" id="fullName" className="form-control"
                            placeholder="Enter your name" required autoFocus />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="email"> Email address </label>
-                    <input onChange={updateUser}
+                    <input onChange={updateCustomer}
                         type="email" id="email" className="form-control"
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
-                    <input onChange={(evt) => {
-                        const copy = {...user}
-                        copy.isStaff = evt.target.checked
-                        setUser(copy)
-                    }}
-                        type="checkbox" id="isStaff" />
-                    <label htmlFor="email"> I am an employee </label>
+                    <label htmlFor="email"> Phone number </label>
+                    <input onChange={updateCustomer}
+                        type="phoneNumber" id="phoneNumber" className="form-control"
+                        placeholder="Phone number" required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Register </button>
+                    <button onClick={(evt) => {
+                        const copy = {...customer}
+                        copy.customer = evt.target.click
+                        setCustomer(copy)
+                    }} type="submit"> Ready to Generate a Workout! </button>
                 </fieldset>
             </form>
         </main>
