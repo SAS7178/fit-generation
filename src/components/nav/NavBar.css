@@ -1,0 +1,11 @@
+.title__home {
+    display: flex;
+   color: aqua;
+}
+.login__input {
+    display: flex;
+    width: min-content;
+}
+.welcome__home {
+    font-size: xx-large;
+}
