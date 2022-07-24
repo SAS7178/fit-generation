@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import "./Login.css"
 
 export const Register = () => {
@@ -26,7 +26,7 @@ export const Register = () => {
                         email: createdCustomer.email
                     }))
 
-                    navigate("/register")
+                    navigate("/generateWorkout")
                 }
             })
     }
@@ -61,7 +61,7 @@ export const Register = () => {
                 </nav>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Fit Generation</h1>
                 <fieldset>
-                    <label htmlFor="fullName"> Name </label>
+                    <label htmlFor="name"> Name </label>
                     <input onChange={updateCustomer}
                            type="text" id="fullName" className="form-control"
                            placeholder="Enter your name" required autoFocus />
@@ -73,7 +73,7 @@ export const Register = () => {
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="email"> Phone number </label>
+                    <label htmlFor="phoneNumber"> Phone number </label>
                     <input onChange={updateCustomer}
                         type="phoneNumber" id="phoneNumber" className="form-control"
                         placeholder="Phone number" required />
@@ -83,7 +83,11 @@ export const Register = () => {
                         const copy = {...customer}
                         copy.customer = evt.target.click
                         setCustomer(copy)
-                    }} type="submit"> Ready to Generate a Workout! </button>
+                    }} type="submit"> <nav>
+                    <Link className="navbar__link" to="/generateWorkout">
+                        Ready to Generate a Workout!
+                        </Link>
+                    </nav></button>   
                 </fieldset>
             </form>
         </main>
