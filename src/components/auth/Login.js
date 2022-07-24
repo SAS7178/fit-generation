@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
@@ -10,17 +10,17 @@ export const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        return fetch(`http://localhost:8088/users?email=${email}`)
+        return fetch(`http://localhost:8088/customers?email=${email}`)
             .then(res => res.json())
-            .then(foundUsers => {
-                if (foundUsers.length === 1) {
-                    const user = foundUsers[0]
-                    localStorage.setItem("kandy_user", JSON.stringify({
-                        id: user.id,
-                        staff: user.isStaff
+            .then(foundCustomers => {
+                if (foundCustomers.length === 1) {
+                    const customer = foundCustomers[0]
+                    localStorage.setItem("fit_customer", JSON.stringify({
+                        id: customer.id,
+                        email: customer.email
                     }))
 
-                    navigate("/")
+                    navigate("/profile")
                 }
                 else {
                     window.alert("Invalid login")
@@ -44,10 +44,14 @@ export const Login = () => {
                             placeholder="Email address"
                             required autoFocus />
                     </fieldset>
-                    <fieldset>
-                        <button type="submit">
-                            Sign in
+                    <button type="submit">
+                            <Link className="navbar__link" to="" onClick={() => {
+  localStorage.getItem("fit_customer")
+  navigate("/profile")
+}}>Login</Link>
                         </button>
+                    <fieldset>
+                       
                     </fieldset>
                 </form>
             </section>
