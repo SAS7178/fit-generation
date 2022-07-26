@@ -1,7 +1,8 @@
 
 .title__home {
     display: flex;
-   color: aqua;
+   color: rgb(119, 205, 205);
+   
 }
 .login__input {
     display: flex;

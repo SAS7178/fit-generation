@@ -1,9 +1,21 @@
 .profile__nav {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .welcome__header {
     display: flex;
     justify-content: center;
+}
+
+.navbar__home {
+    border: 1px dotted;
+    border-color: rgb(54, 55, 55);
+    border-radius: 50%;
+}
+.navbar__generate {
+    border: 1px dotted;
+    border-color: rgb(54, 55, 55);
+    border-radius: 50%;
 }

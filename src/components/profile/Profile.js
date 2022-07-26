@@ -6,10 +6,8 @@ export const Profile = () => {
     return (
         <>
         <div className="profile__nav">
-        <Link className="navbar__link" to="/">Home</Link>
-       
-        
-        <Link className="navbar__link" to="/generateWorkout">Generate New Workout</Link>
+        <Link className="navbar__home" to="/">Home</Link>
+        <Link className="navbar__generate" to="/generateWorkout">Generate New Workout</Link>
         </div>
         <div className='welcome__header'>
             <h1> Fit Generation </h1>
