@@ -52,6 +52,7 @@ export const Exercise = () => {
         [] // When this array is empty, you are observing initial component state
     )
 
+   
 
     return (
         <>
@@ -63,8 +64,13 @@ export const Exercise = () => {
           <Link className="navbar__link" to="/profile">Profile</Link>
         </nav>
       </div>
-            <h1>Fit Generator</h1>
-            <h2>Workout</h2>
+      <div className='welcome__header'>
+            <h1> Fit Generation </h1>
+            <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+            exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
+            card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
+          </div>
+            <h2 className="workout"><b>Workout</b></h2>
             <div className="workout__exercises">
                 <ul>
                     {filteredExercises.map(exercise => <li className="w__e" key="{exerciseId}">

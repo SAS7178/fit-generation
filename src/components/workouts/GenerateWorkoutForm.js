@@ -52,6 +52,7 @@ export const GenerateWorkoutForm = () => {
   }
   // TODO: Perform the fetch() to POST the object to the API
 
+  /////////////////////////
   return (
 
     <Form>
@@ -217,6 +218,13 @@ export const GenerateWorkoutForm = () => {
           Upload your Fit Generation profile img here
         </FormText>
       </FormGroup>
+      {/* <FormGroup check>
+        <Input type="checkbox" />
+        {' '}
+        <Label check>
+          Verify inputs
+        </Label>
+      </FormGroup> */}
       <button
         onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
         className="btn btn-primary">
