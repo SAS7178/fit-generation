@@ -1,6 +1,8 @@
+
 .title__home {
     display: flex;
-   color: aqua;
+   color: rgb(119, 205, 205);
+   
 }
 .login__input {
     display: flex;
@@ -8,4 +10,23 @@
 }
 .welcome__home {
     font-size: xx-large;
+}
+
+.welcome__header {
+    display: flex;
+}
+.welcome__menu {
+    color: blue;
+    display: flex;
+    position: relative ;;
+    
+}
+.Header {
+  
+    background-color: rgb(197, 207, 207);
+height: 2em;
+}
+.nav__image {
+    margin-left: 2em;
+    border-radius: 100%;
 }

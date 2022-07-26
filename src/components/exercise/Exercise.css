@@ -1,1 +1,22 @@
- 
+body {
+    background-color: rgb(226, 226, 227);
+}
+.workout__exercises {
+    display: flex;
+  
+}
+h1,
+h2,
+button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.w__e {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
