@@ -14,9 +14,9 @@ export const FitGeneration = () => {
 		<Route path="/register" element={<Register />} />
 		<Route path="/generateWorkout" element={<GenerateWorkoutForm />} />
 		<Route path="/profile" element={<Profile />} />
-		<Route path="/exercise" element={<Exercise />} />
+		<Route path="/exercise/:customerId" element={<Exercise />} />
 		
-		<Route path="*" element={
+		<Route path="/" element={
 				<>
 					<NavBar />
 					<WelcomePage />

@@ -1,10 +1,18 @@
 h1 {
     display: flex;
     justify-content: center;
+    color: aqua;
     font-weight: 700 bolder;
 }
 
 .generator__nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+body{
+    margin-left: 3em;
+}
+.generate__header {
+    display: flex;
+    justify-content: center;
 }
