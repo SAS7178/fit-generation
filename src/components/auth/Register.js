@@ -59,7 +59,13 @@ export const Register = () => {
                 <nav>
                 <Link className="navbar__link" to="/">Home</Link>
                 </nav>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Fit Generation</h1>
+                <div className="header__register">
+                <h1 >Fit Generation</h1>
+                <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+            exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
+            card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
+                </div>
+                <h1 className="h3 mb-3 font-weight-normal">Register and get started!</h1>
                 <fieldset>
                     <label htmlFor="name"> Name </label>
                     <input onChange={updateCustomer}
