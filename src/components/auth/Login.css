@@ -4,7 +4,7 @@
 
 fieldset {
     min-width: 0;
-    padding: 1rem 0;
+    padding: 1rem;
     margin: 0;
     border: 0;
 }
@@ -16,12 +16,14 @@ fieldset {
 }
 
 .form--login > fieldset > input[type="email"] {
-    width: 25em;
+    width: 20em;
+    
 }
 
 .label--login {
     width: 8rem;
     display: inline-block;
+    
 }
 
 .form-control {
@@ -48,8 +50,10 @@ fieldset {
 .form--login {
     background-position-x: right;
     z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
+    border-radius: 5%;
+    margin-top: 2em;
+    min-height: 100%;
+    min-width: 100%;
     background-color: hsla(0,0%,100%,0.40);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
@@ -59,4 +63,23 @@ fieldset {
     position: relative;
     bottom: -2rem;
 }
+.login__header {
+    display: flex;
+    background-color: #8f969e;
+    margin-bottom: 4em;
+    justify-content: center;
+}
 
+.h3 {
+    border: 1px dotted;
+    border-radius: 10%;
+    background-color: #babdc1;
+    height: 2em;
+}
+
+.header__register {
+    display: flex;
+    justify-content: center;
+    background-color: #8f969e;
+    margin-bottom: 3em;
+}
