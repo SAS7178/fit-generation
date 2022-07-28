@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { createRoutesFromChildren, Link, useNavigate } from "react-router-dom"
-import { Button, Form, FormGroup, FormText, Input, Label } from 'reactstrap';
+import { Link, useNavigate } from "react-router-dom"
+import { Form, FormGroup, FormText, Input, Label } from 'reactstrap';
 import "./Workouts.css"
 
+// funct to take input form data and post to database in customerworkouts array
+//then nav to exercise page on generate click
 export const GenerateWorkoutForm = () => {
   const navigate = useNavigate()
 
-  // ////////////////////////////////
   /*
        TODO: Add the correct default properties to the
        initial state object
@@ -14,19 +15,17 @@ export const GenerateWorkoutForm = () => {
   const [customerWorkout, update] = useState({
     customerId: null,
     experienceId: "stretch",
-    height: "stretch",
-    weight: "stretch",
+    height: 0,
+    weight: 0,
     goalId: null,
     muscleId: 0
   })
-  /*
-      TODO: Use the useNavigation() hook so you can redirect
-      the user to the ticket list
-  */
 
+  //find current user Id and set value to variable
   const localFitCustomer = localStorage.getItem("fit_customer")
   const fitCustomerObject = JSON.parse(localFitCustomer)
 
+  //function to handle the post for generate workout click
   const handleSaveButtonClick = (event) => {
     event.preventDefault()
     console.log("You clicked the wrong button!")
@@ -48,7 +47,9 @@ export const GenerateWorkoutForm = () => {
       .then(response => response.json())
       .then(() => {
         navigate(`/exercise/${fitCustomerObject.id}`)
+
       })
+      
   }
   // TODO: Perform the fetch() to POST the object to the API
 
