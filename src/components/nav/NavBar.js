@@ -34,7 +34,7 @@ export const NavBar = (args) => {
             pills
           >
             <NavItem>
-              <NavLink href="/profile">
+              <NavLink href="/profile/:customerId">
                 My Profile
               </NavLink>
             </NavItem>

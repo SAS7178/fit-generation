@@ -17,7 +17,7 @@ export const Login = () => {
                     const customer = foundCustomers[0]
                     localStorage.setItem("fit_customer", JSON.stringify({
                         id: customer.id,
-                        email: customer.email
+                        email: customer.id
                     }))
 
                     navigate("/profile")

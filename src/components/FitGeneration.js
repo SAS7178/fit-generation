@@ -21,7 +21,7 @@ export const FitGeneration = () => {
 		<Route path="/login" element={<Login />} />
 		<Route path="/register" element={<Register />} />
 		<Route path="/generateWorkout" element={<GenerateWorkoutForm />} />
-		<Route path="/profile" element={<Profile />} />
+		<Route path="/profile/:customerId" element={<Profile />} />
 		<Route path="/exercise/:customerId" element={<Exercise />} />
 	</Routes>
 }
