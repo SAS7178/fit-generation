@@ -10,11 +10,6 @@ import { Exercise } from "./exercise/Exercise"
 
 export const FitGeneration = () => {
 	return <Routes>
-		<Route path="/login" element={<Login />} />
-		<Route path="/register" element={<Register />} />
-		<Route path="/generateWorkout" element={<GenerateWorkoutForm />} />
-		<Route path="/profile" element={<Profile />} />
-		<Route path="/exercise/:customerId" element={<Exercise />} />
 		
 		<Route path="/" element={
 				<>
@@ -23,6 +18,11 @@ export const FitGeneration = () => {
 					<WelcomeFooter />
 				</>
 		} />
+		<Route path="/login" element={<Login />} />
+		<Route path="/register" element={<Register />} />
+		<Route path="/generateWorkout" element={<GenerateWorkoutForm />} />
+		<Route path="/profile" element={<Profile />} />
+		<Route path="/exercise/:customerId" element={<Exercise />} />
 	</Routes>
 }
 
