@@ -49,12 +49,12 @@ export const ExerciseView = () => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
             </div>
             <h2 className="workout"><b>MyWorkout</b></h2>
+
             <div className="workout__exercises">
                 <ul> 
                <customerExercise /> 
                 </ul>
             </div>
-            <fieldset></fieldset>
         </>
     )
 }

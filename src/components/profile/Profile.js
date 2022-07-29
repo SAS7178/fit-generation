@@ -66,7 +66,7 @@ export const Profile = () => {
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
-      <div>Welcome to your profile!</div>
+      <div>Welcome to your profile!{fitCustomerObject.name}</div>
       <div>
         <Card inverse>
           <CardImg
@@ -100,7 +100,7 @@ export const Profile = () => {
             Born on:&nbsp;{workout.dateCompleted}&nbsp;&nbsp;
             <div className="workout__btns">
               <Button outline onClick={() => navigate("/exerciseView/:customerId")}
-                className="save-primary">
+                className="save-primary" >
                - View Workout -
               </Button>&nbsp;&nbsp;&nbsp;
               <Button outline onClick={() => deleteButton(workout.id)}
