@@ -26,7 +26,7 @@ export const GenerateWorkoutForm = () => {
   const fitCustomerObject = JSON.parse(localFitCustomer)
 
   //function to handle the post for generate workout click
-  const handleSaveButtonClick = (event) => {
+  const handleUpdateButtonClick = (event) => {
     event.preventDefault()
     console.log("You clicked the wrong button!")
     // TODO: Create the object to be saved to the API
@@ -44,16 +44,13 @@ export const GenerateWorkoutForm = () => {
       },
       body: JSON.stringify(workoutToSendToApi)
     })
-      .then(response => response.json())
-      .then(() => {
-        navigate(`/exercise/${fitCustomerObject.id}`)
+  }
 
-      })
-      
+  const handleGenerateButtonClick = () => {
+      navigate(`/exercise/${fitCustomerObject.id}`)
   }
   // TODO: Perform the fetch() to POST the object to the API
 
-  /////////////////////////
   return (
 
     <Form>
@@ -62,7 +59,7 @@ export const GenerateWorkoutForm = () => {
           <Link className="navbar__link" to="/">Home</Link>
         </nav>
         <nav>
-          <Link className="navbar__link" to="/profile">Profile</Link>
+          <Link className="navbar__link" to="/profile/:customerId">Profile</Link>
         </nav>
       </div>
       <div className='generate__header'>
@@ -93,7 +90,6 @@ export const GenerateWorkoutForm = () => {
           <Label check>
             Intermediate
           </Label>
-
         </FormGroup>
 
         <FormGroup check>
@@ -177,7 +173,6 @@ export const GenerateWorkoutForm = () => {
           </option>
         </Input>
       </FormGroup>
-
       <FormGroup>
         <Label for="exampleSelect">
           Muscle Group
@@ -203,7 +198,6 @@ export const GenerateWorkoutForm = () => {
           <option value={3}>
             Legs/Shoulders
           </option>
-
         </Input>
       </FormGroup>
       <FormGroup>
@@ -219,15 +213,13 @@ export const GenerateWorkoutForm = () => {
           Upload your Fit Generation profile img here
         </FormText>
       </FormGroup>
-      {/* <FormGroup check>
-        <Input type="checkbox" />
-        {' '}
-        <Label check>
-          Verify inputs
-        </Label>
-      </FormGroup> */}
       <button
-        onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+        onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
+        className="btn btn-primary">
+        update
+      </button>
+      <button
+        onClick={(clickEvent) => handleGenerateButtonClick(clickEvent)}
         className="btn btn-primary">
         Generate Workout
       </button>

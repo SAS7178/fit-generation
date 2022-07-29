@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link, NavLink, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./Login.css"
 
 export const Register = () => {
@@ -48,7 +48,7 @@ export const Register = () => {
     }
 
     const updateCustomer = (evt) => {
-        const copy = {...customer}
+        const copy = { ...customer }
         copy[evt.target.id] = evt.target.value
         setCustomer(copy)
     }
@@ -57,11 +57,11 @@ export const Register = () => {
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
                 <nav>
-                <Link className="navbar__link" to="/">Home</Link>
+                    <Link className="navbar__link" to="/">Home</Link>
                 </nav>
                 <div className="header__register">
-                <h1 >Fit Generation</h1>
-                <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+                    <h1 >Fit Generation</h1>
+                    <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
                 </div>
@@ -69,8 +69,8 @@ export const Register = () => {
                 <fieldset>
                     <label htmlFor="name"> Name </label>
                     <input onChange={updateCustomer}
-                           type="text" id="fullName" className="form-control"
-                           placeholder="Enter your name" required autoFocus />
+                        type="text" id="fullName" className="form-control"
+                        placeholder="Enter your name" required autoFocus />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="email"> Email address </label>
@@ -86,14 +86,13 @@ export const Register = () => {
                 </fieldset>
                 <fieldset>
                     <button onClick={(evt) => {
-                        const copy = {...customer}
+                        const copy = { ...customer }
                         copy.customer = evt.target.click
                         setCustomer(copy)
-                    }} type="submit"> <nav>
-                    <Link className="navbar__link" to="/generateWorkout">
-                        Ready to Generate a Workout!
-                        </Link>
-                    </nav></button>   
+                        handleRegister(copy)
+                    }} type="submit">
+                        Submit!
+                    </button>
                 </fieldset>
             </form>
         </main>

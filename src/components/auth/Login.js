@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
@@ -20,7 +20,7 @@ export const Login = () => {
                         email: customer.email
                     }))
 
-                    navigate("/profile")
+                    navigate("/profile/:customerId")
                 }
                 else {
                     window.alert("Invalid login")
@@ -32,9 +32,9 @@ export const Login = () => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                <Link className="navbar__home" to="/">Home</Link>
+                    <Link className="navbar__home" to="/">Home</Link>
                     <div className="login__header">
-                    <h1>Fit Generation</h1><img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+                        <h1>Fit Generation</h1><img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
                     </div>
@@ -48,14 +48,11 @@ export const Login = () => {
                             placeholder="Email address"
                             required autoFocus />
                     </fieldset>
-                    <button type="submit">
-                            <Link className="navbar__link" to="" onClick={() => {
-  localStorage.getItem("fit_customer")
-  navigate("/profile")
-}}>Login</Link>
-                        </button>
+                    <button className="login__button" type="submit">
+                        Login
+                    </button>
                     <fieldset>
-                       
+
                     </fieldset>
                 </form>
             </section>
