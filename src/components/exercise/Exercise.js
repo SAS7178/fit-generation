@@ -13,7 +13,6 @@ export const Exercise = () => {
     const [latestWorkout, setLatest] = useState({})
     const navigate = useNavigate()
 
-
     useEffect(
         () => {
             fetch(`http://localhost:8088/exercises`)
@@ -52,15 +51,6 @@ export const Exercise = () => {
     const localFitCustomer = localStorage.getItem("fit_customer")
     const fitCustomerObject = JSON.parse(localFitCustomer)
 
-    //handles click of save workout button obj 
-    //performs post of exercise objects on save btn click to workoutExercises in database
-    // const handleGenerateButtonClick = (event) => {
-    //     event.preventDefault()
-
-    //     return 
-    // }
-
-
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
@@ -98,7 +88,7 @@ export const Exercise = () => {
                     <Link className="navbar__link" to="/">Home</Link>
                 </nav>
                 <nav>
-                    <NavLink className="navbar__link" path="/profile">Profile</NavLink>
+                    <Link className="navbar__link" to="/profile/:customerId">Profile</Link>
                 </nav>
             </div>
             <div className='welcome__header'>
@@ -115,7 +105,7 @@ export const Exercise = () => {
                         sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
                         reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                         rest time:&nbsp;{exercise.rest}<br />
-                        <Link className="exercise__link" to={exercise.exampleVid}>Watch tutorial</Link>
+                        <button className="exercise__link">Watch tutorial</button>
                     </li>)}
                 </ul>
             </div>

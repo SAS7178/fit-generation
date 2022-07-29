@@ -19,3 +19,12 @@
     border-color: rgb(54, 55, 55);
     border-radius: 50%;
 }
+
+button {
+    width: 25%;
+}
+
+.workout__btns {
+    display: flex;
+    
+}

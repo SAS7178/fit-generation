@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from "react-router-dom"
+import React, { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom"
 import { Form, FormGroup, FormText, Input, Label } from 'reactstrap';
 import "./Workouts.css"
 
@@ -7,11 +7,6 @@ import "./Workouts.css"
 //then nav to exercise page on generate click
 export const GenerateWorkoutForm = () => {
   const navigate = useNavigate()
-  const { customerId } = useParams()
-  const [customerWorkouts, setWorkouts] = useState([])
-  const [latestWorkout, setLatest] = useState({})
-  const [exercises, setExercises] = useState([])
-  const [filteredExercises, setFilteredExercises] = useState([])
 
   /*
        TODO: Add the correct default properties to the
@@ -56,7 +51,6 @@ export const GenerateWorkoutForm = () => {
   }
   // TODO: Perform the fetch() to POST the object to the API
 
-  /////////////////////////
   return (
 
     <Form>
@@ -65,7 +59,7 @@ export const GenerateWorkoutForm = () => {
           <Link className="navbar__link" to="/">Home</Link>
         </nav>
         <nav>
-          <Link className="navbar__link" to="profile/:customerId">Profile</Link>
+          <Link className="navbar__link" to="/profile/:customerId">Profile</Link>
         </nav>
       </div>
       <div className='generate__header'>
@@ -96,7 +90,6 @@ export const GenerateWorkoutForm = () => {
           <Label check>
             Intermediate
           </Label>
-
         </FormGroup>
 
         <FormGroup check>
@@ -180,7 +173,6 @@ export const GenerateWorkoutForm = () => {
           </option>
         </Input>
       </FormGroup>
-
       <FormGroup>
         <Label for="exampleSelect">
           Muscle Group
@@ -206,7 +198,6 @@ export const GenerateWorkoutForm = () => {
           <option value={3}>
             Legs/Shoulders
           </option>
-
         </Input>
       </FormGroup>
       <FormGroup>

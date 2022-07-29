@@ -1,4 +1,5 @@
-.h1, h1 {
+.h1,
+h1 {
     font-size: 2.5rem;
 }
 
@@ -15,15 +16,15 @@ fieldset {
     text-align: left;
 }
 
-.form--login > fieldset > input[type="email"] {
+.form--login>fieldset>input[type="email"] {
     width: 20em;
-    
+
 }
 
 .label--login {
     width: 8rem;
     display: inline-block;
-    
+
 }
 
 .form-control {
@@ -39,8 +40,8 @@ fieldset {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .container--login {
@@ -54,7 +55,7 @@ fieldset {
     margin-top: 2em;
     min-height: 100%;
     min-width: 100%;
-    background-color: hsla(0,0%,100%,0.40);
+    background-color: hsla(0, 0%, 100%, 0.40);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
 }
@@ -63,6 +64,7 @@ fieldset {
     position: relative;
     bottom: -2rem;
 }
+
 .login__header {
     display: flex;
     background-color: #8f969e;
@@ -82,4 +84,10 @@ fieldset {
     justify-content: center;
     background-color: #8f969e;
     margin-bottom: 3em;
+}
+
+.login__button {
+    display: flex;
+    margin-left: 2em;
+
 }
