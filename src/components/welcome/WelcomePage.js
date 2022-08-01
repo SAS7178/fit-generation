@@ -24,7 +24,7 @@ export const WelcomePage = () => {
             </CardText>
             <CardText>
               <small className="text-muted">
-                {/* WE are Here to Better our Lives and if We can...Make your Lives Better TOO! */}
+                {/* WE are Here to Better our Selves! */}
               </small>
             </CardText>
           </CardImgOverlay>

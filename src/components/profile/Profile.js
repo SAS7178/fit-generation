@@ -7,70 +7,50 @@ export const Profile = () => {
   const [filteredWorkouts, setFilteredWorkouts] = useState([])
   const { customerId } = useParams()
   const navigate = useNavigate()
-  
+
   const localFitCustomer = localStorage.getItem("fit_customer")
   const fitCustomerObject = JSON.parse(localFitCustomer)
-  
+
   // fetches and set all workoutExercises sets to var to make available for iteration globally
   useEffect(
     () => {
       fetch(`http://localhost:8088/workoutExercises`)
-      .then(response => response.json())
-      .then((data) => {
-        setworkoutExercises(data)
-      })
+        .then(response => response.json())
+        .then((data) => {
+          setworkoutExercises(data)
+        })
     },
     [customerId] // When this array is empty, you are observing initial component state
-    )
-    
-    useEffect(
-      () => {
-        let filteredWorkouts = workoutExercises.filter(
-          (workout) =>
-          fitCustomerObject.id === workout.customerId)
-          setFilteredWorkouts(filteredWorkouts)
-        },
-        [workoutExercises] // When this array is empty, you are observing initial component state
-        )
-        
-        const getAllWorkouts = () => {
-          fetch(`http://localhost:8088/workoutExercises`)
-          .then(response => response.json())
-          .then((workoutArray) => {
-            setworkoutExercises(workoutArray)
-            
-          })
-        }
-        const deleteButton = (workoutId) => {
-          
-          fetch(`http://localhost:8088/workoutExercises/${workoutId}`, {
-            method: "DELETE"
-          })
-          .then(() => { getAllWorkouts() })
-          
-        }
-        
-       const displayExercise = () => {
-        workoutExercises.map((workout) => {
-            if (workout.id) {
-                workout.exercises.map((exercise) => {
+  )
 
-                    return (<>
-                        <strong>{exercise.name}</strong>&nbsp;<br />
-                        sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
-                        reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
-                        rest time:&nbsp;{exercise.rest}<br />
-                        <button className="exercise__link"
-                        >Watch tutorial</button>
-                    </>
-                    )
-                })
-            }
-        })
-    }
-        
-        return (
-          <>
+  useEffect(
+    () => {
+      let filteredWorkouts = workoutExercises.filter(
+        (workout) =>
+          fitCustomerObject.id === workout.customerId)
+      setFilteredWorkouts(filteredWorkouts)
+    },
+    [workoutExercises] // When this array is empty, you are observing initial component state
+  )
+
+  const getAllWorkouts = () => {
+    fetch(`http://localhost:8088/workoutExercises`)
+      .then(response => response.json())
+      .then((workoutArray) => {
+        setworkoutExercises(workoutArray)
+
+      })
+  }
+  const deleteButton = (workoutId) => {
+
+    fetch(`http://localhost:8088/workoutExercises/${workoutId}`, {
+      method: "DELETE"
+    })
+      .then(() => { getAllWorkouts() })
+
+  }
+  return (
+    <>
       <div className="profile__nav">
         <Link className="navbar__home" to="/">Home</Link>
         <Link className="navbar__generate" to="/generateWorkout">Generate New Workout</Link>
@@ -91,17 +71,15 @@ export const Profile = () => {
               height: 270
             }}
             width="100%"
-            />
+          />
           <CardImgOverlay className="profile__card">
             <CardTitle tag="h5">
               {/* overlayTitle */}
             </CardTitle>
             <CardText>
-              {/* \\ overlaytext */}
             </CardText>
             <CardText>
               <small className="text-muted">
-
               </small>
             </CardText>
           </CardImgOverlay>
@@ -115,8 +93,8 @@ export const Profile = () => {
             Born on:&nbsp;{workout.dateCompleted}&nbsp;&nbsp;
             <div className="workout__btns">
 
-              <Button outline onClick={() => 
-              navigate(`/exerciseView/${workout.id}`)}
+              <Button outline onClick={() =>
+                navigate(`/exerciseView/${workout.id}`)}
                 className="save-primary" >
                 - View Workout -
               </Button>&nbsp;&nbsp;&nbsp;

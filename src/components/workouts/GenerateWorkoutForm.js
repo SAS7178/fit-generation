@@ -50,9 +50,7 @@ export const GenerateWorkoutForm = () => {
     navigate(`/exercise/${fitCustomerObject.id}`)
   }
   // TODO: Perform the fetch() to POST the object to the API
-
   return (
-
     <Form>
       <div className='generator__nav'>
         <nav>
@@ -72,17 +70,14 @@ export const GenerateWorkoutForm = () => {
         <legend>
           Experience Level
         </legend>
-
         <FormGroup check>
           <Input check
             name="radio1"
             type="radio" />
-
           <Label check>
             Beginner
           </Label>
         </FormGroup>
-
         <FormGroup check>
           <Input check
             name="radio1"
@@ -91,12 +86,10 @@ export const GenerateWorkoutForm = () => {
             Intermediate
           </Label>
         </FormGroup>
-
         <FormGroup check>
           <Input check
             name="radio1"
             type="radio" />
-
           {' '}
           <Label check>
             Advanced
@@ -128,11 +121,9 @@ export const GenerateWorkoutForm = () => {
                 value={customerWorkout.weight}
                 onChange={
                   (evt) => {
-
                     const copy = { ...customerWorkout }
                     copy.weight = parseInt(evt.target.value)
                     update(copy)
-
                   }
                 } />
             </div>
