@@ -19,7 +19,6 @@ export const Login = () => {
                         id: customer.id,
                         email: customer.email
                     }))
-
                     navigate("/profile/:customerId")
                 }
                 else {
