@@ -20,7 +20,7 @@ export const Login = () => {
                         email: customer.email
                     }))
 
-                    navigate("/profile")
+                    navigate("/profile/:customerId")
                 }
                 else {
                     window.alert("Invalid login")
@@ -51,7 +51,7 @@ export const Login = () => {
                     <button type="submit">
                             <Link className="navbar__link" to="" onClick={() => {
   localStorage.getItem("fit_customer")
-  navigate("/profile")
+  navigate("/profile/:customerId")
 }}>Login</Link>
                         </button>
                     <fieldset>

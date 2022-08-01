@@ -23,8 +23,8 @@ export const FitGeneration = () => {
 		<Route path="/register" element={<Register />} />
 		<Route path="/generateWorkout" element={<GenerateWorkoutForm />} />
 		<Route path="/profile/:customerId" element={<Profile />} />
+		<Route path="/exerciseView/:workoutId" element={<ExerciseView />} />
 		<Route path="/exercise/:customerId" element={<Exercise />} />
-		<Route path="/exerciseView/:customerId" element={<ExerciseView />} />
 	</Routes>
 }
 

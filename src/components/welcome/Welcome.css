@@ -1,5 +1,10 @@
 
 
     .welcome__card {
+        display: flex;
+        justify-content: center;
+        max-height:max-content;
+        margin-right: 5em;
         margin-top: 12.5em;
+        
     }

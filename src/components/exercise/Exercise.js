@@ -105,7 +105,8 @@ export const Exercise = () => {
                         sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
                         reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                         rest time:&nbsp;{exercise.rest}<br />
-                        <button className="exercise__link">Watch tutorial</button>
+                       <a href={exercise.exampleVid}> <Button className="exercise__link" 
+                        >Watch tutorial</Button></a>
                     </li>)}
                 </ul>
             </div>

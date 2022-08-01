@@ -7,11 +7,10 @@ import "./Workouts.css"
 //then nav to exercise page on generate click
 export const GenerateWorkoutForm = () => {
   const navigate = useNavigate()
-
-  /*
-       TODO: Add the correct default properties to the
-       initial state object
-   */
+  
+  //TODO: Add the correct default properties to the
+  //initial state object
+  
   const [customerWorkout, update] = useState({
     customerId: null,
     experienceId: "stretch",
@@ -28,7 +27,7 @@ export const GenerateWorkoutForm = () => {
   //function to handle the post for generate workout click
   const handleUpdateButtonClick = (event) => {
     event.preventDefault()
-    console.log("You clicked the wrong button!")
+
     // TODO: Create the object to be saved to the API
     const workoutToSendToApi = {
       customerId: fitCustomerObject.id,//
@@ -47,7 +46,8 @@ export const GenerateWorkoutForm = () => {
   }
 
   const handleGenerateButtonClick = () => {
-      navigate(`/exercise/${fitCustomerObject.id}`)
+    // setWorkout(evt.target.value)
+    navigate(`/exercise/${fitCustomerObject.id}`)
   }
   // TODO: Perform the fetch() to POST the object to the API
 
@@ -63,8 +63,8 @@ export const GenerateWorkoutForm = () => {
         </nav>
       </div>
       <div className='generate__header'>
-      <h1>Fit Generation</h1>
-      <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+        <h1>Fit Generation</h1>
+        <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
@@ -188,7 +188,7 @@ export const GenerateWorkoutForm = () => {
               update(copy)
             }
           }>
-            <option>select</option>
+          <option>select</option>
           <option value={1}>
             Back/Biceps
           </option>
@@ -219,7 +219,8 @@ export const GenerateWorkoutForm = () => {
         update
       </button>
       <button
-        onClick={(clickEvent) => handleGenerateButtonClick(clickEvent)}
+        onClick={(evt) => handleGenerateButtonClick(evt)
+        }
         className="btn btn-primary">
         Generate Workout
       </button>
