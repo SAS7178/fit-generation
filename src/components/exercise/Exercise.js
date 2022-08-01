@@ -56,12 +56,12 @@ export const Exercise = () => {
         },
         [latestCustomerWorkout] // When this array is empty, you are observing initial component state
     )
-    const handleAddExerciseClick = (evt) => {
-        const exerciseId = evt
+    const handleAddExerciseClick = (exerciseId) => {
+      
         // TODO: Create the object to be saved to the API
         const exerciseToSendToApi = {
           workoutId: workoutId,
-          exerciseId: exerciseId
+          exerciseId: parseInt(exerciseId)
         }
         return fetch(`http://localhost:8088/workoutExercises`, {
           method: "POST",
@@ -83,7 +83,7 @@ export const Exercise = () => {
                     <a href={exercise.exampleVid}> <Button className="exercise__link"
                     >Watch tutorial</Button></a>     <FormGroup>
                         <button
-                             onClick={(evt) => handleAddExerciseClick(evt.target.id)}
+                             onClick={() => handleAddExerciseClick(`${exercise.id}`)}
                             className="btn btn-primary">
                             Add to Workout
                         </button>
