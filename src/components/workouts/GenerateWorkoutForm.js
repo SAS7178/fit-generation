@@ -70,28 +70,28 @@ export const GenerateWorkoutForm = () => {
         <legend>
           Experience Level
         </legend>
-        <FormGroup check>
-          <Input check
+        <FormGroup>
+          <Input
             name="radio1"
             type="radio" />
-          <Label check>
+          <Label>
             Beginner
           </Label>
         </FormGroup>
-        <FormGroup check>
-          <Input check
+        <FormGroup >
+          <Input
             name="radio1"
             type="radio" />
-          <Label check>
+          <Label>
             Intermediate
           </Label>
         </FormGroup>
-        <FormGroup check>
-          <Input check
+        <FormGroup>
+          <Input
             name="radio1"
             type="radio" />
           {' '}
-          <Label check>
+          <Label>
             Advanced
           </Label>
         </FormGroup>
@@ -112,7 +112,7 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
-        <FormGroup check>
+        <FormGroup>
           <fieldset>
             <div className="form-group">
               <label htmlFor="name">Weight</label>
@@ -129,7 +129,7 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
-        <FormGroup check>
+        <FormGroup >
         </FormGroup>
       </FormGroup>
       <FormGroup>
