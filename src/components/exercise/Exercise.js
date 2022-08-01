@@ -54,7 +54,6 @@ export const Exercise = () => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
-
         // TODO: Create the object to be saved to the API
         const workoutToSendToApi = {
             customerId: fitCustomerObject.id,

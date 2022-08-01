@@ -50,6 +50,7 @@ export const Login = () => {
                     <button type="submit">
                             <Link className="navbar__link" to="" onClick={() => {
   localStorage.getItem("fit_customer")
+  handleLogin()
   navigate("/profile/:customerId")
 }}>Login</Link>
                         </button>
