@@ -27,4 +27,8 @@ button {
     justify-content: space-between;
     margin-top: 4em;
 }
+.navbar__link{
+    display: flex;
+    margin-right: 1em;
+}
 

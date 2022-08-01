@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import "./NavBar.css";
 import {
   Collapse,
@@ -16,13 +16,13 @@ export const NavBar = (args) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate()
   const toggle = () => setIsOpen(!isOpen);
+  // const [customerId] = useParams()
   
   // const localFitCustomer = localStorage.getItem("fit_customer")
   // const fitCustomerObject = JSON.parse(localFitCustomer)
   
   // const handleDisplay = () => {
-    
-  //    fetch(`http://localhost:8088/customers`)
+  //    fetch(`http://localhost:8088/customers/id=${customerId}`)
   //     .then(res => res.json())
   //     .then(foundCustomer => {
   //       if (foundCustomer.filter(fitCustomerObject.id === foundCustomer.id)) {
@@ -106,5 +106,5 @@ export const NavBar = (args) => {
         // }
      // })
     )}
-  // handleDisplay()
+//   handleDisplay()
 // }

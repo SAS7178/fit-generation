@@ -24,6 +24,12 @@ button {
     width: 25%;
 }
 
+.welcome__card {
+    display: flex;
+    margin-right: 3em;
+}
+
+
 .workout__btns {
     display: flex;
     

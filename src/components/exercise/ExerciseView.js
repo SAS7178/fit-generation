@@ -1,37 +1,67 @@
-import { click } from "@testing-library/user-event/dist/click"
+// import { click } from "@testing-library/user-event/dist/click"
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
-import { Button } from "reactstrap"
+import { Link, useParams } from "react-router-dom"
+import "./Exercise.css"
 
 export const ExerciseView = () => {
-   // const { customerId } = useParams()
-    const [workoutExercises, setWorkoutExercises] = useState([])
-
+    const { workoutId } = useParams()
+    const [workout, setWorkout] = useState({})
+    // const shownWorkout = Number(workoutId)
+    
     useEffect(
         () => {
-            fetch(`http://localhost:8088/workoutExercises`)
-                .then(response => response.json())
-                .then((data) => {
-                    setWorkoutExercises(data)
-                })
+            fetch(`http://localhost:8088/workoutExercises?id=${workoutId}`)
+            .then(response => response.json())
+            .then((data) => {
+                const singleWorkout = data[0]
+                setWorkout(singleWorkout)
+            })
         },
-        [] // When this array is empty, you are observing initial component state
-    )
-    const customerExercise = (evt) => {
-        workoutExercises.map(workoutExercise => {
-            if(workoutExercise.id === evt.value) {
-                {workoutExercises.map(exercise => <li className="w__e" key="{exerciseId}">
-                <strong>{exercise.name}</strong>&nbsp;<br />
-                sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
-                reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
-                rest time:&nbsp;{exercise.rest}<br />
-                <button className="exercise__link"
-                >Watch tutorial</button>
-            </li>)}
-            }
-        })
-    }
+        [workoutId] // When this array is empty, you are observing initial component state
+        )
+        // const getExercises = () => {
+        //  return workout.exercises.map(exercise => ({ ...exercise }))
+        // }
+        // const exercises = getExercises()
+    //export function of each array mapped to access each object  key:values  
+       const thisWorkout = () => {
+          console.log(workout)
+          let str = null
+         str = JSON.stringify(workout.exercises)
+        console.log(str)
+        //str.forEach(() => (exercise){ $('tbody').append('<tr>,<td>'+ exercise.name + '</td><td>'
+        //+ exercise["sets"]+'</td><td>' + exercise.reps+'</td></tr>')
 
+        //})
+        }
+    //             exercises.map((exercise) => {
+    //                 return <ul>
+    //                     <li key="exercise--{exercise.id}">
+    //                         <strong>{exercise.name}</strong>&nbsp;<br />
+    //                         sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
+    //                         reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
+    //                         rest time:&nbsp;{exercise.rest}<br />
+    //                         <button className="exercise__link"
+    //                         >Watch tutorial</button>
+    //                     </li>
+    //                 </ul>
+    //             })}  
+            
+    // const workoutName = () => {
+          
+    //             <>{workout.exercises.map((exercise) => {
+    //                 return <ul>
+    //                     <li key="exercise--{exercise.id}">
+    //                         <strong>{exercise.name}</strong>&nbsp;<br />
+    //                         sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
+    //                         reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
+    //                         rest time:&nbsp;{exercise.rest}<br />
+    //                         <button className="exercise__link"
+    //                         >Watch tutorial</button>
+    //                     </li>
+    //                 </ul>
+    //             })}  </>
+    //         }
     return (
         <>
             <div className='generator__nav'>
@@ -48,13 +78,33 @@ export const ExerciseView = () => {
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
             </div>
-            <h2 className="workout"><b>MyWorkout</b></h2>
-            <div className="workout__exercises">
-                <ul> 
-               <customerExercise /> 
-                </ul>
-            </div>
-            <fieldset></fieldset>
+            <>
+                <h2 className="workout"><b>MyWorkout</b></h2>
+                <div className="workout__exercises">
+{/* 
+                    {workoutName()} */}
+                    {thisWorkout()}
+                    
+{/* 
+                    <div className="workout__exercises">
+                        <ul>
+                            {workoutExercises.map(workout => {
+                                if (workout.id === shownWorkout) {
+                                    workout.exercises.map((exercise) => {
+                                        return <li className="w__e" key="{exercise.id}">
+                                            <strong>{exercise.name}</strong>&nbsp;<br />
+                                            sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
+                                            reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
+                                            rest time:&nbsp;{exercise.rest}<br />
+                                            <button className="exercise__link"
+                                            >Watch tutorial</button>
+                                        </li>
+                                    })
+                                }
+                            })}
+                        </ul>
+                    </div> */}
+                </div></>
         </>
     )
 }
