@@ -6,34 +6,72 @@ import "./Exercise.css"
 export const ExerciseView = () => {
     const { workoutId } = useParams()
     const [workout, setWorkout] = useState({})
+    const [exercises, setExercises] = useState([])
+    const [workoutExercises, setWorkoutExercises] = useState([])
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/workoutExercises?id=${workoutId}`)
+            fetch(`http://localhost:8088/workouts?id=${workoutId}`)
                 .then(response => response.json())
                 .then((data) => {
-                    const singleWorkout = data[0]
-                    setWorkout(singleWorkout)
+                    setWorkout(data)
                 })
         },
         [workoutId] // When this array is empty, you are observing initial component state
     )
 
-    const thisWorkout = () => {
-        return workout?.exercises?.map((exercise) => {
-            return <ul>
-                <li key="exercise--{exercise.id}">
-                    <strong>{exercise.name}</strong>&nbsp;<br />
-                    sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
-                    reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
-                    rest time:&nbsp;{exercise.rest}<br />
-                    <a href={exercise.exampleVid}><Button className="exercise__link"
-                    >Watch tutorial</Button></a>
-                </li>
-            </ul>
-        }
-        )
+    useEffect(
+        () => {
+            fetch(`http://localhost:8088/workoutExercises`)
+                .then(response => response.json())
+                .then((data) => {
+                    setWorkoutExercises(data)
+                })
+        },
+        [] // When this array is empty, you are observing initial component state
+    )
+    useEffect(
+        () => {
+            fetch(`http://localhost:8088/exercises`)
+                .then(response => response.json())
+                .then((data) => {
+                    setExercises(data)
+                })
+        },
+        [] // When this array is empty, you are observing initial component state
+    )
+
+    const filteredWorkoutExercises = () => {
+        let filtered = []
+        workoutExercises.map((workoutExercise) => {
+            if (workout.id === workoutExercise.workoutId) {
+                filtered.push(workoutExercise)
+            } return filtered
+        })
     }
+
+    const displayExercises = (filteredWorkoutExercises) => {
+        exercises.map(exercise => {
+            filteredWorkoutExercises.map(workoutExercise => {
+                if (exercise.id === workoutExercise.exerciseId) {
+                    return <ul>
+                        <li key="exercise--{exercise.id}">
+                            <strong>{exercise.name}</strong>&nbsp;<br />
+                            sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
+                            reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
+                            rest time:&nbsp;{exercise.rest}<br />
+                            <a href={exercise.exampleVid}><Button className="exercise__link"
+                            >Watch tutorial</Button></a>
+                        </li>
+                    </ul>
+                }
+            })
+        })
+    }
+      const filters = filteredWorkoutExercises()
+         
+    
+
 
     return (
         <>
@@ -54,8 +92,8 @@ export const ExerciseView = () => {
             <>
                 <h2 className="workout"><b>MyWorkout</b></h2>
                 <div className="workout__exercises">
-                    {thisWorkout()}
-                </div></>
+                {displayExercises(filters)}
+                      </div></>
         </>
     )
 }

@@ -107,7 +107,7 @@ export const Exercise = () => {
             dateCompleted: new Date
         }
 
-        return fetch(`http://localhost:8088/workoutExercises`, {
+        return fetch(`http://localhost:8088/workouts`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
