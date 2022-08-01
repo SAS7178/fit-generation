@@ -46,7 +46,6 @@ export const GenerateWorkoutForm = () => {
   }
 
   const handleGenerateButtonClick = () => {
-    // setWorkout(evt.target.value)
     navigate(`/exercise/${fitCustomerObject.id}`)
   }
   // TODO: Perform the fetch() to POST the object to the API
