@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import "./NavBar.css";
 import {
   Collapse,
@@ -90,10 +90,6 @@ export const NavBar = (args) => {
               </section>
             </div>
           )
-          
-
-        // }
-     // })
     }}
-//   handleDisplay()
+
  
