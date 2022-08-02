@@ -8,3 +8,14 @@
         margin-top: 12.5em;
         
     }
+
+    .footer {
+        background-color: rgb(138, 167, 234);
+        height: 7em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .fb_image {
+        width: fit-content;
+    }
