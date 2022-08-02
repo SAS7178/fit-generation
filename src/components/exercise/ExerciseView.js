@@ -5,7 +5,6 @@ import "./Exercise.css"
 
 export const ExerciseView = () => {
     const { workoutId } = useParams()
-    // const [workouts, setWorkouts] = useState([])
     const [exercises, setExercises] = useState([])
     const [workoutExercises, setWorkoutExercises] = useState([])
     const workoutid = Number(workoutId)
@@ -16,6 +15,7 @@ export const ExerciseView = () => {
                 .then(response => response.json())
                 .then((data) => {
                     setWorkoutExercises(data)
+                    console.log(data)
                 })
         },
         [] // When this array is empty, you are observing initial component state
@@ -26,6 +26,7 @@ export const ExerciseView = () => {
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
+                    console.log(data)
                 })
         },
         [] // When this array is empty, you are observing initial component state
@@ -33,9 +34,9 @@ export const ExerciseView = () => {
 
     //return array of filterd workout exercise objects 
     const filteredWorkoutExercises = () => {
-        const filteredWExercises = []
-        workoutExercises.map((workoutExercise) => {
-            if (workoutid === workoutExercise.workoutId) {
+        let filteredWExercises = [];
+        return workoutExercises.map((workoutExercise) => {
+            if (workoutid == workoutExercise?.workoutId) {
                 filteredWExercises.push(workoutExercise)
             } return filteredWExercises
         })
@@ -45,7 +46,7 @@ export const ExerciseView = () => {
     const displayExercises = (filteredWExercises) => {
         for (const filteredWExercise of filteredWExercises) {
             for (const exercise of exercises) {
-                if (filteredWExercise.exerciseId === exercise.id) {
+                if (filteredWExercise?.exerciseId === exercise?.id) {
                     return <ul>
                         <li key="exercise--{exercise.id}">
                             <strong>{exercise.name}</strong>&nbsp;<br />
@@ -81,7 +82,8 @@ export const ExerciseView = () => {
                 <h2 className="workout"><b>MyWorkout</b></h2>
                 <div className="workout__exercises">
                     {displayExercises(filteredWExercises)}
-                </div></>
+                </div>
+            </>
         </>
     )
 }
