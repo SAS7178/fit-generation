@@ -5,7 +5,7 @@ export const WelcomePage = () => {
 
   return (
     <>
-      <body>
+      <section>
         <Card inverse className="welcome__card">
           <CardImg
             alt="Card image cap"
@@ -29,10 +29,10 @@ export const WelcomePage = () => {
             </CardText>
           </CardImgOverlay>
         </Card>
-      </body>
+      </section>
       {/* My discription info */}
       <>
-        <body className="body"></body></>
+        <div className="div"></div></>
     </>
   )
 }

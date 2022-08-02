@@ -7,10 +7,6 @@ import "./Workouts.css"
 //then nav to exercise page on generate click
 export const GenerateWorkoutForm = () => {
   const navigate = useNavigate()
-  
-  //TODO: Add the correct default properties to the
-  //initial state object
-  
   const [customerWorkout, update] = useState({
     customerId: null,
     experienceId: "stretch",
@@ -48,7 +44,7 @@ export const GenerateWorkoutForm = () => {
   const handleGenerateButtonClick = () => {
     navigate(`/exercise/${fitCustomerObject.id}`)
   }
-  // TODO: Perform the fetch() to POST the object to the API
+ 
   return (
     <Form>
       <div className='generator__nav'>
