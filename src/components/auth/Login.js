@@ -48,9 +48,9 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <button type="submit">
-                            <Link className="navbar__link" to="" onClick={() => {
+                            <Link className="navbar__link" to="" onClick={(e) => {
   localStorage.getItem("fit_customer")
-  handleLogin()
+  handleLogin(e)
   navigate("/profile/:customerId")
 }}>Login</Link>
                         </button>
