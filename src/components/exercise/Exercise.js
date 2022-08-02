@@ -14,6 +14,7 @@ export const Exercise = () => {
     const [newWorkoutId, setId] = useState(null)
      const workoutId = Number(newWorkoutId)
     const navigate = useNavigate()
+    
     useEffect(
         () => {
             fetch(`http://localhost:8088/exercises`)

@@ -65,17 +65,14 @@ export const WelcomeFooter = () => {
             </div>
             <>
                 <List className="footer">
-                    <li>
-                        <img className="fb_image" src= "https://image.similarpng.com/very-thumbnail/2020/04/Facebook-
-                        logo-watercolor-social-media-icon-png.png"/>
-                        
-                    </li>
+    
                     <li>
                         Phasellus iaculis
                     </li>
                     <li>
                         Nulla volutpat
                     </li>
+                    <div className="footer_img" ></div>
                 </List>
             </>
         </>

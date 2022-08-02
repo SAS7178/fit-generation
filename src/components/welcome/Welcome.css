@@ -9,13 +9,19 @@
         
     }
 
+
     .footer {
         background-color: rgb(138, 167, 234);
+        background-image: url("https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg");
         height: 7em;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
     .fb_image {
-        width: fit-content;
+        height: 1em;
+        width: 1px;
+    }
+    .footer_img {
+        background-image: url("https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg");
     }
