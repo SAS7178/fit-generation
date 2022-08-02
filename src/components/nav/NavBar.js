@@ -34,20 +34,23 @@ export const NavBar = (args) => {
                   </div></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
+                  
                   <Nav fill pills>
                     <NavItem>
                       <NavLink href="/profile/:customerId">
                         My Profile
                       </NavLink>
                     </NavItem>
+                    
                     <NavItem>
-                      <NavLink to="" onClick={() => {
+                      <NavLink href="" onClick={() => {
                         localStorage.removeItem("fit_customer")
                         navigate("/login", { replace: true })
                       }}>Logout
                       </NavLink>
                     </NavItem>
                   </Nav>
+
                   <NavbarText className='welcome__home'>Welcome!</NavbarText>
                 </Collapse>
               </Navbar>
