@@ -74,8 +74,8 @@ export const Exercise = () => {
 
     const exerciseList = () => {
         return filteredExercises.map(exercise => {
-            return <ul>
-                <li className="w__e" key="{exercise.id}" type="checkbox">
+            return <ul key={exercise.id}>
+                <li className="w__e" key={exercise.id} type="checkbox">
                     <strong>{exercise.name}</strong>&nbsp;<br />
                     sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
                     reps:&nbsp;{exercise.reps}&nbsp;&nbsp;

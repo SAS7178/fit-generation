@@ -88,7 +88,7 @@ export const Profile = () => {
       <h2 className="workout"><b>MyWorkouts</b></h2>
       <div className="workout__list">
         <ul>
-          {filteredWorkouts.map(workout => <li className="w__e" key="{workoutId}">
+          {filteredWorkouts.map(workout => <li className="w__e" key={workout.id}>
             <strong>{workout.workoutName}</strong>&nbsp;<br />
             Born on:&nbsp;{workout.dateCompleted}&nbsp;&nbsp;
             <div className="workout__btns">

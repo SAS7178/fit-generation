@@ -6,6 +6,7 @@ import "./Exercise.css"
 export const ExerciseView = () => {
     const { workoutId } = useParams()
     const [exercises, setExercises] = useState([])
+    const [currentWorkoutExercises, setCurrentWorkoutExercises] = useState([])
     const [workoutExercises, setWorkoutExercises] = useState([])
     const workoutid = Number(workoutId)
 
@@ -15,7 +16,7 @@ export const ExerciseView = () => {
                 .then(response => response.json())
                 .then((data) => {
                     setWorkoutExercises(data)
-                    console.log(data)
+                    // console.log(data)
                 })
         },
         [] // When this array is empty, you are observing initial component state
@@ -26,40 +27,40 @@ export const ExerciseView = () => {
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
-                    console.log(data)
+                    // console.log(data)
                 })
         },
         [] // When this array is empty, you are observing initial component state
     )
+    useEffect(
+        () => {
+            let filteredWExercises = []
+            for (const workoutExercise of workoutExercises) {
+                if (workoutExercise.workoutId === workoutid) {
+                    filteredWExercises.push(workoutExercise)
 
-    //return array of filterd workout exercise objects 
-    const filteredWorkoutExercises = () => {
-        let filteredWExercises = [];
-        return workoutExercises.map((workoutExercise) => {
-            if (workoutid == workoutExercise?.workoutId) {
-                filteredWExercises.push(workoutExercise)
-            } return filteredWExercises
-        })
-    }
-    const filteredWExercises = filteredWorkoutExercises()
-    //if filterd exercise objects.exerciseId and exercises have same id list each exercises info to display
-    const displayExercises = (filteredWExercises) => {
-        for (const filteredWExercise of filteredWExercises) {
-            for (const exercise of exercises) {
-                if (filteredWExercise?.exerciseId === exercise?.id) {
-                    return <ul>
-                        <li key="exercise--{exercise.id}">
-                            <strong>{exercise.name}</strong>&nbsp;<br />
-                            sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
-                            reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
-                            rest time:&nbsp;{exercise.rest}<br />
-                            <a href={exercise.exampleVid}><Button className="exercise__link"
-                            >Watch tutorial</Button></a>
-                        </li>
-                    </ul>
                 }
-            }
-        }
+            } return setCurrentWorkoutExercises(filteredWExercises)
+        },
+        [workoutExercises] // When this array is empty, you are observing initial component state
+    )
+
+    const displayExercises = (filteredWExercises) => {
+        return filteredWExercises.map((WExercise) => {
+            return exercises.map((exercise) => {
+                 if (exercise.id === WExercise.exerciseId) {
+                    return <li key="exercise--{exercise.id}">
+                        <strong>{exercise.name}</strong>&nbsp;<br />
+                        sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
+                        reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
+                        rest time:&nbsp;{exercise.rest}<br />
+                        <a href={exercise.exampleVid}>
+                            <Button className="exercise__link">Watch tutorial</Button>
+                        </a>
+                    </li>
+                }
+            })
+        })
     }
 
     return (
@@ -81,7 +82,8 @@ export const ExerciseView = () => {
             <>
                 <h2 className="workout"><b>MyWorkout</b></h2>
                 <div className="workout__exercises">
-                    {displayExercises(filteredWExercises)}
+                    {displayExercises(currentWorkoutExercises)}
+                    
                 </div>
             </>
         </>
