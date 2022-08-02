@@ -14,7 +14,7 @@ export const Profile = () => {
   // fetches and set all workoutExercises sets to var to make available for iteration globally
   useEffect(
     () => {
-      fetch(`http://localhost:8088/workoutExercises`)
+      fetch(`http://localhost:8088/workouts`)
         .then(response => response.json())
         .then((data) => {
           setworkoutExercises(data)
@@ -34,7 +34,7 @@ export const Profile = () => {
   )
 
   const getAllWorkouts = () => {
-    fetch(`http://localhost:8088/workoutExercises`)
+    fetch(`http://localhost:8088/workouts`)
       .then(response => response.json())
       .then((workoutArray) => {
         setworkoutExercises(workoutArray)
@@ -43,7 +43,7 @@ export const Profile = () => {
   }
   const deleteButton = (workoutId) => {
 
-    fetch(`http://localhost:8088/workoutExercises/${workoutId}`, {
+    fetch(`http://localhost:8088/workouts/${workoutId}`, {
       method: "DELETE"
     })
       .then(() => { getAllWorkouts() })
