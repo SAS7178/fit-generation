@@ -9,7 +9,7 @@ export const ExerciseView = () => {
     const [currentWorkoutExercises, setCurrentWorkoutExercises] = useState([])
     const [workoutExercises, setWorkoutExercises] = useState([])
     const workoutid = Number(workoutId)
-
+    
     //get workoutExercises set to var
     useEffect(
         () => {
@@ -40,7 +40,6 @@ export const ExerciseView = () => {
             for (const workoutExercise of workoutExercises) {
                 if (workoutExercise.workoutId === workoutid) {
                     filteredWExercises.push(workoutExercise)
-
                 }
             } return setCurrentWorkoutExercises(filteredWExercises)
         },
