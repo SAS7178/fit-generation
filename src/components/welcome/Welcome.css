@@ -1,5 +1,4 @@
 
-
     .welcome__card {
         display: flex;
         justify-content: center;
@@ -23,5 +22,6 @@
         width: 1px;
     }
     .footer_img {
-        background-image: url("https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg");
+       width: min-content;
+       height: 20em;
     }

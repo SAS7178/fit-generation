@@ -72,7 +72,8 @@ export const WelcomeFooter = () => {
                     <li>
                         Nulla volutpat
                     </li>
-                    <div className="footer_img" ></div>
+                    <img className="footer_img" src="https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg"></img>
+                  
                 </List>
             </>
         </>

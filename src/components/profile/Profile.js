@@ -38,7 +38,6 @@ export const Profile = () => {
       .then(response => response.json())
       .then((workoutArray) => {
         setworkoutExercises(workoutArray)
-
       })
   }
   const deleteButton = (workoutId) => {

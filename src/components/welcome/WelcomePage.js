@@ -30,7 +30,6 @@ export const WelcomePage = () => {
           </CardImgOverlay>
         </Card>
       </section>
-      {/* My discription info */}
       <>
         <div className="div"></div></>
     </>
