@@ -13,13 +13,15 @@ import {
 } from 'reactstrap';
 
 export const NavBar = (args) => {
+  // hamburger w initial state of closed
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate()
   const toggle = () => setIsOpen(!isOpen);
   
+  //get fitCustomer from local set to var
   const localFitCustomer = localStorage.getItem("fit_customer")
   const fitCustomerObject = JSON.parse(localFitCustomer)
-  
+  // return one nav if customer true return other if false
             if(fitCustomerObject) {
           return (
 
