@@ -1,39 +1,34 @@
-import { List, Progress } from "reactstrap"
+import { List, Offcanvas, OffcanvasBody, OffcanvasHeader, Progress } from "reactstrap"
 
 export const WelcomeFooter = () => {
 
     return (
         <>
+            <div><div>
+                <Offcanvas
+                    direction="start"
+                    scrollable
+                    toggle={function noRefCheck() { }}
+                >
+                    <OffcanvasHeader toggle={function noRefCheck() { }}>
+                        Offcanvas
+                    </OffcanvasHeader>
+                    <OffcanvasBody>
+                        <strong>
+                            This is the Offcanvas body.
+                        </strong>
+                    </OffcanvasBody>
+                </Offcanvas>
+            </div></div>
             <div>
-                <Progress
-                    animated
-                    className="my-3"
-                    value={10}
-                />
-                <Progress
-                    animated
-                    className="my-3"
-                    color="success"
-                    value="25"
-                />
+
                 <Progress
                     animated
                     className="my-3"
                     color="info"
                     value={50}
                 />
-                <Progress
-                    animated
-                    className="my-3"
-                    color="warning"
-                    value={75}
-                />
-                <Progress
-                    animated
-                    className="my-3"
-                    color="danger"
-                    value="100"
-                />
+
                 <Progress
                     className="my-3"
                     multi
@@ -65,7 +60,7 @@ export const WelcomeFooter = () => {
             </div>
             <>
                 <List className="footer">
-    
+
                     <li>
                         Phasellus iaculis
                     </li>
@@ -73,7 +68,7 @@ export const WelcomeFooter = () => {
                         Nulla volutpat
                     </li>
                     <img className="footer_img" src="https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg"></img>
-                  
+
                 </List>
             </>
         </>
