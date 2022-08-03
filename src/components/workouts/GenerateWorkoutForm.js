@@ -7,6 +7,7 @@ import "./Workouts.css"
 //then nav to exercise page on generate click
 export const GenerateWorkoutForm = () => {
   const navigate = useNavigate()
+  //create state obj with initial state of customerWorkout obj
   const [customerWorkout, update] = useState({
     customerId: null,
     experienceId: "stretch",
@@ -41,6 +42,7 @@ export const GenerateWorkoutForm = () => {
     })
   }
 
+  // funct to navigate on click of generateWorkout with customerid for useparam
   const handleGenerateButtonClick = () => {
     navigate(`/exercise/${fitCustomerObject.id}`)
   }
@@ -98,6 +100,7 @@ export const GenerateWorkoutForm = () => {
                 className="form-control"
                 value={customerWorkout.height}
                 onChange={
+                  //take current obj value and update with user selected value
                   (evt) => {
                     const copy = { ...customerWorkout }
                     copy.height = parseFloat(evt.target.value, 2)
@@ -115,6 +118,7 @@ export const GenerateWorkoutForm = () => {
                 className="form-control"
                 value={customerWorkout.weight}
                 onChange={
+                  //take current obj value and update with user selected value
                   (evt) => {
                     const copy = { ...customerWorkout }
                     copy.weight = parseInt(evt.target.value)
@@ -136,6 +140,7 @@ export const GenerateWorkoutForm = () => {
           name="select"
           type="select"
           onChange={
+            //take current obj value and update with user selected value
             (evt) => {
               const copy = { ...customerWorkout }
               copy.goalId = parseInt(evt.target.value)
@@ -168,6 +173,7 @@ export const GenerateWorkoutForm = () => {
           name="select"
           type="select"
           onChange={
+            //take current obj value and update with user selected value
             (evt) => {
               const copy = { ...customerWorkout }
               copy.muscleId = parseInt(evt.target.value)
