@@ -44,10 +44,10 @@ export const Login = () => {
                             value={email}
                             onChange={evt => set(evt.target.value)}
                             className="form-control"
-                            placeholder="Email address"
+                            placeholder="example@format.com"
                             required autoFocus />
                     </fieldset>
-                    <button type="submit">
+                    <button className="login__button" type="submit">
                             <Link className="navbar__link" to="" onClick={(e) => {
   localStorage.getItem("fit_customer")
   handleLogin(e)

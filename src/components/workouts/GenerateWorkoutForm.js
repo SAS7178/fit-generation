@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom"
-import { Form, FormGroup, FormText, Input, Label } from 'reactstrap';
+import { Form, FormGroup, FormText, Input, Label, Progress } from 'reactstrap';
 import "./Workouts.css"
 
 // funct to take input form data and post to database in customerworkouts array
@@ -65,11 +65,12 @@ export const GenerateWorkoutForm = () => {
         <legend>
           Experience Level
         </legend>
+        <div className='experience'>
         <FormGroup>
           <Input
             name="radio1"
             type="radio" />
-          <Label>
+          <Label className='beginner'>
             Beginner
           </Label>
         </FormGroup>
@@ -77,7 +78,7 @@ export const GenerateWorkoutForm = () => {
           <Input
             name="radio1"
             type="radio" />
-          <Label>
+          <Label className='intermediate'>
             Intermediate
           </Label>
         </FormGroup>
@@ -86,13 +87,15 @@ export const GenerateWorkoutForm = () => {
             name="radio1"
             type="radio" />
           {' '}
-          <Label>
+          <Label className='advanced'>
             Advanced
           </Label>
         </FormGroup>
+        </div>
+
         <FormGroup>
           <fieldset>
-            <div className="form-group">
+            <div className="form-weight">
               <label htmlFor="name">Height</label>
               <input type="number"
                 className="form-control"
@@ -105,11 +108,12 @@ export const GenerateWorkoutForm = () => {
                   }
                 } />
             </div>
+           
           </fieldset>
         </FormGroup>
         <FormGroup>
           <fieldset>
-            <div className="form-group">
+            <div className="form-weight">
               <label htmlFor="name">Weight</label>
               <input type="number"
                 className="form-control"
@@ -124,8 +128,11 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
-        <FormGroup >
-        </FormGroup>
+            <div className='art'>
+                <img className='clipart' src="https://thumbs.dreamstime.com/b/detailed-illustration-
+                silhouettes-strong-rolling-people-set-girl-man-sport-fitness-gym-body-
+                building-workout-powerlifting-115536097.jpg" width="50%"></img>
+              </div>
       </FormGroup>
       <FormGroup>
         <Label for="goal">
@@ -199,16 +206,53 @@ export const GenerateWorkoutForm = () => {
           Upload your Fit Generation profile img here
         </FormText>
       </FormGroup>
+      <div>
+                <Progress
+                    className="my-3"
+                    multi
+                >
+                    <Progress
+                        animated
+                        bar
+                        color="warning"
+                        value="20"
+                    />
+                    <Progress
+                        animated
+                        bar
+                        color="warning"
+                        value="20"
+                    />
+                    <Progress
+                        animated
+                        bar
+
+                        value="20"
+                    />
+                    <Progress
+                        animated
+                        bar
+                        color="danger"
+                        value="20"
+                    />
+                    <Progress
+                        animated
+                        bar
+                        color="success"
+                        value="20"
+                    />
+                </Progress>
+            </div>
       <button
         onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
         className="btn btn-primary">
-        update
+        Update
       </button>
       <button
         onClick={(evt) => handleGenerateButtonClick(evt)
         }
         className="btn btn-primary">
-        Generate Workout
+         Generate Workout
       </button>
     </Form>
   )

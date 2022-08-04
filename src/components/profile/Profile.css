@@ -19,18 +19,26 @@
     border-color: rgb(54, 55, 55);
     border-radius: 50%;
 }
+.workout_name {
+    font-style: oblique;
+color: blue;
+}
 
 button {
-    width: 25%;
+
+    width: 20%;
 }
 
 .welcome__card {
     display: flex;
+    border: 2px solid black;
     margin-right: 3em;
 }
 
 
 .workout__btns {
     display: flex;
+    width: 40em;
+    margin-left: 5em;
     
 }

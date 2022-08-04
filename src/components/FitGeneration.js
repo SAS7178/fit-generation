@@ -5,7 +5,6 @@ import { Register } from "./auth/Register"
 import { GenerateWorkoutForm } from "./workouts/GenerateWorkoutForm"
 import { Profile } from "./profile/Profile"
 import { WelcomePage } from "./welcome/WelcomePage"
-import { WelcomeFooter } from "./welcome/WelcomeFooter"
 import { Exercise } from "./exercise/Exercise"
 import { ExerciseView } from "./exercise/ExerciseView"
 
@@ -16,7 +15,6 @@ export const FitGeneration = () => {
 				<>
 					<NavBar />
 					<WelcomePage />
-					<WelcomeFooter />
 				</>
 		} />
 		<Route path="/login" element={<Login />} />

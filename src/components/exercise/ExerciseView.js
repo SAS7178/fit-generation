@@ -49,12 +49,12 @@ export const ExerciseView = () => {
         return filteredWExercises.map((WExercise) => {
             return exercises.map((exercise) => {
                  if (exercise.id === WExercise.exerciseId) {
-                    return <li key="exercise--{exercise.id}">
-                        <strong>{exercise.name}</strong>&nbsp;<br />
+                    return <li className="workout__exercise" key="exercise--{exercise.id}">
+                        <strong>{exercise.name}</strong><br/><br/>
                         sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
                         reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                         rest time:&nbsp;{exercise.rest}<br />
-                        <a href={exercise.exampleVid}>
+                        <a href={exercise.exampleVid}><br/><br/>
                             <Button className="exercise__link">Watch tutorial</Button>
                         </a>
                     </li>

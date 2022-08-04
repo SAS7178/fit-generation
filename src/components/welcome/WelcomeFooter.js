@@ -4,7 +4,7 @@ export const WelcomeFooter = () => {
 
     return (
         <>
-            <div><div>
+            <div>
                 <Offcanvas
                     direction="start"
                     scrollable
@@ -19,57 +19,29 @@ export const WelcomeFooter = () => {
                         </strong>
                     </OffcanvasBody>
                 </Offcanvas>
-            </div></div>
-            <div>
-
-                <Progress
-                    animated
-                    className="my-3"
-                    color="info"
-                    value={50}
-                />
-
-                <Progress
-                    className="my-3"
-                    multi
-                >
-                    <Progress
-                        animated
-                        bar
-                        value="10"
-                    />
-                    <Progress
-                        animated
-                        bar
-                        color="success"
-                        value="30"
-                    />
-                    <Progress
-                        animated
-                        bar
-                        color="warning"
-                        value="20"
-                    />
-                    <Progress
-                        animated
-                        bar
-                        color="danger"
-                        value="20"
-                    />
-                </Progress>
             </div>
             <>
+
                 <List className="footer">
 
-                    <li>
-                        Phasellus iaculis
-                    </li>
-                    <li>
-                        Nulla volutpat
-                    </li>
-                    <img className="footer_img" src="https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg"></img>
+                    <div className="footer-box">
+                        <div className="about">
+                            About us:
+                        </div>
+                        <img className="footer_img" src="https://thumbs.dreamstime.com/z/detailed-illustration-silhouettes-strong-rolling-people-set-girl-man-sport-fitness-gym-body-building-workout-powerlifting-115536119.jpg"></img>
+                        <>
+                        </>
+                        <img className="footer_img" src="https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg"></img>
+                        <>
+                        </>
+                        <img className="footer_img" src="https://thumbs.dreamstime.com/z/detailed-colorful-silhouette-yoga-vector-illustration-fitness-concept-gymnastics-aerobicssport-aerobics-115520142.jpg"></img>
+                        <div className="contact">
+                            Contact us:
+                        </div>
+                    </div>
 
                 </List>
+
             </>
         </>
 

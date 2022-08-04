@@ -2,26 +2,56 @@
     .welcome__card {
         display: flex;
         justify-content: center;
-        max-height:max-content;
-        margin-right: 5em;
-        margin-top: 12.5em;
-        
-    }
-
-
+        position: relative;
+        height:min-content;
+        margin-top: 13.5em;
+        margin-left: 3em;
+        display: flex;
+        border: 3px solid rgb(161, 232, 232);
+    } 
     .footer {
-        background-color: rgb(138, 167, 234);
-        background-image: url("https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg");
-        height: 7em;
+        background-color: rgb(252, 252, 252);
+        margin: 0;
+        border: 2px double rgb(161, 232, 232);
+        position: fixed;
+        bottom: 0;
+        height: 9em;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
-    .fb_image {
-        height: 1em;
-        width: 1px;
+    .myPT {
+        display: flex;
+        justify-content: space-around;
+      margin-top: 3em;  
+    }
+    .about{
+        display: flex;
+        margin-right: 8em;
+    }
+    .contact{
+        display: flex;
+        margin-left: 8em;
+    }
+    ul.footer {
+        display: flex;
+        width: 100%;
+        margin-top: 11rem;
+    }
+    
+    .card-box {
+        max-height: fit-content;
+        max-width: 100%;
+    }
+    .footer-box {
+        display: flex;
+      justify-content: space-around;
     }
     .footer_img {
-       width: min-content;
-       height: 20em;
+       width: 100%;
+       height: 10rem;
+    }
+    .li {
+        display: flex;
+        justify-content: space-between;
     }
