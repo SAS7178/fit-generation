@@ -6,8 +6,8 @@ import "./Exercise.css"
 export const ExerciseView = () => {
     const { workoutId } = useParams()
     const [exercises, setExercises] = useState([])
-    const [currentWorkoutExercises, setCurrentWorkoutExercises] = useState([])
     const [workoutExercises, setWorkoutExercises] = useState([])
+    const [currentWorkoutExercises, setCurrentWorkoutExercises] = useState([])
     const workoutid = Number(workoutId)
 
     useEffect(
@@ -26,7 +26,7 @@ export const ExerciseView = () => {
             fetch(`http://localhost:8088/exercises`)
                 .then(response => response.json())
                 .then((data) => {
-                    setExercises(data)
+                    setExercises(data)    
                     // console.log(data)
                 })
         },
@@ -36,13 +36,13 @@ export const ExerciseView = () => {
         () => {
             let filteredWExercises = []
             for (const workoutExercise of workoutExercises) {
-                if (workoutExercise.workoutId === workoutid) {
+                if (workoutExercise?.workoutId === workoutid) {
                     filteredWExercises.push(workoutExercise)
 
                 }
             } return setCurrentWorkoutExercises(filteredWExercises)
         },
-        [workoutExercises] // When this array is empty, you are observing initial component state
+        [workoutExercises,workoutid] // When this array is empty, you are observing initial component state
     )
 
     const displayExercises = (filteredWExercises) => {

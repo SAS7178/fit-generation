@@ -5,7 +5,7 @@ import "./Profile.css"
 export const Profile = () => {
   const [workoutExercises, setworkoutExercises] = useState([])
   const [filteredWorkouts, setFilteredWorkouts] = useState([])
-  const [customer, setCustomers] = useState({})
+  //const [customer, setCustomers] = useState({})
   const { customerId } = useParams()
   const navigate = useNavigate()
 
@@ -23,16 +23,16 @@ export const Profile = () => {
     },
     [customerId] // When this array is empty, you are observing initial component state
   )
-  useEffect(
-    () => {
-      fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
-        .then(response => response.json())
-        .then((data) => {
-          setCustomers(data)
-        })
-    },
-    [] // When this array is empty, you are observing initial component state
-  )
+  // useEffect(
+  //   () => {
+  //     fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
+  //       .then(response => response.json())
+  //       .then((data) => {
+  //         setCustomers(data)
+  //       })
+  //   },
+  //   [] // When this array is empty, you are observing initial component state
+  // )
 
   useEffect(
     () => {
@@ -72,7 +72,7 @@ export const Profile = () => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
       <div></div>
-      <div>&nbsp;&nbsp;&nbsp;&nbsp;Welcome to your profile<>`${customer?.fullName}`</>!</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;Welcome to your profile<></>!</div>
       <div>
         <Card inverse className="welcome__card">
           <CardImg

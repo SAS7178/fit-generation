@@ -14,7 +14,6 @@
     font-size: xx-large;
     
 }
-
 .welcome__header {
     display: flex;
 }
@@ -34,6 +33,4 @@ height: 2em;
 .nonMember{
     display: flex;
     justify-content: start;
-   
-    
 }

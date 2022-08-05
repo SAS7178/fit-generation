@@ -29,8 +29,7 @@ export const WelcomePage = () => {
           </CardImgOverlay>
         </Card>
       <section className="myPT" >
-        <iframe width="250" height="120" src="https://www.youtube.com/embed/N0HRRWn7Ayg" title="My PT Hub - Face to Face Personal Training and Coaching" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="250" height="120" src="https://www.youtube.com/embed/N0HRRWn7Ayg" title="My PT Hub - Face to Face Personal Training and Coaching" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
       </section>
       </section>
 
