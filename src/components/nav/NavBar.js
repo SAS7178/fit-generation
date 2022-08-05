@@ -17,15 +17,12 @@ export const NavBar = (args) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate()
   const toggle = () => setIsOpen(!isOpen);
-  const localFitCustomer = localStorage.getItem("fit_customer")
-  const fitCustomerObject = JSON.parse(localFitCustomer)
+
 
   //get fitCustomer from local set to var
   const localFitCustomer = localStorage.getItem("fit_customer")
   const fitCustomerObject = JSON.parse(localFitCustomer)
   // return one nav if customer true return other if false
-            if(fitCustomerObject) {
-          return (
   if (fitCustomerObject) {
     return (
 
@@ -79,7 +76,6 @@ export const NavBar = (args) => {
             </div></NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-
             <Nav fill pills >
               <NavItem className='nonMember'>
                 <NavLink href="/register" className='nonMember'>
@@ -92,13 +88,9 @@ export const NavBar = (args) => {
                 </NavItem>
               </NavItem>
             </Nav>
-
             <NavbarText className='welcome__home'>Welcome!</NavbarText>
           </Collapse>
         </Navbar>
-        {/* <section className='welcome__menu'>
-                <b>Menu</b>
-              </section> */}
       </div>
     )
   }

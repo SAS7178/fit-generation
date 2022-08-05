@@ -46,7 +46,6 @@ export const Exercise = () => {
                 .then(response => response.json())
                 .then((data) => {
                     const WObj = (data.slice(-1))
-                    console.log(WObj)
                     setId(WObj[0].id +1)
                 })
         },
