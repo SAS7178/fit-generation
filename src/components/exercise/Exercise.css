@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(226, 226, 227);
+    background-color: rgb(232, 232, 232);
     margin: 0;
 }
 .workout__exercises {
@@ -14,10 +14,18 @@ width: 5em;
 }
 .workout__exercise {
     display: flex;
+    flex-direction: column;
+    
+    align-items: center;
     flex-wrap: wrap;
-    margin: 1em;
-    border: 1px solid black;
-    padding-right: 3em;
+    position: relative;
+    width: 75%;
+    margin: 3em;
+    border: 1px dashed black;
+}
+.name{
+    display: flex;
+   margin-left: 8em;
 }
 
 button {
@@ -31,10 +39,20 @@ button {
     justify-content: center;
     margin-top: 1.5em;
  }
+
+ .btn-primary {
+    width: 7em;
+ }
+
 .w__e {
     display: flex;
+    flex-wrap: wrap;
+    border: solid 1px;
+    width: 50%;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
     margin-top: 4em;
 }
 .navbar__link{

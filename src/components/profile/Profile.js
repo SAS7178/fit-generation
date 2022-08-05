@@ -6,7 +6,7 @@ import "./Profile.css"
 export const Profile = () => {
   const [workoutExercises, setworkoutExercises] = useState([])
   const [filteredWorkouts, setFilteredWorkouts] = useState([])
-  //const [customer, setCustomers] = useState({})
+  const [customer, setCustomers] = useState({})
   const { customerId } = useParams()
   const navigate = useNavigate()
 
@@ -24,16 +24,17 @@ export const Profile = () => {
     },
     [customerId] // When this array is empty, you are observing initial component state
   )
-  // useEffect(
-  //   () => {
-  //     fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
-  //       .then(response => response.json())
-  //       .then((data) => {
-  //         setCustomers(data)
-  //       })
-  //   },
-  //   [] // When this array is empty, you are observing initial component state
-  // )
+  useEffect(
+    () => {
+      fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
+        .then(response => response.json())
+        .then((data) => {
+          console.log(data)
+          setCustomers(data[0])
+        })
+    },
+    [] // When this array is empty, you are observing initial component state
+  )
 
   //set customer workoutExercises to var dep on workoutexercises change 
   useEffect(
@@ -45,7 +46,7 @@ export const Profile = () => {
     },
     [workoutExercises] // When this array is empty, you are observing initial component state
   )
-//funt to reerender all workouts to be used where needed
+  //funt to reerender all workouts to be used where needed
   const getAllWorkouts = () => {
     fetch(`http://localhost:8088/workouts`)
       .then(response => response.json())
@@ -73,8 +74,13 @@ export const Profile = () => {
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
-      <div></div>
-      <div>&nbsp;&nbsp;&nbsp;&nbsp;Welcome to your profile<></>!</div>
+
+      <div >
+        &nbsp;&nbsp;&nbsp;&nbsp;Welcome back,
+        <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>{customer.fullName}</b></div>
+      </div>
+
       <div>
         <Card inverse className="welcome__card">
           <CardImg

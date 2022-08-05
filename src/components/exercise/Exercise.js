@@ -91,7 +91,8 @@ export const Exercise = () => {
                     reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                     rest time:&nbsp;{exercise.rest}<br />
                     <a href={exercise.exampleVid}> <Button className="exercise__link"
-                    >Watch tutorial</Button></a>     <FormGroup>
+                    >Watch tutorial</Button></a>    
+                     <FormGroup>
                         <button
                              onClick={() => handleAddExerciseClick(`${exercise.id}`)}
                             className="btn btn-primary">
