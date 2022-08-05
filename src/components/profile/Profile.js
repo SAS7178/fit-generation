@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
 import "./Profile.css"
+
 export const Profile = () => {
   const [workoutExercises, setworkoutExercises] = useState([])
   const [filteredWorkouts, setFilteredWorkouts] = useState([])
@@ -12,7 +13,7 @@ export const Profile = () => {
   const localFitCustomer = localStorage.getItem("fit_customer")
   const fitCustomerObject = JSON.parse(localFitCustomer)
 
-  // fetches and set all workoutExercises sets to var to make available for iteration globally
+  // fetches and set all workouts for cust sets to var to make available for iteration globally
   useEffect(
     () => {
       fetch(`http://localhost:8088/workouts`)
@@ -34,6 +35,7 @@ export const Profile = () => {
   //   [] // When this array is empty, you are observing initial component state
   // )
 
+  //set customer workoutExercises to var dep on workoutexercises change 
   useEffect(
     () => {
       let filteredWorkouts = workoutExercises.filter(
@@ -43,7 +45,7 @@ export const Profile = () => {
     },
     [workoutExercises] // When this array is empty, you are observing initial component state
   )
-
+//funt to reerender all workouts to be used where needed
   const getAllWorkouts = () => {
     fetch(`http://localhost:8088/workouts`)
       .then(response => response.json())
@@ -51,8 +53,8 @@ export const Profile = () => {
         setworkoutExercises(workoutArray)
       })
   }
+  //func to delete workout from database if has wworkoutid
   const deleteButton = (workoutId) => {
-
     fetch(`http://localhost:8088/workouts/${workoutId}`, {
       method: "DELETE"
     })

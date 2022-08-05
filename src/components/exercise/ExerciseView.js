@@ -9,42 +9,45 @@ export const ExerciseView = () => {
     const [workoutExercises, setWorkoutExercises] = useState([])
     const [currentWorkoutExercises, setCurrentWorkoutExercises] = useState([])
     const workoutid = Number(workoutId)
-
+    
+    //get workoutExercises set to var
     useEffect(
         () => {
             fetch(`http://localhost:8088/workoutExercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setWorkoutExercises(data)
-                    // console.log(data)
                 })
         },
         [] // When this array is empty, you are observing initial component state
     )
+    //get exercises add to var
     useEffect(
         () => {
             fetch(`http://localhost:8088/exercises`)
                 .then(response => response.json())
                 .then((data) => {
-                    setExercises(data)    
-                    // console.log(data)
+                    setExercises(data)   
+                    setExercises(data)
                 })
         },
         [] // When this array is empty, you are observing initial component state
     )
+    // test workoutExercises to useparam workoutid push all to
+    // array set array to var/make dependency array on workoutExercises
     useEffect(
         () => {
             let filteredWExercises = []
             for (const workoutExercise of workoutExercises) {
                 if (workoutExercise?.workoutId === workoutid) {
                     filteredWExercises.push(workoutExercise)
-
                 }
             } return setCurrentWorkoutExercises(filteredWExercises)
         },
         [workoutExercises,workoutid] // When this array is empty, you are observing initial component state
     )
-
+// map the filitered workoutExercises and check to exercises to
+// return a html info for each exercise that matches
     const displayExercises = (filteredWExercises) => {
         return filteredWExercises.map((WExercise) => {
             return exercises.map((exercise) => {
@@ -82,6 +85,7 @@ export const ExerciseView = () => {
             <>
                 <h2 className="workout"><b>MyWorkout</b></h2>
                 <div className="workout__exercises">
+                    {/* call function with func as argument */}
                     {displayExercises(currentWorkoutExercises)}
                     
                 </div>

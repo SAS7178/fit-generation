@@ -14,7 +14,8 @@ export const Exercise = () => {
     const [newWorkoutId, setId] = useState(null)
      const workoutId = Number(newWorkoutId)
     const navigate = useNavigate()
-    
+
+    //fetch exercises set to var
     useEffect(
         () => {
             fetch(`http://localhost:8088/exercises`)
@@ -25,6 +26,7 @@ export const Exercise = () => {
         },
         [] // When this array is empty, you are observing initial component state
     )
+    //fetch customerWorkouts set var to customersWorkouts with queried customerId last index
     useEffect(
         () => {
             fetch(`http://localhost:8088/customerWorkouts?customerId=${customerId}`)
@@ -37,6 +39,7 @@ export const Exercise = () => {
         },
         [] // When this array is empty, you are observing initial component state
     )
+    //fetch workouts and set workout id to next workout id that will made 
     useEffect(
         () => {
             fetch(`http://localhost:8088/workouts`)
@@ -49,6 +52,8 @@ export const Exercise = () => {
         },
         [] // When this array is empty, you are observing initial component state
     )
+    //use effect to watch latestcustomerworkout and set the filtered exercises to
+    // var
     useEffect(
         () => {
             let filteredExercises = exercises.filter(
@@ -59,6 +64,7 @@ export const Exercise = () => {
         },
         [latestCustomerWorkout] // When this array is empty, you are observing initial component state
     )
+    //post function for onclick of workout Exercise
     const handleAddExerciseClick = (exerciseId) => {
       
         // TODO: Create the object to be saved to the API
@@ -66,6 +72,7 @@ export const Exercise = () => {
           workoutId: workoutId,
           exerciseId: parseInt(exerciseId)
         }
+        //post Object in this APi array
         return fetch(`http://localhost:8088/workoutExercises`, {
           method: "POST",
           headers: {
@@ -75,6 +82,7 @@ export const Exercise = () => {
         })
       }
 
+      //func to map exercises info and tutorial button/add to workout butn
     const exerciseList = () => {
         return filteredExercises.map(exercise => {
             return <ul key={exercise.id}>
@@ -100,6 +108,7 @@ export const Exercise = () => {
     const localFitCustomer = localStorage.getItem("fit_customer")
     const fitCustomerObject = JSON.parse(localFitCustomer)
 
+    //func to post workout of saved workoutexercises on save btn click
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
@@ -119,6 +128,8 @@ export const Exercise = () => {
         })
             .then(response => response.json())
             .then(() => {
+                //navigates back to profiile with render of new workout 
+                //added to list passed customer id for useParam
                 navigate(`/profile/${fitCustomerObject.id}`)
 
             })
