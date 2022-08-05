@@ -2,6 +2,7 @@
 .title__home {
     display: flex;
     font-size: 50%;
+    margin-left: 8em;
    color: rgb(119, 205, 205);
    
 }

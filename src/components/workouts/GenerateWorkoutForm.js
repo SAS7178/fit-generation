@@ -46,7 +46,7 @@ export const GenerateWorkoutForm = () => {
   const handleGenerateButtonClick = () => {
     navigate(`/exercise/${fitCustomerObject.id}`)
   }
- 
+
   return (
     <Form>
       <div className='generator__nav'>
@@ -68,31 +68,31 @@ export const GenerateWorkoutForm = () => {
           Experience Level
         </legend>
         <div className='experience'>
-        <FormGroup>
-          <Input
-            name="radio1"
-            type="radio" />
-          <Label className='beginner'>
-            Beginner
-          </Label>
-        </FormGroup>
-        <FormGroup >
-          <Input
-            name="radio1"
-            type="radio" />
-          <Label className='intermediate'>
-            Intermediate
-          </Label>
-        </FormGroup>
-        <FormGroup>
-          <Input
-            name="radio1"
-            type="radio" />
-          {' '}
-          <Label className='advanced'>
-            Advanced
-          </Label>
-        </FormGroup>
+          <FormGroup>
+            <Input
+              name="radio1"
+              type="radio" />
+            <Label className='beginner'>
+              Beginner
+            </Label>
+          </FormGroup>
+          <FormGroup >
+            <Input
+              name="radio1"
+              type="radio" />
+            <Label className='intermediate'>
+              Intermediate
+            </Label>
+          </FormGroup>
+          <FormGroup>
+            <Input
+              name="radio1"
+              type="radio" />
+            {' '}
+            <Label className='advanced'>
+              Advanced
+            </Label>
+          </FormGroup>
         </div>
 
         <FormGroup>
@@ -111,7 +111,7 @@ export const GenerateWorkoutForm = () => {
                   }
                 } />
             </div>
-           
+
           </fieldset>
         </FormGroup>
         <FormGroup>
@@ -132,11 +132,11 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
-            <div className='art'>
-                <img className='clipart' src="https://thumbs.dreamstime.com/b/detailed-illustration-
+        <div className='art'>
+          <img className='clipart' src="https://thumbs.dreamstime.com/b/detailed-illustration-
                 silhouettes-strong-rolling-people-set-girl-man-sport-fitness-gym-body-
                 building-workout-powerlifting-115536097.jpg" width="50%"></img>
-              </div>
+        </div>
       </FormGroup>
       <FormGroup>
         <Label for="goal">
@@ -201,7 +201,7 @@ export const GenerateWorkoutForm = () => {
       </FormGroup>
       <FormGroup>
         <Label for="exampleFile">
-          File
+          Image:
         </Label>
         <Input
           id="exampleFile"
@@ -213,42 +213,41 @@ export const GenerateWorkoutForm = () => {
         </FormText>
       </FormGroup>
       <div>
-                <Progress
-                    className="my-3"
-                    multi
-                >
-                    <Progress
-                        animated
-                        bar
-                        color="warning"
-                        value="20"
-                    />
-                    <Progress
-                        animated
-                        bar
-                        color="warning"
-                        value="20"
-                    />
-                    <Progress
-                        animated
-                        bar
-
-                        value="20"
-                    />
-                    <Progress
-                        animated
-                        bar
-                        color="danger"
-                        value="20"
-                    />
-                    <Progress
-                        animated
-                        bar
-                        color="success"
-                        value="20"
-                    />
-                </Progress>
-            </div>
+        <Progress
+          className="my-3"
+          multi
+        >
+          <Progress
+            animated
+            bar
+            color="warning"
+            value="20"
+          />
+          <Progress
+            animated
+            bar
+            color="warning"
+            value="20"
+          />
+          <Progress
+            animated
+            bar
+            value="20"
+          />
+          <Progress
+            animated
+            bar
+            color="danger"
+            value="20"
+          />
+          <Progress
+            animated
+            bar
+            color="success"
+            value="20"
+          />
+        </Progress>
+      </div>
       <button
         onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
         className="btn btn-primary">
@@ -258,7 +257,7 @@ export const GenerateWorkoutForm = () => {
         onClick={(evt) => handleGenerateButtonClick(evt)
         }
         className="btn btn-primary">
-         Generate Workout
+        Generate Workout
       </button>
     </Form>
   )

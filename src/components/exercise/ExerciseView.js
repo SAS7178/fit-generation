@@ -9,7 +9,7 @@ export const ExerciseView = () => {
     const [workoutExercises, setWorkoutExercises] = useState([])
     const [currentWorkoutExercises, setCurrentWorkoutExercises] = useState([])
     const workoutid = Number(workoutId)
-    
+
     //get workoutExercises set to var
     useEffect(
         () => {
@@ -27,7 +27,7 @@ export const ExerciseView = () => {
             fetch(`http://localhost:8088/exercises`)
                 .then(response => response.json())
                 .then((data) => {
-                    setExercises(data)   
+                    setExercises(data)
                     setExercises(data)
                 })
         },
@@ -44,20 +44,23 @@ export const ExerciseView = () => {
                 }
             } return setCurrentWorkoutExercises(filteredWExercises)
         },
-        [workoutExercises,workoutid] // When this array is empty, you are observing initial component state
+        [workoutExercises, workoutid] // When this array is empty, you are observing initial component state
     )
-// map the filitered workoutExercises and check to exercises to
-// return a html info for each exercise that matches
+    // map the filitered workoutExercises and check to exercises to
+    // return a html info for each exercise that matches
     const displayExercises = (filteredWExercises) => {
         return filteredWExercises.map((WExercise) => {
             return exercises.map((exercise) => {
-                 if (exercise.id === WExercise.exerciseId) {
+                if (exercise.id === WExercise.exerciseId) {
                     return <li className="workout__exercise" key="exercise--{exercise.id}">
-                        <strong>{exercise.name}</strong><br/><br/>
+                        <strong>
+                            {exercise.name}
+                        </strong>
+                        <br />
                         sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
                         reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                         rest time:&nbsp;{exercise.rest}<br />
-                        <a href={exercise.exampleVid}><br/><br/>
+                        <a href={exercise.exampleVid}>
                             <Button className="exercise__link">Watch tutorial</Button>
                         </a>
                     </li>
@@ -87,7 +90,7 @@ export const ExerciseView = () => {
                 <div className="workout__exercises">
                     {/* call function with func as argument */}
                     {displayExercises(currentWorkoutExercises)}
-                    
+
                 </div>
             </>
         </>
