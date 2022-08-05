@@ -62,6 +62,7 @@ export const Profile = () => {
       .then(() => { getAllWorkouts() })
 
   }
+  
   return (
     <>
       <div className="profile__nav">

@@ -23,6 +23,9 @@ width: 5em;
     margin: 3em;
     border: 1px dashed black;
 }
+.form-control {
+    width: 18em;
+}
 .name{
     display: flex;
    margin-left: 8em;

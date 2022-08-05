@@ -31,7 +31,7 @@ export const NavBar = (args) => {
           <NavbarBrand className="title__home" href="/">
             <div className='welcome__header'>
               <h1> <strong>Fit Generation</strong> </h1>
-              <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+              <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
             </div></NavbarBrand>
@@ -70,24 +70,29 @@ export const NavBar = (args) => {
           <NavbarBrand className="title__home" href="/">
             <div className='welcome__header'>
               <h1> Fit Generation </h1>
-              <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+              <img alt='' className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
             </div></NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
+
             <Nav fill pills >
               <NavItem className='nonMember'>
+                
                 <NavLink href="/register" className='nonMember'>
                   Register
                 </NavLink>
+               
                 <NavItem className='nonMember'>
                   <NavLink href="/login" className='nonMember'>
                     Login
                   </NavLink>
                 </NavItem>
+              
               </NavItem>
             </Nav>
+
             <NavbarText className='welcome__home'>Welcome!</NavbarText>
           </Collapse>
         </Navbar>

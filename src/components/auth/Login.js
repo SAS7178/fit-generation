@@ -13,17 +13,16 @@ export const Login = () => {
         return fetch(`http://localhost:8088/customers?email=${email}`)
             .then(res => res.json())
             .then(foundCustomers => {
-                
-                if (foundCustomers.length === 1) {
+                 if (foundCustomers.length === 1) {
                     const customer = foundCustomers[0]
                     localStorage.setItem("fit_customer", JSON.stringify({
                         id: customer.id,
                         email: customer.email
                     }))
-                    navigate("/profile/:customerId")
+                    navigate("/")
                 }
                 else {
-                    window.alert("Invalid login")
+                    window.alert("Robert has been BlackListed...Unfortunate")
                 }
             })
             
