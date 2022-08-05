@@ -6,8 +6,8 @@ import "./Exercise.css"
 export const ExerciseView = () => {
     const { workoutId } = useParams()
     const [exercises, setExercises] = useState([])
-    const [currentWorkoutExercises, setCurrentWorkoutExercises] = useState([])
     const [workoutExercises, setWorkoutExercises] = useState([])
+    const [currentWorkoutExercises, setCurrentWorkoutExercises] = useState([])
     const workoutid = Number(workoutId)
     
     //get workoutExercises set to var
@@ -27,6 +27,7 @@ export const ExerciseView = () => {
             fetch(`http://localhost:8088/exercises`)
                 .then(response => response.json())
                 .then((data) => {
+                    setExercises(data)   
                     setExercises(data)
                 })
         },
@@ -38,12 +39,12 @@ export const ExerciseView = () => {
         () => {
             let filteredWExercises = []
             for (const workoutExercise of workoutExercises) {
-                if (workoutExercise.workoutId === workoutid) {
+                if (workoutExercise?.workoutId === workoutid) {
                     filteredWExercises.push(workoutExercise)
                 }
             } return setCurrentWorkoutExercises(filteredWExercises)
         },
-        [workoutExercises] // When this array is empty, you are observing initial component state
+        [workoutExercises,workoutid] // When this array is empty, you are observing initial component state
     )
 // map the filitered workoutExercises and check to exercises to
 // return a html info for each exercise that matches
@@ -51,12 +52,12 @@ export const ExerciseView = () => {
         return filteredWExercises.map((WExercise) => {
             return exercises.map((exercise) => {
                  if (exercise.id === WExercise.exerciseId) {
-                    return <li key="exercise--{exercise.id}">
-                        <strong>{exercise.name}</strong>&nbsp;<br />
+                    return <li className="workout__exercise" key="exercise--{exercise.id}">
+                        <strong>{exercise.name}</strong><br/><br/>
                         sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
                         reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                         rest time:&nbsp;{exercise.rest}<br />
-                        <a href={exercise.exampleVid}>
+                        <a href={exercise.exampleVid}><br/><br/>
                             <Button className="exercise__link">Watch tutorial</Button>
                         </a>
                     </li>

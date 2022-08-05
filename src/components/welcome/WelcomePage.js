@@ -1,19 +1,18 @@
 import { Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
 import "./Welcome.css"
-
+import { WelcomeFooter } from "./WelcomeFooter.js";
 export const WelcomePage = () => {
 
   return (
     <>
-      <section>
+      <section className="card-box">
         <Card inverse className="welcome__card">
           <CardImg
             alt="Card image cap"
             src="https://picsum.photos/900/270?grayscale"
-            style={{
-              height: 270
-            }}
-            width="80%"
+          // style={{
+          //   height: 270
+          // }}
           />
           <CardImgOverlay>
             <CardTitle tag="h5">
@@ -29,10 +28,13 @@ export const WelcomePage = () => {
             </CardText>
           </CardImgOverlay>
         </Card>
+      <section className="myPT" >
+      
       </section>
-      {/* My discription info */}
-      <>
-        <div className="div"></div></>
+      </section>
+
+      <WelcomeFooter />
     </>
+
   )
 }

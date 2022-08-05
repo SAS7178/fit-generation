@@ -45,7 +45,9 @@ export const Exercise = () => {
             fetch(`http://localhost:8088/workouts`)
                 .then(response => response.json())
                 .then((data) => {
-                    setId(data.length + 1)
+                    const WObj = (data.slice(-1))
+                    console.log(WObj)
+                    setId(WObj[0].id +1)
                 })
         },
         [] // When this array is empty, you are observing initial component state

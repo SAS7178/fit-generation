@@ -1,6 +1,7 @@
 
 .title__home {
     display: flex;
+    font-size: 50%;
    color: rgb(119, 205, 205);
    
 }
@@ -8,25 +9,28 @@
     display: flex;
     width: min-content;
 }
-.welcome__home {
+.welcome__home { display: flex;
+    justify-content: center;
     font-size: xx-large;
+    
 }
-
 .welcome__header {
     display: flex;
 }
 .welcome__menu {
     color: blue;
     display: flex;
-    position: relative ;;
-    
+    position: relative ;
 }
 .Header {
-  
     background-color: rgb(197, 207, 207);
 height: 2em;
 }
 .nav__image {
     margin-left: 2em;
     border-radius: 100%;
+}
+.nonMember{
+    display: flex;
+    justify-content: start;
 }
