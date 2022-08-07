@@ -29,11 +29,10 @@ export const Profile = () => {
       fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
         .then(response => response.json())
         .then((data) => {
-          console.log(data)
           setCustomers(data[0])
         })
     },
-    [] // When this array is empty, you are observing initial component state
+    [fitCustomerObject.id] // When this array is empty, you are observing initial component state
   )
 
   //set customer workoutExercises to var dep on workoutexercises change 
@@ -44,7 +43,7 @@ export const Profile = () => {
           fitCustomerObject.id === workout.customerId)
       setFilteredWorkouts(filteredWorkouts)
     },
-    [workoutExercises] // When this array is empty, you are observing initial component state
+    [workoutExercises,fitCustomerObject.id] // When this array is empty, you are observing initial component state
   )
   //funt to reerender all workouts to be used where needed
   const getAllWorkouts = () => {
@@ -62,7 +61,7 @@ export const Profile = () => {
       .then(() => { getAllWorkouts() })
 
   }
-  
+
   return (
     <>
       <div className="profile__nav">
@@ -71,7 +70,7 @@ export const Profile = () => {
       </div>
       <div className='welcome__header'>
         <h1> Fit Generation </h1>
-        <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+        <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
@@ -79,11 +78,11 @@ export const Profile = () => {
       <div >
         &nbsp;&nbsp;&nbsp;&nbsp;Welcome back,
         <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <b>{customer.fullName}</b></div>
+          <b>{customer.name}</b></div>
       </div>
 
-      <div>
-        <Card inverse className="welcome__card">
+      <div className="card__Element">
+        <Card inverse className="profile__card">
           <CardImg
             alt="Card image cap"
             src="https://picsum.photos/900/270?grayscale"
@@ -92,7 +91,7 @@ export const Profile = () => {
             }}
             width="100%"
           />
-          <CardImgOverlay className="profile__card">
+          <CardImgOverlay className="profile__card-text">
             <CardTitle tag="h5">
               {/* overlayTitle */}
             </CardTitle>
@@ -106,29 +105,28 @@ export const Profile = () => {
         </Card>
       </div>
       <h2 className="workout"><b>My Workout List</b></h2>
-      <div className="workout__list">
-        <ul>
-          {filteredWorkouts.map(workout => <li className="w__e" key={workout.id}>
+
+      <section className="workout__list">
+        <ul className="w__List">
+          
+          {filteredWorkouts.map(workout => <li className="w__Item" key={workout.id}>
             <h3 className="workout_name"><strong>{workout.workoutName}</strong></h3>&nbsp;<br />
             <i>Generated on:</i>&nbsp;{workout.dateCompleted}&nbsp;&nbsp;
             <div className="workout__btns">
-
               <Button outline onClick={() =>
                 navigate(`/exerciseView/${workout.id}`)}
                 className="save-primary" >
                 - View Workout -
               </Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>
-
               <Button outline onClick={() => deleteButton(workout.id)}
                 className="save-primary">
                 - Delete Workout -
               </Button>
             </div>
-            <div>
-            </div>
           </li>)}
+        
         </ul>
-      </div>
+      </section>
 
     </>
   )

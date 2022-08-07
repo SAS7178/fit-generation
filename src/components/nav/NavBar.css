@@ -1,37 +1,51 @@
-
 .title__home {
     display: flex;
     font-size: 50%;
     margin-left: 8em;
-   color: rgb(119, 205, 205);
-   
+    color: rgb(119, 205, 205);
+
 }
+
+h1 {
+    font-style: ;
+}
+
 .login__input {
     display: flex;
     width: min-content;
 }
-.welcome__home { display: flex;
+
+.welcome__home {
+    display: flex;
     justify-content: center;
     font-size: xx-large;
-    
 }
+
 .welcome__header {
     display: flex;
 }
+
+.navbar-toggler {
+    width: 4em;
+}
+
 .welcome__menu {
     color: blue;
     display: flex;
-    position: relative ;
+    position: relative;
 }
+
 .Header {
     background-color: rgb(197, 207, 207);
-height: 2em;
+    height: 2em;
 }
+
 .nav__image {
     margin-left: 2em;
     border-radius: 100%;
 }
-.nonMember{
+
+.nonMember {
     display: flex;
     justify-content: start;
 }

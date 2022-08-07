@@ -37,7 +37,7 @@ export const Exercise = () => {
                     setLatest(singleCustomerWorkout)
                 })
         },
-        [] // When this array is empty, you are observing initial component state
+        [customerId] // When this array is empty, you are observing initial component state
     )
     //fetch workouts and set workout id to next workout id that will made 
     useEffect(
@@ -57,11 +57,11 @@ export const Exercise = () => {
         () => {
             let filteredExercises = exercises.filter(
                 (exercise) =>
-                    latestCustomerWorkout?.goalId == exercise?.goalId
+                    latestCustomerWorkout?.goalId === exercise?.goalId
             )
             setFilteredExercises(filteredExercises)
         },
-        [latestCustomerWorkout] // When this array is empty, you are observing initial component state
+        [latestCustomerWorkout, exercises] // When this array is empty, you are observing initial component state
     )
     //post function for onclick of workout Exercise
     const handleAddExerciseClick = (exerciseId) => {
@@ -111,12 +111,12 @@ export const Exercise = () => {
     //func to post workout of saved workoutexercises on save btn click
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
-
+        const date = new Date()
         // TODO: Create the object to be saved to the API
         const workoutToSendToApi = {
             customerId: fitCustomerObject.id,
             workoutName: workoutName,
-            dateCompleted: new Date
+            dateCompleted: date.toDateString()
         }
 
         return fetch(`http://localhost:8088/workouts`, {
@@ -128,7 +128,7 @@ export const Exercise = () => {
         })
             .then(response => response.json())
             .then(() => {
-                //navigates back to profiile with render of new workout 
+                //navigates back to profile with render of new workout 
                 //added to list passed customer id for useParam
                 navigate(`/profile/${fitCustomerObject.id}`)
 
@@ -149,7 +149,7 @@ export const Exercise = () => {
             </div>
             <div className='welcome__header'>
                 <h1> Fit Generation </h1>
-                <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+                <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
             </div>

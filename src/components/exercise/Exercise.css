@@ -46,10 +46,15 @@ button {
  .btn-primary {
     width: 7em;
  }
-
+ul{
+    display: flex;
+    justify-content: center;
+}
 .w__e {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
     border: solid 1px;
     width: 50%;
     flex-direction: column;

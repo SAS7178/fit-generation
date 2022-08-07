@@ -28,7 +28,7 @@ export const ExerciseView = () => {
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
-                    setExercises(data)
+                   
                 })
         },
         [] // When this array is empty, you are observing initial component state
