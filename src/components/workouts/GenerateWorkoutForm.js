@@ -11,9 +11,9 @@ export const GenerateWorkoutForm = () => {
   const [customerWorkout, update] = useState({
     customerId: null,
     experienceId: "stretch",
-    height: 0,
-    weight: 0,
-    goalId: null,
+    height: null,
+    weight: null,
+    goalId: 0,
     muscleId: 0
   })
 
@@ -97,16 +97,16 @@ export const GenerateWorkoutForm = () => {
 
         <FormGroup>
           <fieldset>
-            <div className="form-weight">
-              <label htmlFor="name">Height</label>
-              <input type="number"
+            <div className="form-height">
+              <label htmlFor="number">Height</label>
+              <input type="height"
                 className="form-control"
                 value={customerWorkout.height}
                 onChange={
                   //take current obj value and update with user selected value
                   (evt) => {
                     const copy = { ...customerWorkout }
-                    copy.height = parseFloat(evt.target.value, 2)
+                    copy.height = parseFloat(evt.target.value)
                     update(copy)
                   }
                 } />
@@ -117,8 +117,8 @@ export const GenerateWorkoutForm = () => {
         <FormGroup>
           <fieldset>
             <div className="form-weight">
-              <label htmlFor="name">Weight</label>
-              <input type="number"
+              <label htmlFor="number">Weight</label>
+              <input type="weight"
                 className="form-control"
                 value={customerWorkout.weight}
                 onChange={
@@ -132,13 +132,14 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
-        <div className='art'>
+        {/* <div className='art'>
           <img className='clipart' src="https://thumbs.dreamstime.com/b/detailed-illustration-
                 silhouettes-strong-rolling-people-set-girl-man-sport-fitness-gym-body-
                 building-workout-powerlifting-115536097.jpg" width="50%"></img>
-        </div>
+        </div> */}
       </FormGroup>
-      <FormGroup>
+      <div className='choice'>
+      <FormGroup className='determinables'>
         <Label for="goal">
           Fitness Goal
         </Label>
@@ -171,7 +172,7 @@ export const GenerateWorkoutForm = () => {
           </option>
         </Input>
       </FormGroup>
-      <FormGroup>
+      <FormGroup className='determinables'>
         <Label for="exampleSelect">
           Muscle Group
         </Label>
@@ -199,9 +200,10 @@ export const GenerateWorkoutForm = () => {
           </option>
         </Input>
       </FormGroup>
-      <FormGroup>
+      </div>
+      <FormGroup className='img-file'>
         <Label for="exampleFile">
-          Image:
+        Add
         </Label>
         <Input
           id="exampleFile"
@@ -220,13 +222,6 @@ export const GenerateWorkoutForm = () => {
           <Progress
             animated
             bar
-            color="warning"
-            value="20"
-          />
-          <Progress
-            animated
-            bar
-            color="warning"
             value="20"
           />
           <Progress
@@ -237,7 +232,11 @@ export const GenerateWorkoutForm = () => {
           <Progress
             animated
             bar
-            color="danger"
+            value="20"
+          />
+          <Progress
+            animated
+            bar
             value="20"
           />
           <Progress
@@ -248,6 +247,7 @@ export const GenerateWorkoutForm = () => {
           />
         </Progress>
       </div>
+      <div className='gen-btns'>
       <button
         onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
         className="btn btn-primary">
@@ -259,6 +259,7 @@ export const GenerateWorkoutForm = () => {
         className="btn btn-primary">
         Generate Workout
       </button>
+      </div>
     </Form>
   )
 }

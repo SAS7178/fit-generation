@@ -12,7 +12,28 @@ margin-top: 1em;
 .generator__nav {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    background-color: rgb(197, 207, 207);
 }
+.form-weight{
+    display: flex;
+    justify-content: center;
+}
+.form-height{
+    display: flex;
+    justify-content: center;
+}
+
+.choice{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+/* .determinables {
+    display: flex;
+    justify-content: center;
+} */
 body{
     margin-left: 3em;
 }
@@ -30,6 +51,7 @@ body{
     display: flex;
     justify-content: center;
     background-color: #8f969e;
+    position: relative;
     display: flex;
     border: 2px solid black;
     border-radius: 50%;
@@ -40,9 +62,6 @@ legend {
     display: flex;
     justify-content: center;
     font-size: x-large;
-}
-.form-weight {
-    display: flex;
 }
 .experience {
     display: flex;
@@ -68,4 +87,14 @@ legend {
 }
 #exampleFile{
     width: 7rem;
+}
+.img-file{
+    display: flex;
+    justify-content: center;
+    margin: 3em;
+}
+.gen-btns{
+    display: flex;
+    justify-content: center;
+    position: relative;;
 }
