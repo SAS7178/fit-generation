@@ -22,29 +22,29 @@ export const WelcomeFooter = () => {
             </div>
             <>
 
-                <List className="footer">
+                <footer className="footer">
+                    {/* <div className="about">
+                        </div> */}
 
-                    <div className="footer-box">
-                        <div className="about">
-                          
+
+                    {/* <img className="footer_img1"
+                        src="https://img.freepik.com/premium-vector/continuous-line-drawing-man-workout-activities-fitness-concept-isolated-white-background_554735-277.jpg"></img> */}
+                    {/* <img className="footer_img1"
+                        src="https://static.wixstatic.com/media/9f17ea_355e5c1b218841759de771a7f19d40c1~mv2.png/v1/fill/w_640,h_1102,al_l,q_90,usm_0.66_1.00_0.01,enc_auto/9f17ea_355e5c1b218841759de771a7f19d40c1~mv2.png"></img> */}
+
+                    <section>
+                        <img className="footer_img2"
+                            src="https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg"></img>
+
+                    {/* <img className="footer_img3"
+                        src="https://img.myloview.com/stickers/continuous-one-line-drawing-of-yoga-girl-workout-concept-of-woman-exercise-standing-with-hands-vector-illustration-minimalism-sport-theme-design-700-182433063.jpg"></img> */}
+                        <div>
                         </div>
-                        <img className="footer_img1" src="https://img.freepik.com/premium-vector/continuous-line-drawing-man-workout-activities-fitness-concept-isolated-white-background_554735-277.jpg"></img>
-                        <>
-                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                        </>
-                        <img className="footer_img2" src="https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg"></img>
-                        <>
-                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                        </>
-                        <img className="footer_img3" src="https://img.myloview.com/stickers/continuous-one-line-drawing-of-yoga-girl-workout-concept-of-woman-exercise-standing-with-hands-vector-illustration-minimalism-sport-theme-design-700-182433063.jpg"></img>
-                        
-                        <div className="contact">
-                          
+                    </section>
+                </footer>
+                        <div className="createdBy">
+                            created by
                         </div>
-                    </div>
-
-                </List>
-
             </>
         </>
 

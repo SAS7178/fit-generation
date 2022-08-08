@@ -43,7 +43,7 @@ export const Profile = () => {
           fitCustomerObject.id === workout.customerId)
       setFilteredWorkouts(filteredWorkouts)
     },
-    [workoutExercises,fitCustomerObject.id] // When this array is empty, you are observing initial component state
+    [workoutExercises, fitCustomerObject.id] // When this array is empty, you are observing initial component state
   )
   //funt to reerender all workouts to be used where needed
   const getAllWorkouts = () => {
@@ -63,7 +63,7 @@ export const Profile = () => {
   }
 
   return (
-    <>
+    <body className="background">
       <div className="profile__nav">
         <Link className="navbar__home" to="/">Home</Link>
         <Link className="navbar__generate" to="/generateWorkout">Generate New Workout</Link>
@@ -75,12 +75,12 @@ export const Profile = () => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
 
-      <div >
+      <div className="welcome-msg" >
         &nbsp;&nbsp;&nbsp;&nbsp;Welcome back,
         <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <b>{customer.name}</b></div>
       </div>
-
+      <br></br>
       <div className="card__Element">
         <Card inverse className="profile__card">
           <CardImg
@@ -105,10 +105,23 @@ export const Profile = () => {
         </Card>
       </div>
       <h2 className="workout"><b>My Workout List</b></h2>
-
+      <div className="max">
+        <b>Understanding</b>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button outline onClick={() => { window.open(URL= "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
+            className="max-link">
+            Click Here
+          </Button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Button outline onClick={() => { window.open(URL= "https://www.nasm.org/resources/one-rep-max-calculator") }}
+            className="max-link">
+            Max Calculator
+          </Button>
+<br></br> <i>OneRepMax:</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+     
+      </div>
       <section className="workout__list">
         <ul className="w__List">
-          
+
           {filteredWorkouts.map(workout => <li className="w__Item" key={workout.id}>
             <h3 className="workout_name"><strong>{workout.workoutName}</strong></h3>&nbsp;<br />
             <i>Generated on:</i>&nbsp;{workout.dateCompleted}&nbsp;&nbsp;
@@ -124,10 +137,10 @@ export const Profile = () => {
               </Button>
             </div>
           </li>)}
-        
+
         </ul>
       </section>
 
-    </>
+    </body>
   )
 }

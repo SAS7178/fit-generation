@@ -1,68 +1,88 @@
+.welcome__header{
+    position: fixed;
+    top: 0;
+}
 
-    .welcome__card {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        height:min-content;
-        margin: 3em;
-        margin-top: 13.5em;
-        display: flex;
-        border: 3px solid rgb(161, 232, 232);
-    } 
-    .footer {
-        background-color: rgb(252, 252, 252);
-        margin: 0;
-        border: 2px double rgb(161, 232, 232);
-        position: fixed;
-        bottom: 0;
-        height: 9em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    .myPT {
-        display: flex;
-        justify-content: space-around;
-      margin-top: 3em;  
-    }
-    .about{
-        display: flex;
-        margin-right: 8em;
-    }
-    .contact{
-        display: flex;
-        margin-left: 8em;
-    }
-    ul.footer {
-        display: flex;
-        width: 100%;
-        margin-top: 11rem;
-    }
-    
-    .card-box {
-        max-height: fit-content;
-        max-width: 100%;
-    }
-    .footer-box {
-        display: flex;
-      justify-content: space-between;
-    }
-    .footer_img1 {
-        display: flex;
-        justify-content: start;
-       width: 100%;
-       height: 8rem;
-    }
-    .footer_img2 {
-        display: flex;
-       width: 100%;
-       height: 10rem;
-    }
-    .footer_img3 {
-       width: 100%;
-       height: 8rem;
-    }
-    .li {
-        display: flex;
-        justify-content: space-between;
-    }
+.welcome__card {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: min-content;
+    margin: 3em;
+    margin-top: 1em;
+    display: flex;
+    border: 3px solid rgb(161, 232, 232);
+}
+.tagline{
+    display: flex;
+    justify-content: center;
+}
+.btn-primary {
+    background-color: rgb(112, 251, 61);
+    margin-bottom: 2em;
+}
+.footer {
+    background-color: rgb(135, 135, 139);
+    border-top: 2px double black;
+    border-bottom: 2px double black;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-evenly;
+    height: 7em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.myPT {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3em;
+}
+
+.about {
+    display: flex;
+    margin-right: 8em;
+}
+
+.contact {
+    display: flex;
+    margin-left: 8em;
+}
+
+.card-box {
+    max-height: fit-content;
+    max-width: 100%;
+}
+
+.footer_img1 {
+    display: flex;
+    position: relative;
+    width: 8em;
+    height: 6rem;
+}
+.footer_img2 {
+    display: flex;
+
+    position: relative;
+    width: 10em;
+    height: 6rem;
+}
+#root{
+    background-image: url(https://as1.ftcdn.net/v2/jpg/04/37/37/46/1000_F_437374623_dcWp53EfQiW59Vyn8Va62qI64LuULoYo.jpg  );
+}
+
+.footer_img3 {
+    display: flex;
+    position: relative;
+    width: 8em;
+    height: 8rem;
+}
+
+.li {
+    display: flex;
+    justify-content: space-between;
+}
+.tagline{
+    margin-bottom: 8em;
+}

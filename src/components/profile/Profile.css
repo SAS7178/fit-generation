@@ -1,26 +1,37 @@
 .profile__nav {
     display: flex;
     justify-content: space-between;
-    margin: 1em;
-    background-color: rgb(197, 207, 207);
+    height: 2em;
+    top: -1;
+    background-color: rgb(116, 123, 123);
+    border-bottom: 2px solid black;
 }
+.background{
+    background-image: url(https://secure.img1-fg.wfcdn.com/im/81908704/resize-h445%5Ecompr-r85/3636/36365904/Nautical+Living+33%2527+L+x+20.5%2522+W+Removable+Wallpaper+Roll.jpg);
 
+} 
 .welcome__header {
     display: flex;
     justify-content: center;
+   margin: 2em;
 }
 
 .navbar__home {
-    border: 1px dotted;
-    border-color: rgb(54, 55, 55);
-    border-radius: 50%;
+    margin-left: 1em;
+  
+}
+.navbar__generate {
+   margin-right: 1em;
+} 
+.max{
+    margin-left: 3em;
+}
+.max-link{
+    background-color: rgb(96, 207, 40);
+    border: 3px solid black;
+    color: whitesmoke;
 }
 
-.navbar__generate {
-    border: 1px dotted;
-    border-color: rgb(54, 55, 55);
-    border-radius: 50%;
-}
 
 .workout_name {
     font-style: oblique;
@@ -42,11 +53,17 @@ button {
     justify-content: center;
 
 }
-
+.welcome-msg{
+    margin-top: 8em;
+}
 .customer-name {
     font-size: x-large;
     color: rgb(121, 217, 89);
-    bottom: 0%;
+    
+}
+.save-primary{
+    background-color: darkgrey;
+    color: black;
 }
 
 .workout__btns {
@@ -67,9 +84,10 @@ button {
 
 .w__Item {
     display: flex;
+    background-image: url("") ;
     flex-wrap: wrap;
     justify-content: center;
-    border: dashed 2px;
+    border: groove 5px;
     border-radius: 25%;
     flex-direction: column;
     align-items: center;

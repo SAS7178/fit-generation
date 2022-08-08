@@ -30,16 +30,31 @@ h1 {
 }
 
 .welcome__menu {
-    color: blue;
+    color: rgb(0, 187, 255);
     display: flex;
     position: relative;
 }
-
-.Header {
-    background-color: rgb(197, 207, 207);
-    height: 2em;
+.nav-link{
+    color:black ;
 }
 
+.Header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(116, 123, 123);
+    border-bottom: 2px solid black;
+    height: 2em;
+}
+.fb__logo{
+margin-bottom: .1em;
+margin-right: .5em;
+}
+.nav__logo{
+    position: relative;
+   margin: .2em;
+   margin-right: 1em;
+    
+}
 .nav__image {
     margin-left: 2em;
     border-radius: 100%;
