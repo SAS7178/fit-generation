@@ -141,11 +141,7 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
-        {/* <div className='art'>
-          <img className='clipart' src="https://thumbs.dreamstime.com/b/detailed-illustration-
-                silhouettes-strong-rolling-people-set-girl-man-sport-fitness-gym-body-
-                building-workout-powerlifting-115536097.jpg" width="50%"></img>
-        </div> */}
+    
       </FormGroup>
       <div className='choice'>
       <FormGroup className='determinables'>

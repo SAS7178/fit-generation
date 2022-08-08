@@ -51,7 +51,8 @@ export const WelcomePage = () => {
       </section>
       <section className="tagline" >
 
-     <div> <b>Where <strong>Fitness Generation</strong> is our Mission!</b></div>
+     <div> 
+      <b>Your <strong>Fitness Generation</strong> is our Mission!</b></div>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button 
         onClick={(evt) => handleGenerateButtonClick(evt)
@@ -65,7 +66,6 @@ export const WelcomePage = () => {
               Exercise Games</button>
           </div>
           </section>
-  
       <WelcomeFooter />
       </div>   
 

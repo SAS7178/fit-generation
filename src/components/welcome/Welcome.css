@@ -1,3 +1,6 @@
+/* .body{ 
+    margin: 15em;
+} */
 .welcome__header{
     position: fixed;
     top: 0;
@@ -16,6 +19,7 @@
 .tagline{
     display: flex;
     justify-content: center;
+    margin-bottom:4em;
 }
 .btn-primary {
     background-color: rgb(112, 251, 61);
@@ -27,18 +31,53 @@
     display:flex;
     justify-content: center;
 }
+
+
+
 .footer {
     background-color: rgb(135, 135, 139);
     border-top: 2px double black;
     border-bottom: 2px double black;
     position: fixed;
     bottom: 0;
-    justify-content: space-evenly;
-    height: 7em;
+    height: 9em;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
+    align-items: center;
 }
+.footer-items{
+    display:flex;
+}
+.footer-features{
+    display:flex;
+    flex-direction:column;
+}
+.footer-resources{
+    display:flex;
+    flex-direction:column;
+}
+.footer-links{
+    display:flex;
+    justify-content:center;
+    
+}
+
+.footer-logos{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
+    .footer-foot{
+        display:flex;
+        flex-direction:column;
+        margin-top:3em;
+    }
+.font{
+    font-size:x-large;
+}
+
 
 .myPT {
     display: flex;
@@ -46,49 +85,14 @@
     margin-top: 3em;
 }
 
-.about {
-    display: flex;
-    margin-right: 8em;
-}
-
-.contact {
-    display: flex;
-    margin-left: 8em;
-}
-
 .card-box {
     max-height: fit-content;
     max-width: 100%;
 }
-
-.footer_img1 {
-    display: flex;
-    position: relative;
-    width: 8em;
-    height: 6rem;
-}
-.footer_img2 {
-    display: flex;
-
-    position: relative;
-    width: 10em;
-    height: 6rem;
-}
 #root{
     background-image: url(https://as1.ftcdn.net/v2/jpg/04/37/37/46/1000_F_437374623_dcWp53EfQiW59Vyn8Va62qI64LuULoYo.jpg  );
 }
-
-.footer_img3 {
-    display: flex;
-    position: relative;
-    width: 8em;
-    height: 8rem;
-}
-
 .li {
     display: flex;
     justify-content: space-between;
-}
-.tagline{
-    margin-bottom: 8em;
 }
