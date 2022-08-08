@@ -11,20 +11,19 @@ const [qoute, setQoute] = useState({})
     navigate(`/generateWorkout`)
   }
 
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'df702358e3msh0a60399ba97f41ap1be78cjsn2053bd221176',
-      'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com'
-    }
-  };
+  // const options = {
+  //   method: 'GET',
+  //   headers: {
+  //     'X-RapidAPI-Key': 'df702358e3msh0a60399ba97f41ap1be78cjsn2053bd221176',
+  //     'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com'
+  //   }
+  // };
   
-  fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    // .then(response => {setQoute(response)})
-
-    .catch(err => console.error(err));
+  // fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
+  //   .then(response => response.json())
+  //   .then(response => console.log(response))
+  //   // .then(response => {setQoute(response)})
+  //   .catch(err => console.error(err));
 
   return (
     <div className="">
@@ -34,12 +33,13 @@ const [qoute, setQoute] = useState({})
             alt="Card image cap"
             src="https://picsum.photos/900/270?grayscale"
           />
+          
           <CardImgOverlay>
             <CardTitle tag="h5">
               Fit Generation Mission
             </CardTitle>
             <CardText>
-              {/* <div>{qoute.qoute}</div> */}
+              {/* <div>{...qoute.qoute}</div> */}
             </CardText>
             <CardText>
               <small className="text-muted">

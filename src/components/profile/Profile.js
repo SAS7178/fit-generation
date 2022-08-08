@@ -75,7 +75,7 @@ export const Profile = () => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
 
-      <div >
+      <div className="welcome-msg" >
         &nbsp;&nbsp;&nbsp;&nbsp;Welcome back,
         <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <b>{customer.name}</b></div>
@@ -106,9 +106,7 @@ export const Profile = () => {
       </div>
       <h2 className="workout"><b>My Workout List</b></h2>
       <div className="max">
-        <b>Understanding</b> <i>OneRepMax:</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       
-          <Button outline onClick={() => { window.open(URL= "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
+        <b>Understanding</b>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button outline onClick={() => { window.open(URL= "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
             className="max-link">
             Click Here
           </Button>
@@ -117,7 +115,9 @@ export const Profile = () => {
             className="max-link">
             Max Calculator
           </Button>
-
+<br></br> <i>OneRepMax:</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+     
       </div>
       <section className="workout__list">
         <ul className="w__List">

@@ -42,9 +42,9 @@ export const WelcomeFooter = () => {
                         </div>
                     </section>
                 </footer>
-                <div className="createdBy">
-                    created by
-                </div>
+                        <div className="createdBy">
+                            created by
+                        </div>
             </>
         </>
 

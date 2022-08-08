@@ -13,6 +13,7 @@
 .welcome__header {
     display: flex;
     justify-content: center;
+   margin: 2em;
 }
 
 .navbar__home {
@@ -52,11 +53,13 @@ button {
     justify-content: center;
 
 }
-
+.welcome-msg{
+    margin-top: 8em;
+}
 .customer-name {
     font-size: x-large;
     color: rgb(121, 217, 89);
-    bottom: 0%;
+    
 }
 .save-primary{
     background-color: darkgrey;
@@ -81,6 +84,7 @@ button {
 
 .w__Item {
     display: flex;
+    background-image: url("") ;
     flex-wrap: wrap;
     justify-content: center;
     border: groove 5px;
