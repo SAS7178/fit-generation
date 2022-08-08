@@ -20,6 +20,12 @@
 .btn-primary {
     background-color: rgb(112, 251, 61);
     margin-bottom: 2em;
+    border-radius: 10%;
+    border:2px solid black;
+}
+.exercise-games{
+    display:flex;
+    justify-content: center;
 }
 .footer {
     background-color: rgb(135, 135, 139);

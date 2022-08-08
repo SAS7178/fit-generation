@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom"
 import { Form, FormGroup, FormText, Input, Label, Progress } from 'reactstrap';
 import "./Workouts.css"
 
+
+
 // funct to take input form data and post to database in customerworkouts array
 //then nav to exercise page on generate click
 export const GenerateWorkoutForm = () => {
@@ -33,7 +35,7 @@ export const GenerateWorkoutForm = () => {
       experienceId: customerWorkout.experienceId,//
       goalId: customerWorkout.goalId,
       muscleId: customerWorkout.muscleId,//
-      dateCompleted: new Date//
+      dateCompleted: new Date()//
     }
     return fetch(`http://localhost:8088/customerWorkouts`, {
       method: "POST",
@@ -66,7 +68,7 @@ export const GenerateWorkoutForm = () => {
       </div>
       <div className='generate__header'>
         <h1>Fit Generation</h1>
-        <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+        <img alt='' className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
@@ -210,9 +212,9 @@ export const GenerateWorkoutForm = () => {
       </div>
       <FormGroup className='img-file'>
         <Label for="exampleFile">
-        Add
+        
         </Label>
-        <Input
+        <Input 
           id="exampleFile"
           name="file"
           type="file"
@@ -255,7 +257,7 @@ export const GenerateWorkoutForm = () => {
         </Progress>
       </div>
       <div className='gen-btns'>
-      <button
+      <button 
         onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
         className="btn btn-primary">
         Update

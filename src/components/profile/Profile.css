@@ -7,18 +7,25 @@
     border-bottom: 2px solid black;
 }
 .background{
-    background-image: url(https://secure.img1-fg.wfcdn.com/im/81908704/resize-h445%5Ecompr-r85/3636/36365904/Nautical+Living+33%2527+L+x+20.5%2522+W+Removable+Wallpaper+Roll.jpg);
-
+    background-image: url("https://secure.img1-fg.wfcdn.com/im/81908704/resize-h445%5Ecompr-r85/3636/36365904/Nautical+Living+33%2527+L+x+20.5%2522+W+Removable+Wallpaper+Roll.jpg");
 } 
 .welcome__header {
     display: flex;
     justify-content: center;
-   margin: 2em;
+    position: relative;
+    margin-left: 8em;
 }
+.carousel{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-left:18em;
+    width: 40%;
+}
+
 
 .navbar__home {
     margin-left: 1em;
-  
 }
 .navbar__generate {
    margin-right: 1em;
@@ -63,6 +70,7 @@ button {
 }
 .save-primary{
     background-color: darkgrey;
+    border: 2px solid black;
     color: black;
 }
 
@@ -75,7 +83,12 @@ button {
     width: 35rem;
 
 }
-
+.generateNew{
+    display:flex;
+    border: 1px solid black;
+    border-radius: 10%;
+    margin-left:22em;
+}
 .workout__list {
     display: flex;
     justify-content: center;
@@ -84,7 +97,7 @@ button {
 
 .w__Item {
     display: flex;
-    background-image: url("") ;
+    /* background-image: url("") ; */
     flex-wrap: wrap;
     justify-content: center;
     border: groove 5px;
