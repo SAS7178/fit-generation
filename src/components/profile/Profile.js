@@ -43,7 +43,7 @@ export const Profile = () => {
           fitCustomerObject.id === workout.customerId)
       setFilteredWorkouts(filteredWorkouts)
     },
-    [workoutExercises,fitCustomerObject.id] // When this array is empty, you are observing initial component state
+    [workoutExercises, fitCustomerObject.id] // When this array is empty, you are observing initial component state
   )
   //funt to reerender all workouts to be used where needed
   const getAllWorkouts = () => {
@@ -80,7 +80,7 @@ export const Profile = () => {
         <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <b>{customer.name}</b></div>
       </div>
-
+<br></br>
       <div className="card__Element">
         <Card inverse className="profile__card">
           <CardImg
@@ -105,10 +105,16 @@ export const Profile = () => {
         </Card>
       </div>
       <h2 className="workout"><b>My Workout List</b></h2>
-
+      <div className="max">
+       Understanding <i>OneRepMax:</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Button outline onClick={() => {} }
+                className="max-link">
+                 Find my Current Strength 
+              </Button>
+      </div>
       <section className="workout__list">
         <ul className="w__List">
-          
+
           {filteredWorkouts.map(workout => <li className="w__Item" key={workout.id}>
             <h3 className="workout_name"><strong>{workout.workoutName}</strong></h3>&nbsp;<br />
             <i>Generated on:</i>&nbsp;{workout.dateCompleted}&nbsp;&nbsp;
@@ -124,7 +130,7 @@ export const Profile = () => {
               </Button>
             </div>
           </li>)}
-        
+
         </ul>
       </section>
 

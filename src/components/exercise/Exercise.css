@@ -20,8 +20,10 @@ width: 5em;
     flex-wrap: wrap;
     position: relative;
     width: 75%;
-    margin: 3em;
-    border: 1px dashed black;
+    margin-left: 7em;
+    margin-bottom: 1em;
+    border-radius: 25%;
+    border: 5px ridge black;
 }
 .form-control {
     width: 18em;

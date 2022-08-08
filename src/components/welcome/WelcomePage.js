@@ -1,7 +1,13 @@
-import { Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
+import { useNavigate } from "react-router-dom";
+import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
 import "./Welcome.css"
 import { WelcomeFooter } from "./WelcomeFooter.js";
 export const WelcomePage = () => {
+ const navigate = useNavigate() 
+
+  const handleGenerateButtonClick = () => {
+    navigate(`/generateWorkout`)
+  }
 
   return (
     <>
@@ -10,9 +16,6 @@ export const WelcomePage = () => {
           <CardImg
             alt="Card image cap"
             src="https://picsum.photos/900/270?grayscale"
-          // style={{
-          //   height: 270
-          // }}
           />
           <CardImgOverlay>
             <CardTitle tag="h5">
@@ -28,11 +31,19 @@ export const WelcomePage = () => {
             </CardText>
           </CardImgOverlay>
         </Card>
-      <section className="myPT" >
-      
       </section>
-      </section>
+      <section className="tagline" >
 
+     <div> <b>Where <strong>Fitness Generation</strong> is our Pleasure!</b></div>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button 
+        onClick={(evt) => handleGenerateButtonClick(evt)
+        }
+        className="btn-primary">
+        Generate Workout
+      </button>
+          </section>
+  
       <WelcomeFooter />
     </>
 

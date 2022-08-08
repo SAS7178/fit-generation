@@ -7,6 +7,7 @@ import "./Workouts.css"
 //then nav to exercise page on generate click
 export const GenerateWorkoutForm = () => {
   const navigate = useNavigate()
+  const [updateTest , setUpdateTest] = useState(false)
   //create state obj with initial state of customerWorkout obj
   const [customerWorkout, update] = useState({
     customerId: null,
@@ -24,6 +25,7 @@ export const GenerateWorkoutForm = () => {
   //function to handle the post for generate workout click
   const handleUpdateButtonClick = (event) => {
     event.preventDefault()
+    setUpdateTest(true)
 
     // TODO: Create the object to be saved to the API
     const workoutToSendToApi = {
@@ -44,8 +46,13 @@ export const GenerateWorkoutForm = () => {
 
   // funct to navigate on click of generateWorkout with customerid for useparam
   const handleGenerateButtonClick = () => {
+    if(updateTest === true) {
     navigate(`/exercise/${fitCustomerObject.id}`)
-  }
+  
+  } else {window.alert("Update Inputs To Generate")} 
+ }
+    
+  
 
   return (
     <Form>
@@ -214,7 +221,7 @@ export const GenerateWorkoutForm = () => {
           Upload your Fit Generation profile img here
         </FormText>
       </FormGroup>
-      <div>
+      <div className='progress-bar'>
         <Progress
           className="my-3"
           multi
