@@ -25,8 +25,13 @@ export const NavBar = (args) => {
   // return one nav if customer true return other if false
   if (fitCustomerObject) {
     return (
-
+      <>
       <div className='Header'>
+      <a href='https://twitter.com/'><img alt="" className="nav__logo" src="http://powerpackedventures.in/wp-content/uploads/2022/05/Asset-1@4x.png" width="30" height="30"></img></a>
+      <a href='https://www.snapchat.com/'><img alt="" className="nav__logo" src="https://assets.stickpng.com/thumbs/584c4c131fc21103bb375baa.png" width="25" height="25"></img></a>
+      <a href='https://www.facebook.com/'><img alt="" className="fb__logo" src="https://i.pinimg.com/originals/79/ff/98/79ff98c829c7f91b891cfc9555ebade2.png" width="30" height="30"></img></a>
+      <a href='https://www.instagram.com/'><img alt="" className="nav__logo" src="https://i.pinimg.com/originals/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.png" width="30" height="25"></img></a>
+      </div>
         <Navbar {...args}>
           <NavbarBrand className="title__home" href="/">
             <div></div>
@@ -62,7 +67,7 @@ export const NavBar = (args) => {
         <section className='welcome__menu'>
           <b></b>
         </section>
-      </div>
+      </>
     )
   } else {
     return (

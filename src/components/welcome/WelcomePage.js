@@ -10,22 +10,24 @@ const [qoute, setQoute] = useState({})
   const handleGenerateButtonClick = () => {
     navigate(`/generateWorkout`)
   }
-  // const options = {
-  //   method: 'GET',
-  //   headers: {
-  //     'X-RapidAPI-Key': 'df702358e3msh0a60399ba97f41ap1be78cjsn2053bd221176',
-  //     'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com'
-  //   }
-  // };
-  
-  // fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
-  //   .then(response => response.json())
-  //   .then(response => console.log(response))
-  //   .then(response => {setQoute(response)})
 
-  //   .catch(err => console.error(err));
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'df702358e3msh0a60399ba97f41ap1be78cjsn2053bd221176',
+      'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com'
+    }
+  };
+  
+  fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    // .then(response => {setQoute(response)})
+
+    .catch(err => console.error(err));
+
   return (
-    <>
+    <div className="">
       <section className="card-box">
         <Card inverse className="welcome__card">
           <CardImg
@@ -37,7 +39,7 @@ const [qoute, setQoute] = useState({})
               Fit Generation Mission
             </CardTitle>
             <CardText>
-              <div>{qoute.qoute}</div>
+              {/* <div>{qoute.qoute}</div> */}
             </CardText>
             <CardText>
               <small className="text-muted">
@@ -49,7 +51,7 @@ const [qoute, setQoute] = useState({})
       </section>
       <section className="tagline" >
 
-     <div> <b>Where <strong>Fitness Generation</strong> is our Pleasure!</b></div>
+     <div> <b>Where <strong>Fitness Generation</strong> is our Mission!</b></div>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button 
         onClick={(evt) => handleGenerateButtonClick(evt)
@@ -60,7 +62,7 @@ const [qoute, setQoute] = useState({})
           </section>
   
       <WelcomeFooter />
-    </>
+      </div>   
 
   )
 }

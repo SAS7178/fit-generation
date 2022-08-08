@@ -39,13 +39,21 @@ h1 {
 }
 
 .Header {
+    display: flex;
+    justify-content: flex-end;
     background-color: rgb(116, 123, 123);
     border-bottom: 2px solid black;
     height: 2em;
 }
-.insta__logo{
-    color: black;
-margin-top: 3em;
+.fb__logo{
+margin-bottom: .1em;
+margin-right: .5em;
+}
+.nav__logo{
+    position: relative;
+   margin: .2em;
+   margin-right: 1em;
+    
 }
 .nav__image {
     margin-left: 2em;

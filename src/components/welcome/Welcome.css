@@ -1,10 +1,15 @@
+.welcome__header{
+    position: fixed;
+    top: 0;
+}
+
 .welcome__card {
     display: flex;
     justify-content: center;
     position: relative;
     height: min-content;
     margin: 3em;
-    margin-top: 13.5em;
+    margin-top: 1em;
     display: flex;
     border: 3px solid rgb(161, 232, 232);
 }
@@ -19,9 +24,11 @@
 .footer {
     background-color: rgb(135, 135, 139);
     border-top: 2px double black;
+    border-bottom: 2px double black;
     position: fixed;
     bottom: 0;
     justify-content: space-evenly;
+    height: 7em;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -51,19 +58,13 @@
 .footer_img1 {
     display: flex;
     position: relative;
-    opacity: 25%;
-    background-color: rgb(116, 123, 123);
     width: 8em;
     height: 6rem;
 }
-.insta__logo{
-    margin: .5em;
-}
 .footer_img2 {
     display: flex;
-    background-color: rgb(116, 123, 123);
+
     position: relative;
-    opacity: 25%;
     width: 10em;
     height: 6rem;
 }
@@ -74,7 +75,6 @@
 .footer_img3 {
     display: flex;
     position: relative;
-    opacity: 25%;
     width: 8em;
     height: 8rem;
 }
@@ -82,4 +82,7 @@
 .li {
     display: flex;
     justify-content: space-between;
+}
+.tagline{
+    margin-bottom: 8em;
 }
