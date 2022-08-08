@@ -9,6 +9,10 @@ h1 {
 .nav__image {
 margin-top: 1em;
 }
+.navbar__link{
+    margin-left: 2em;
+    margin-right: 2em;
+}
 .generator__nav {
     display: flex;
     justify-content: space-between;

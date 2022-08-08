@@ -17,7 +17,7 @@
     margin-bottom: 2em;
 }
 .footer {
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(135, 135, 139);
     border-top: 2px double black;
     position: fixed;
     bottom: 0;
@@ -56,13 +56,15 @@
     width: 8em;
     height: 6rem;
 }
-
+.insta__logo{
+    margin: .5em;
+}
 .footer_img2 {
     display: flex;
     background-color: rgb(116, 123, 123);
     position: relative;
     opacity: 25%;
-    width: 8em;
+    width: 10em;
     height: 6rem;
 }
 #root{
@@ -74,7 +76,7 @@
     position: relative;
     opacity: 25%;
     width: 8em;
-    height: 6rem;
+    height: 8rem;
 }
 
 .li {

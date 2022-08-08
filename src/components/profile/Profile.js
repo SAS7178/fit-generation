@@ -63,7 +63,7 @@ export const Profile = () => {
   }
 
   return (
-    <>
+    <body className="background">
       <div className="profile__nav">
         <Link className="navbar__home" to="/">Home</Link>
         <Link className="navbar__generate" to="/generateWorkout">Generate New Workout</Link>
@@ -80,7 +80,7 @@ export const Profile = () => {
         <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <b>{customer.name}</b></div>
       </div>
-<br></br>
+      <br></br>
       <div className="card__Element">
         <Card inverse className="profile__card">
           <CardImg
@@ -106,11 +106,18 @@ export const Profile = () => {
       </div>
       <h2 className="workout"><b>My Workout List</b></h2>
       <div className="max">
-       Understanding <i>OneRepMax:</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <Button outline onClick={() => {} }
-                className="max-link">
-                 Find my Current Strength 
-              </Button>
+        <b>Understanding</b> <i>OneRepMax:</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+          <Button outline onClick={() => { window.open(URL= "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
+            className="max-link">
+            Click Here
+          </Button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Button outline onClick={() => { window.open(URL= "https://www.nasm.org/resources/one-rep-max-calculator") }}
+            className="max-link">
+            Max Calculator
+          </Button>
+
       </div>
       <section className="workout__list">
         <ul className="w__List">
@@ -134,6 +141,6 @@ export const Profile = () => {
         </ul>
       </section>
 
-    </>
+    </body>
   )
 }
