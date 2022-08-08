@@ -60,10 +60,10 @@ export const GenerateWorkoutForm = () => {
     <Form>
       <div className='generator__nav'>
         <nav>
-          <Link className="navbar__link" to="/">Home</Link>
+          <Link className="navbar__link" to="/"><b>Home</b></Link>
         </nav>
         <nav>
-          <Link className="navbar__link" to="/profile/:customerId">Profile</Link>
+          <Link className="navbar__link" to="/profile/:customerId"><b>Profile</b></Link>
         </nav>
       </div>
       <div className='generate__header'>

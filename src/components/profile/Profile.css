@@ -86,8 +86,11 @@ button {
 .generateNew{
     display:flex;
     border: 1px solid black;
+    color: black;
+    background-color:grayscale;
     border-radius: 10%;
     margin-left:22em;
+    margin-bottom:3em;
 }
 .workout__list {
     display: flex;
@@ -97,7 +100,7 @@ button {
 
 .w__Item {
     display: flex;
-    /* background-image: url("") ; */
+
     flex-wrap: wrap;
     justify-content: center;
     border: groove 5px;

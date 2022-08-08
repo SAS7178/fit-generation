@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, UncontrolledCarousel } from "reactstrap"
+import { GenerateWorkoutForm } from "../workouts/GenerateWorkoutForm"
 import "./Profile.css"
 
 export const Profile = () => {
@@ -106,11 +107,11 @@ export const Profile = () => {
       </div>
       <h2 className="workout"><b>My Workout List</b></h2>
       <div className="max">
-        <b>Understanding</b>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          <i>OneRepMax:</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Button outline onClick={() => { window.open(URL= "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
             className="max-link">
-            Click Here
+            Learn More
           </Button>
 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -118,7 +119,9 @@ export const Profile = () => {
             className="max-link">
             Max Calculator
           </Button>
-          <button className="generateNew" to="/generateWorkout"><b>Generation New </b></button>
+          <Button className="generateNew"  onClick={() => { navigate("/GenerateWorkout") }}>
+            <b>Generation New </b>
+            </Button>
           </div>
        
      
