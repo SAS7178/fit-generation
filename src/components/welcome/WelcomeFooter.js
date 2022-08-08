@@ -1,4 +1,4 @@
-import { List, Offcanvas, OffcanvasBody, OffcanvasHeader, Progress } from "reactstrap"
+import { Offcanvas, OffcanvasBody, OffcanvasHeader } from "reactstrap"
 
 export const WelcomeFooter = () => {
 
@@ -33,7 +33,7 @@ export const WelcomeFooter = () => {
                         src="https://static.wixstatic.com/media/9f17ea_355e5c1b218841759de771a7f19d40c1~mv2.png/v1/fill/w_640,h_1102,al_l,q_90,usm_0.66_1.00_0.01,enc_auto/9f17ea_355e5c1b218841759de771a7f19d40c1~mv2.png"></img> */}
 
                     <section>
-                        <img className="footer_img2"
+                        <img alt="" className="footer_img2"
                             src="https://i.pinimg.com/564x/42/e7/ef/42e7ef3b07f289a59476d49f0d92ee57.jpg"></img>
 
                     {/* <img className="footer_img3"

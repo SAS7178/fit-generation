@@ -93,9 +93,6 @@ legend {
 .form-select {
     width: 15em;
 }
-.btn-primary {
-    margin-left: 2em;
-}
 #exampleFile{
     width: 7rem;
 }
@@ -104,8 +101,12 @@ legend {
     justify-content: center;
     margin: 3em;
 }
+.btn-primary {
+    color: blue;
+    margin-left: 2em;
+}
 .gen-btns{
     display: flex;
     justify-content: center;
-    position: relative;;
+    position: relative;
 }
