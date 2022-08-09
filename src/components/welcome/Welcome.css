@@ -61,10 +61,8 @@
 
 
 .footer {
-    background-color: rgb(135, 135, 139);
-    border-top: 2px double black;
-    border-bottom: 2px double black;
-
+    background-image: url("https://thumbs.dreamstime.com/b/transparent-abstract-halftone-grey-lines-set-modern-dynamic-smooth-swoosh-futuristic-waves-collection-web-header-footer-layout-219889528.jpg");
+    border: 4px double black;
     justify-content: space-evenly;
 
     width: 100%;
@@ -76,6 +74,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.contact-about{
+    display: flex;
+    
+}
+.about-link{
+    font-size: smaller;
+    width: 8em;
+    height: 1.5em;
+    margin-top: 0.5em;
+}
+.contact-link{
+    font-size: smaller;
+    width: 8em;
+    height: 1.5em;
+    margin-top: 0.5em;
 }
 .footer-features{
     display: flex;
