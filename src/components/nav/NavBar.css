@@ -1,9 +1,9 @@
 .title__home {
     display: flex;
-    font-size: 50%;
-    margin-left: 8em;
+    font-size: 70%;
+    margin-left: 14em;
     color: rgb(119, 205, 205);
-
+ 
 }
 
 .login__input {
@@ -23,6 +23,7 @@
 
 .navbar-toggler {
     width: 4em;
+    top: 0;
 }
 
 .welcome__menu {

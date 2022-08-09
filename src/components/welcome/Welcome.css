@@ -2,7 +2,7 @@
     margin: 15em;
 } */
 .welcome__header{
-    position: fixed;
+    display:flex;
     top: 0;
 }
 
@@ -25,6 +25,7 @@
     justify-content: center;
     margin-bottom:4em;
 }
+
 .btn-primary {
     background-color: rgb(112, 251, 61);
     margin-bottom: 2em;
@@ -37,36 +38,61 @@
     display:flex;
     justify-content: center;
 }
+.footer__link{
+    opacity: 100%;
+    color:blue;
+    text-decoration: underline;
 
+}
+
+.welcome-btns{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn-generate {
+    background-color: rgb(112, 251, 61);
+
+    width: 14em;
+}
+.btn-games {
+    background-color: rgb(112, 251, 61);
+    width: 14em;
+}
 
 
 .footer {
     background-color: rgb(135, 135, 139);
     border-top: 2px double black;
     border-bottom: 2px double black;
-    position: fixed;
-    bottom: 0;
-    height: 9em;
+
+    justify-content: space-evenly;
+
     width: 100%;
     display: flex;
     flex-direction:column;
     align-items: center;
 }
 .footer-items{
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .footer-features{
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 .footer-resources{
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
-.footer-links{
-    display:flex;
-    justify-content:center;
-    
+.font{
+    font-size: large;
+    font-weight: 800;
+}
+.myPT {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3em;
 }
 
 .footer-logos{
@@ -90,6 +116,18 @@
     justify-content: space-around;
     margin-top: 3em;
 }
+
+
+.card-box {
+    max-height: fit-content;
+    max-width: 100%;
+}
+
+
+.background__home{
+    background-image: url(https://as1.ftcdn.net/v2/jpg/04/37/37/46/1000_F_437374623_dcWp53EfQiW59Vyn8Va62qI64LuULoYo.jpg  );
+}
+
 
 #root{
     background-image: url(https://as1.ftcdn.net/v2/jpg/04/37/37/46/1000_F_437374623_dcWp53EfQiW59Vyn8Va62qI64LuULoYo.jpg  );
