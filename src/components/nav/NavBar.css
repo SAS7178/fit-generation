@@ -24,6 +24,8 @@
 .navbar-toggler {
     width: 4em;
     top: 0;
+    margin-bottom:5em;
+    margin-right: 2em;
 }
 
 .welcome__menu {
