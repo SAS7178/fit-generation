@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom"
 import { Form, FormGroup, FormText, Input, Label, Progress } from 'reactstrap';
+import { WelcomeFooter } from '../welcome/WelcomeFooter';
 import "./Workouts.css"
 
 
@@ -141,7 +142,7 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
-    
+        
       </FormGroup>
       <div className='choice'>
       <FormGroup className='determinables'>
@@ -265,6 +266,9 @@ export const GenerateWorkoutForm = () => {
         Generate Workout
       </button>
       </div>
+      <WelcomeFooter/>
     </Form>
+    
   )
+  
 }

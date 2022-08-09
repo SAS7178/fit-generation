@@ -27,7 +27,6 @@ export const NavBar = (args) => {
     return (
       <>
       <div className='Header'>
-      {/* <a href='https://twitter.com/'><img alt="" className="nav__logo" src="https://c8.alamy.com/comp/R80EAW/alien-space-ufo-spaceship-mars-glyph-icon-on-transparent-background-black-icon-R80EAW.jpg" width="30" height="30"></img></a> */}
       <a href='https://twitter.com/'><img alt="" className="nav__logo" src="http://powerpackedventures.in/wp-content/uploads/2022/05/Asset-1@4x.png" width="30" height="30"></img></a>
       <a href='https://www.snapchat.com/'><img alt="" className="nav__logo" src="https://assets.stickpng.com/thumbs/584c4c131fc21103bb375baa.png" width="25" height="25"></img></a>
       <a href='https://www.facebook.com/'><img alt="" className="fb__logo" src="https://i.pinimg.com/originals/79/ff/98/79ff98c829c7f91b891cfc9555ebade2.png" width="30" height="30"></img></a>
@@ -49,7 +48,7 @@ export const NavBar = (args) => {
             <Nav fill pills>
               <NavItem>
                 <NavLink href="/profile/:customerId">
-                  My Profile
+                  <b>My Profile</b>
                 </NavLink>
               </NavItem>
 
@@ -57,12 +56,12 @@ export const NavBar = (args) => {
                 <NavLink href="" onClick={() => {
                   localStorage.removeItem("fit_customer")
                   navigate("/login", { replace: true })
-                }}>Logout
+                }}><b>Logout</b>
                 </NavLink>
               </NavItem>
             </Nav>
 
-            <NavbarText className='welcome__home'>Welcome!</NavbarText>
+            <NavbarText className='welcome__home'><strong>Welcome!</strong></NavbarText>
           </Collapse>
         </Navbar>
         <section className='welcome__menu'>
@@ -72,39 +71,48 @@ export const NavBar = (args) => {
     )
   } else {
     return (
-
-      <div className='Header'>
+      <>
+       <div className='Header'>
+      <a href='https://twitter.com/'><img alt="" className="nav__logo" src="http://powerpackedventures.in/wp-content/uploads/2022/05/Asset-1@4x.png" width="30" height="30"></img></a>
+      <a href='https://www.snapchat.com/'><img alt="" className="nav__logo" src="https://assets.stickpng.com/thumbs/584c4c131fc21103bb375baa.png" width="25" height="25"></img></a>
+      <a href='https://www.facebook.com/'><img alt="" className="fb__logo" src="https://i.pinimg.com/originals/79/ff/98/79ff98c829c7f91b891cfc9555ebade2.png" width="30" height="30"></img></a>
+      <a href='https://www.instagram.com/'><img alt="" className="nav__logo" src="https://i.pinimg.com/originals/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.png" width="30" height="25"></img></a>
+      </div>
+      
         <Navbar {...args}>
           <NavbarBrand className="title__home" href="/">
+            
             <div className='welcome__header'>
               <h1> Fit Generation </h1>
               <img alt='' className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
-            </div></NavbarBrand>
-          <NavbarToggler onClick={toggle} />
+          </div>
+          </NavbarBrand>
+          <NavbarToggler className='hamburger' onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
 
             <Nav fill pills >
               <NavItem className='nonMember'>
 
                 <NavLink href="/register" className='nonMember'>
-                  Register
+                  <b>Register</b>
                 </NavLink>
 
                 <NavItem className='nonMember'>
                   <NavLink href="/login" className='nonMember'>
-                    Login
+                    <b>Login</b>
                   </NavLink>
                 </NavItem>
 
               </NavItem>
             </Nav>
 
-            <NavbarText className='welcome__home'>Welcome!</NavbarText>
+            <NavbarText className='welcome__home'><strong>Welcome!</strong></NavbarText>
           </Collapse>
         </Navbar>
-      </div>
+      
+      </>
     )
   }
 }
