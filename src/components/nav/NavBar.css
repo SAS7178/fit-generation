@@ -14,7 +14,9 @@ h1 {
     display: flex;
     width: min-content;
 }
-
+.hamburger{
+    margin: 2em;
+}
 .welcome__home {
     display: flex;
     justify-content: center;

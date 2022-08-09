@@ -22,7 +22,7 @@ export const Login = () => {
                     navigate("/")
                 }
                 else {
-                    window.alert("Robert has been BlackListed...Unfortunate")
+                    window.alert("No customer found with this email.")
                 }
             })
             
