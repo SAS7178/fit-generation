@@ -5,8 +5,8 @@ import "./Welcome.css"
 import { WelcomeFooter } from "./WelcomeFooter.js";
 
 export const WelcomePage = () => {
- const navigate = useNavigate() 
-// const [qoute, setQoute] = useState({})
+  const navigate = useNavigate()
+  // const [qoute, setQoute] = useState({})
   const handleGenerateButtonClick = () => {
     navigate(`/generateWorkout`)
   }
@@ -18,7 +18,7 @@ export const WelcomePage = () => {
   //     'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com'
   //   }
   // };
-  
+
   // fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
   //   .then(response => response.json())
   //   .then(response => console.log(response))
@@ -33,7 +33,7 @@ export const WelcomePage = () => {
             alt="Card image cap"
             src="https://picsum.photos/900/270?grayscale"
           />
-          
+
           <CardImgOverlay>
             <CardTitle tag="h5">
               Fit Generation Mission
@@ -49,20 +49,30 @@ export const WelcomePage = () => {
           </CardImgOverlay>
         </Card>
       </section>
+
       <section className="tagline" >
 
-     <div> <b>Where <strong>Fitness Generation</strong> is our Mission!</b></div>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button 
-        onClick={(evt) => handleGenerateButtonClick(evt)
-        }
-        className="btn-primary">
-        Generate Workout
-      </button>
-          </section>
-  
+        <div><b>Where <strong>Fitness Generation</strong> is our Mission!</b></div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <div className="welcome-btns">
+          <button
+            onClick={(evt) => handleGenerateButtonClick(evt)}
+            className="btn-generate">
+            Generate Workout
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button
+            onClick={() => { window.open(URL = "https://whatnerd.com/apps-gamify-fitness-and-health/") }}
+            className="btn-games">
+            Exercise Games
+          </button>
+        </div>
+
+      </section>
+
       <WelcomeFooter />
-      </div>   
+    </div>
 
   )
 }

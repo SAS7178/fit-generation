@@ -17,10 +17,25 @@
     display: flex;
     justify-content: center;
 }
-.btn-primary {
-    background-color: rgb(112, 251, 61);
-    margin-bottom: 2em;
+.footer__link{
+    opacity: 100%;
+    color:blue;
+    text-decoration: underline;
 }
+
+.welcome-btns{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn-generate {
+    background-color: rgb(112, 251, 61);
+    width: 14em;
+}
+.btn-games {
+    background-color: rgb(112, 251, 61);
+    width: 14em;
+}
+
 .footer {
     background-color: rgb(135, 135, 139);
     border-top: 2px double black;
@@ -74,8 +89,6 @@
 #root{
     background-image: url(https://as1.ftcdn.net/v2/jpg/04/37/37/46/1000_F_437374623_dcWp53EfQiW59Vyn8Va62qI64LuULoYo.jpg  );
 }
-
-
 .li {
     display: flex;
     justify-content: space-between;

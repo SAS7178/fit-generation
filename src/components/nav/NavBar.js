@@ -48,7 +48,7 @@ export const NavBar = (args) => {
             <Nav fill pills>
               <NavItem>
                 <NavLink href="/profile/:customerId">
-                  My Profile
+                  <b>My Profile</b>
                 </NavLink>
               </NavItem>
 
@@ -56,12 +56,12 @@ export const NavBar = (args) => {
                 <NavLink href="" onClick={() => {
                   localStorage.removeItem("fit_customer")
                   navigate("/login", { replace: true })
-                }}>Logout
+                }}><b>Logout</b>
                 </NavLink>
               </NavItem>
             </Nav>
 
-            <NavbarText className='welcome__home'>Welcome!</NavbarText>
+            <NavbarText className='welcome__home'><strong>Welcome!</strong></NavbarText>
           </Collapse>
         </Navbar>
         <section className='welcome__menu'>
@@ -96,19 +96,19 @@ export const NavBar = (args) => {
               <NavItem className='nonMember'>
 
                 <NavLink href="/register" className='nonMember'>
-                  Register
+                  <b>Register</b>
                 </NavLink>
 
                 <NavItem className='nonMember'>
                   <NavLink href="/login" className='nonMember'>
-                    Login
+                    <b>Login</b>
                   </NavLink>
                 </NavItem>
 
               </NavItem>
             </Nav>
 
-            <NavbarText className='welcome__home'>Welcome!</NavbarText>
+            <NavbarText className='welcome__home'><strong>Welcome!</strong></NavbarText>
           </Collapse>
         </Navbar>
       

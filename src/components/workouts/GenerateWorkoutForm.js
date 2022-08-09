@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom"
 import { Form, FormGroup, FormText, Input, Label, Progress } from 'reactstrap';
+import { WelcomeFooter } from '../welcome/WelcomeFooter';
 import "./Workouts.css"
 
 // funct to take input form data and post to database in customerworkouts array
@@ -139,11 +140,6 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
-        {/* <div className='art'>
-          <img className='clipart' src="https://thumbs.dreamstime.com/b/detailed-illustration-
-                silhouettes-strong-rolling-people-set-girl-man-sport-fitness-gym-body-
-                building-workout-powerlifting-115536097.jpg" width="50%"></img>
-        </div> */}
       </FormGroup>
       <div className='choice'>
       <FormGroup className='determinables'>
@@ -267,6 +263,9 @@ export const GenerateWorkoutForm = () => {
         Generate Workout
       </button>
       </div>
+      <WelcomeFooter/>
     </Form>
+    
   )
+  
 }

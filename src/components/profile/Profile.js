@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
+import { WelcomeFooter } from "../welcome/WelcomeFooter"
 import "./Profile.css"
 
 export const Profile = () => {
@@ -140,7 +141,7 @@ export const Profile = () => {
 
         </ul>
       </section>
-
+      <WelcomeFooter />
     </body>
   )
 }
