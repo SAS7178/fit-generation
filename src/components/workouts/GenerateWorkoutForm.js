@@ -4,6 +4,8 @@ import { Form, FormGroup, FormText, Input, Label, Progress } from 'reactstrap';
 import { WelcomeFooter } from '../welcome/WelcomeFooter';
 import "./Workouts.css"
 
+
+
 // funct to take input form data and post to database in customerworkouts array
 //then nav to exercise page on generate click
 export const GenerateWorkoutForm = () => {
@@ -34,7 +36,7 @@ export const GenerateWorkoutForm = () => {
       experienceId: customerWorkout.experienceId,//
       goalId: customerWorkout.goalId,
       muscleId: customerWorkout.muscleId,//
-      dateCompleted: new Date//
+      dateCompleted: new Date()//
     }
     return fetch(`http://localhost:8088/customerWorkouts`, {
       method: "POST",
@@ -59,15 +61,15 @@ export const GenerateWorkoutForm = () => {
     <Form>
       <div className='generator__nav'>
         <nav>
-          <Link className="navbar__link" to="/">Home</Link>
+          <Link className="navbar__link" to="/"><b>Home</b></Link>
         </nav>
         <nav>
-          <Link className="navbar__link" to="/profile/:customerId">Profile</Link>
+          <Link className="navbar__link" to="/profile/:customerId"><b>Profile</b></Link>
         </nav>
       </div>
       <div className='generate__header'>
         <h1>Fit Generation</h1>
-        <img className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+        <img alt='' className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
@@ -140,6 +142,7 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
+        
       </FormGroup>
       <div className='choice'>
       <FormGroup className='determinables'>
@@ -206,9 +209,9 @@ export const GenerateWorkoutForm = () => {
       </div>
       <FormGroup className='img-file'>
         <Label for="exampleFile">
-        Add
+        
         </Label>
-        <Input
+        <Input 
           id="exampleFile"
           name="file"
           type="file"
@@ -251,7 +254,7 @@ export const GenerateWorkoutForm = () => {
         </Progress>
       </div>
       <div className='gen-btns'>
-      <button
+      <button 
         onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
         className="btn btn-primary">
         Update

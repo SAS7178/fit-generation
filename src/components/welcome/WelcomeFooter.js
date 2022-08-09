@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom"
 import { List, Offcanvas, OffcanvasBody, OffcanvasHeader, Progress } from "reactstrap"
 
+
 export const WelcomeFooter = () => {
 
     return (
         <>
+
             <footer className="footer">
 
                 <article className="footer-links">
@@ -41,6 +43,7 @@ export const WelcomeFooter = () => {
                         &nbsp;--------------------------------------
                         <br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2022 FitGeneration, Inc.&nbsp;&nbsp;&nbsp;&nbsp;--------------------------------
                     </div>
+
 
                 </article>
             </footer>
