@@ -26,7 +26,7 @@ export const WelcomePage = () => {
   //   .catch(err => console.error(err));
 
   return (
-    <div className="">
+    <div className="background__home">
       <section className="card-box">
         <Card inverse className="welcome__card">
           <CardImg

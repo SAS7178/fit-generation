@@ -1,22 +1,17 @@
 .title__home {
     display: flex;
-    font-size: 50%;
-    margin-left: 8em;
+    font-size: 70%;
+    margin-left: 14em;
     color: rgb(119, 205, 205);
-
-}
-
-h1 {
-    font-style: ;
+ 
 }
 
 .login__input {
     display: flex;
     width: min-content;
 }
-.hamburger{
-    margin: 2em;
-}
+.hamburger{}
+
 .welcome__home {
     display: flex;
     justify-content: center;
