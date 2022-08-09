@@ -1,3 +1,6 @@
+/* .body{ 
+    margin: 15em;
+} */
 .welcome__header{
     display:flex;
     top: 0;
@@ -16,6 +19,7 @@
 .tagline{
     display: flex;
     justify-content: center;
+    margin-bottom:4em;
 }
 .footer__link{
     opacity: 100%;
@@ -29,6 +33,7 @@
 }
 .btn-generate {
     background-color: rgb(112, 251, 61);
+
     width: 14em;
 }
 .btn-games {
@@ -36,13 +41,16 @@
     width: 14em;
 }
 
+
 .footer {
     background-image: url("https://thumbs.dreamstime.com/b/transparent-abstract-halftone-grey-lines-set-modern-dynamic-smooth-swoosh-futuristic-waves-collection-web-header-footer-layout-219889528.jpg");
     border: 4px double black;
     justify-content: space-evenly;
+
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
+    align-items: center;
 }
 .footer-items{
     display: flex;
@@ -83,14 +91,26 @@
     margin-top: 3em;
 }
 
-.about {
-    display: flex;
-    margin-right: 8em;
+.footer-logos{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
+    .footer-foot{
+        display:flex;
+        flex-direction:column;
+        margin-top:3em;
+    }
+.font{
+    font-size:x-large;
 }
 
-.contact {
+
+.myPT {
     display: flex;
-    margin-left: 8em;
+    justify-content: space-around;
+    margin-top: 3em;
 }
 
 .card-box {
@@ -98,16 +118,15 @@
     max-width: 100%;
 }
 
+
 .background__home{
     background-image: url(https://as1.ftcdn.net/v2/jpg/04/37/37/46/1000_F_437374623_dcWp53EfQiW59Vyn8Va62qI64LuULoYo.jpg  );
 }
+
 #root{
     background-image: url(https://as1.ftcdn.net/v2/jpg/04/37/37/46/1000_F_437374623_dcWp53EfQiW59Vyn8Va62qI64LuULoYo.jpg  );
 }
 .li {
     display: flex;
     justify-content: space-between;
-}
-.tagline{
-    margin-bottom: 8em;
 }

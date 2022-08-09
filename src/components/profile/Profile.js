@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
 import { WelcomeFooter } from "../welcome/WelcomeFooter"
+
 import "./Profile.css"
 
 export const Profile = () => {
@@ -66,8 +67,8 @@ export const Profile = () => {
   return (
     <body className="background">
       <div className="profile__nav">
-        <Link className="navbar__home" to="/">Home</Link>
-        <Link className="navbar__generate" to="/generateWorkout">Generate New Workout</Link>
+        <Link className="navbar__home" to="/"><b>Home</b></Link>
+        <Link className="navbar__generate" to="/generateWorkout"><b>Generation Form </b></Link>
       </div>
       <div className='welcome__header'>
         <h1> Fit Generation </h1>
@@ -107,19 +108,45 @@ export const Profile = () => {
       </div>
       <h2 className="workout"><b>My Workout List</b></h2>
       <div className="max">
+
         <b>Understanding</b><Button outline onClick={() => { window.open(URL= "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
             className="max-link">
             Learn Here
           </Button>
+
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Button outline onClick={() => { window.open(URL= "https://www.nasm.org/resources/one-rep-max-calculator") }}
             className="max-link">
             Max Calculator
           </Button>
-<br></br> <i>OneRepMax:</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Button className="generateNew"  onClick={() => { navigate("/GenerateWorkout") }}>
+            <b>Generation New </b>
+            </Button>
+          </div>
        
      
-      </div>
+        <UncontrolledCarousel className="carousel"
+  items={[
+    {
+      altText: 'Slide 1',
+      caption: 'Slide 1',
+      key: 1,
+      src: 'https://picsum.photos/id/123/1200/600'
+    },
+    {
+      altText: 'Slide 2',
+      caption: 'Slide 2',
+      key: 2,
+      src: 'https://picsum.photos/id/456/1200/600'
+    },
+    {
+      altText: 'Slide 3',
+      caption: 'Slide 3',
+      key: 3,
+      src: 'https://picsum.photos/id/678/1200/600'
+    }
+  ]}
+  />
       <section className="workout__list">
         <ul className="w__List">
 
@@ -130,11 +157,11 @@ export const Profile = () => {
               <Button outline onClick={() =>
                 navigate(`/exerciseView/${workout.id}`)}
                 className="save-primary" >
-                - View Workout -
+                 View Workout 
               </Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>
               <Button outline onClick={() => deleteButton(workout.id)}
                 className="save-primary">
-                - Delete Workout -
+                 Delete Workout 
               </Button>
             </div>
           </li>)}
