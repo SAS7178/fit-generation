@@ -107,9 +107,9 @@ export const Profile = () => {
       </div>
       <h2 className="workout"><b>My Workout List</b></h2>
       <div className="max">
-        <b>Understanding</b>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button outline onClick={() => { window.open(URL= "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
+        <b>Understanding</b><Button outline onClick={() => { window.open(URL= "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
             className="max-link">
-            Click Here
+            Learn Here
           </Button>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Button outline onClick={() => { window.open(URL= "https://www.nasm.org/resources/one-rep-max-calculator") }}
@@ -125,7 +125,7 @@ export const Profile = () => {
 
           {filteredWorkouts.map(workout => <li className="w__Item" key={workout.id}>
             <h3 className="workout_name"><strong>{workout.workoutName}</strong></h3>&nbsp;<br />
-            <i>Generated on:</i>&nbsp;{workout.dateCompleted}&nbsp;&nbsp;
+            <i>Generated on Date:</i>&nbsp;{workout.dateCompleted}&nbsp;&nbsp;
             <div className="workout__btns">
               <Button outline onClick={() =>
                 navigate(`/exerciseView/${workout.id}`)}
