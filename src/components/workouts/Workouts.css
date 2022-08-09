@@ -1,11 +1,4 @@
-h1 {
-    display: flex;
-    justify-content: center;
-    color: aqua;
-    font-weight: 700 bolder;
-    font-size: 50px;
-    padding-bottom: .5em;
-}
+
 .nav__image {
 margin-top: 1em;
 }
@@ -34,13 +27,7 @@ margin-top: 1em;
     justify-content: center;
     justify-content: space-around;
 }
-/* .determinables {
-    display: flex;
-    justify-content: center;
-} */
-body{
-    margin-left: 3em;
-}
+
 .clipart{
     display: flex;
     justify-content: center;

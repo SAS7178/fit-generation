@@ -5,7 +5,7 @@ export const WelcomeFooter = () => {
 
     return (
         <>
-            <div>
+            {/* <div>
                 <Offcanvas
                     direction="start"
                     scrollable
@@ -20,7 +20,7 @@ export const WelcomeFooter = () => {
                         </strong>
                     </OffcanvasBody>
                 </Offcanvas>
-            </div>
+            </div> */}
 
             <footer className="footer">
 
