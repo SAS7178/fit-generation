@@ -40,7 +40,7 @@
 .Header {
     display: flex;
     justify-content: flex-end;
-    background-color: rgb(116, 123, 123);
+    background-color: rgb(80, 85, 85);
     border-bottom: 2px solid black;
     height: 2em;
 }

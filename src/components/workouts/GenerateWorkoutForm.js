@@ -58,7 +58,10 @@ export const GenerateWorkoutForm = () => {
   
 
   return (
+    
     <Form>
+      
+      <section className='gen-page'>
       <div className='generator__nav'>
         <nav>
           <Link className="navbar__link" to="/"><b>Home</b></Link>
@@ -73,8 +76,9 @@ export const GenerateWorkoutForm = () => {
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
+      
       <FormGroup tag="fieldset">
-        <legend>
+        <legend className='ExperienceTitle'>
           Experience Level
         </legend>
         <div className='experience'>
@@ -110,7 +114,7 @@ export const GenerateWorkoutForm = () => {
             <div className="form-height">
               <label htmlFor="number">Height</label>
               <input type="height"
-                className="form-control"
+                className="form-controlGen"
                 value={customerWorkout.height}
                 onChange={
                   //take current obj value and update with user selected value
@@ -129,7 +133,7 @@ export const GenerateWorkoutForm = () => {
             <div className="form-weight">
               <label htmlFor="number">Weight</label>
               <input type="weight"
-                className="form-control"
+                className="form-controlGen"
                 value={customerWorkout.weight}
                 onChange={
                   //take current obj value and update with user selected value
@@ -144,8 +148,9 @@ export const GenerateWorkoutForm = () => {
         </FormGroup>
         
       </FormGroup>
+      
       <div className='choice'>
-      <FormGroup className='determinables'>
+      <FormGroup className='choice'>
         <Label for="goal">
           Fitness Goal
         </Label>
@@ -178,7 +183,7 @@ export const GenerateWorkoutForm = () => {
           </option>
         </Input>
       </FormGroup>
-      <FormGroup className='determinables'>
+      <FormGroup className='choice'>
         <Label for="exampleSelect">
           Muscle Group
         </Label>
@@ -207,19 +212,7 @@ export const GenerateWorkoutForm = () => {
         </Input>
       </FormGroup>
       </div>
-      <FormGroup className='img-file'>
-        <Label for="exampleFile">
-        
-        </Label>
-        <Input 
-          id="exampleFile"
-          name="file"
-          type="file"
-        />
-        <FormText>
-          Upload your Fit Generation profile img here
-        </FormText>
-      </FormGroup>
+
       <div className='progress-bar'>
         <Progress
           className="my-3"
@@ -256,16 +249,17 @@ export const GenerateWorkoutForm = () => {
       <div className='gen-btns'>
       <button 
         onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
-        className="btn btn-primary">
+        className="btn-UpdateGen">
         Update
       </button>
       <button
         onClick={(evt) => handleGenerateButtonClick(evt)
         }
-        className="btn btn-primary">
+        className="btn-UpdateGen">
         Generate Workout
       </button>
       </div>
+      </section>
       <WelcomeFooter/>
     </Form>
     
