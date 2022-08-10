@@ -30,15 +30,17 @@ export const NavBar = (args) => {
       <div className='Header'>
       <ExerciseSearch/>
       </div>
+      
         <Navbar {...args}>
           <NavbarBrand className="title__home" href="/">
-            <div></div>
+
             <div className='welcome__header'>
-              <h1> <strong>Fit Generation</strong> </h1>
+              <h1> <strong>Fit Generation</strong> </h1> 
               <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="90"></img>
             </div>
+            <img alt='' className='sit-logo' path='src/components/images/Fitlogo.jpeg'></img>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -71,10 +73,7 @@ export const NavBar = (args) => {
     return (
       <>
        <div className='Header'>
-      <a href='https://twitter.com/'><img alt="" className="nav__logo" src="http://powerpackedventures.in/wp-content/uploads/2022/05/Asset-1@4x.png" width="30" height="30"></img></a>
-      <a href='https://www.snapchat.com/'><img alt="" className="nav__logo" src="https://assets.stickpng.com/thumbs/584c4c131fc21103bb375baa.png" width="25" height="25"></img></a>
-      <a href='https://www.facebook.com/'><img alt="" className="fb__logo" src="https://i.pinimg.com/originals/79/ff/98/79ff98c829c7f91b891cfc9555ebade2.png" width="30" height="30"></img></a>
-      <a href='https://www.instagram.com/'><img alt="" className="nav__logo" src="https://i.pinimg.com/originals/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.png" width="30" height="25"></img></a>
+       <ExerciseSearch/>
       </div>
       
         <Navbar {...args}>

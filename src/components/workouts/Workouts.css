@@ -1,3 +1,4 @@
+
 h1 {
     display: flex;
     justify-content: center;
@@ -10,6 +11,7 @@ h1 {
     background-image: url("https://img.wallpapersafari.com/desktop/1600/900/67/54/zf1Ups.jpg");
 
 }
+
 .nav__image {
 margin-top: 1em;
 }
@@ -43,9 +45,11 @@ margin-top: 1em;
     align-items: center;
     
 }
+
 body{
     margin-left: 3em;
 }
+
 .clipart{
     display: flex;
     justify-content: center;

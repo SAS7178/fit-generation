@@ -14,7 +14,7 @@
 .welcome__home {
     display: flex;
     justify-content: center;
-    font-size: xx-large;
+    font-size: 60px;
 }
 
 .welcome__header {
