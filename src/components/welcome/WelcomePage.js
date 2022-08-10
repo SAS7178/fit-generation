@@ -53,7 +53,7 @@ export const WelcomePage = () => {
           </CardImgOverlay>
         </Card>
       </section>
-
+      
       <section className="tagline" >
 
         <div><b>Where <strong>Fitness Generation</strong> is our Mission!</b></div>

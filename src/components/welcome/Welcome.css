@@ -9,6 +9,7 @@
 }
 .card-img{
     margin-top: -4em;
+    border: 2px solid red;
 }
 
 .card-box {
@@ -73,7 +74,7 @@
 
 .footer {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI4YQGwDhArxFDOyulHTSctieoQsyXiwXD-6iray7H2inWKO8G6hdOz7ry4Bp6AuQ8J-Y&usqp=CAU");
-    border-top: 4px double whitesmoke;
+    border-top: 4px double rgb(216, 9, 9);
     border-radius: 5%;
     justify-content: space-evenly;
     position: relative;

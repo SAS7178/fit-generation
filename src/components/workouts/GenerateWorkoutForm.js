@@ -49,7 +49,7 @@ export const GenerateWorkoutForm = () => {
 
   // funct to navigate on click of generateWorkout with customerid for useparam
   const handleGenerateButtonClick = () => {
-    if(updateTest === true) {
+    if(updateTest === true)  {
     navigate(`/exercise/${fitCustomerObject.id}`)
   
   } else {window.alert("Update Inputs To Generate")} 

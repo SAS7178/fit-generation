@@ -4,7 +4,7 @@
     height: 1.5em;
     top: -1;
     background-color: rgb(116, 123, 123);
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid red;
 }
 
 .background{
@@ -29,15 +29,19 @@
 .navbar__generate {
    margin-right: 1em;
 } 
-.understandMax{
-    display: flex;
-    justify-content: center;
-}
+
 .max{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+}
+.tools{
+    display: flex;
+    flex-direction: column;
+}
+.edu{
+    display: flex;
+    flex-direction: column;
 }
 .max-link{
     background-color: ghostwhite;
@@ -51,10 +55,11 @@
     color: blue;
 }
 .tracking{
+    border: 1px solid red;
     position: relative;
     margin-top: 5em;
     margin-left: 7em;
-    height: 15em;
+    height: 25em;
     width: 60%;
 }
 button {
@@ -66,7 +71,7 @@ button {
 }
 .top-half{
     display: flex;
-    margin: 2em;
+    margin-bottom:4em;
 }
 .tableLine{
     display: flex;
@@ -81,10 +86,11 @@ button {
     width: 85%;
 }
 
+
 .fileLoad{
     display: flex;
     flex-direction: column;
-    height: 3em;
+    height: 4em;
     align-items: start;
     margin: 1em;
 }

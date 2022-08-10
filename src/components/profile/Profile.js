@@ -77,59 +77,92 @@ export const Profile = () => {
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
-    
+      <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
       <div className="top-half">
-      <section className="welcomebtn">
-      <div className="welcome-msg" >
-        &nbsp;&nbsp;&nbsp;&nbsp;<b>Welcome back,</b>
-        <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <b>{customer.name}</b></div>
+        <section className="welcomebtn">
+          <div className="welcome-msg" >
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>Welcome back,</b>
+            <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <b>{customer.name}</b></div>
+          </div>
+          <FormGroup className="fileLoad">
+            <Label for="exampleFile">
+            </Label>
+            <Input
+              id="exampleFile"
+              name="file"
+              type="file"
+            />
+            <FormText >
+              <b>Track your progress</b>
+            </FormText>
+          </FormGroup>
+        </section>
+        <img className="tracking" src="https://uk.inbody.com/wp-content/uploads/2018/09/23.png"></img>
       </div>
-      <FormGroup className="fileLoad">
-        <Label for="exampleFile">
-        </Label>
-        <Input
-          id="exampleFile"
-          name="file"
-          type="file"
-        />
-        <FormText >
-          <b>Track your progress</b>
-        </FormText>
-      </FormGroup>
-      </section>
-      <img className="tracking" src="https://raw.github.com/dacer/AndroidCharts/master/pic/line.png"></img>
-      </div>
-     
+
       <div className="card__Element">
       </div>
+
       <div className="max">
-        <div className="edu-zone"><b> (Education Zone)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Tools)</b></div>
-        <section className="understandMax">
-        <div className="tableLine">
-          <Button outline onClick={() => { window.open(URL = "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
-            className="max-link">
-            OneRep Max
-          </Button>
+
+        <div className="edu-zone"><b> &nbsp;&nbsp;(Education Zone)&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
-            className="max-link">
-            Max Calculator
-          </Button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Tools)</b>
+        </div>
+
+        <section className="understandMax">
+          <div className="tableLine">
+            <div className="edu">
+              <Button outline onClick={() => { window.open(URL = "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
+                className="max-link">
+                OneRep Max
+              </Button>
+
+              <Button outline onClick={() => { window.open(URL = "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
+                className="max-link">
+                OneRep Max
+              </Button>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div className="tools">
+              <Button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
+                className="max-link">
+                Max Calculator
+              </Button>
+
+              <Button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
+                className="max-link">
+                Max Calculator
+              </Button>
+            </div>
           </div>
         </section>
-             
-           
-       
-      <h2 className="workout"><b>My Workout List</b></h2>
+
+
+
+        <h2 className="workout"><b>My Workout List</b></h2>
         <Button className="generateNew" onClick={() => { navigate("/GenerateWorkout") }}>
-<Spinner
-  color="primary"
-  size=""
->
-  Loading...
-</Spinner>&nbsp;&nbsp;&nbsp;
+          <Spinner
+            color="primary"
+            size=""
+          >
+            Loading...
+          </Spinner>&nbsp;&nbsp;&nbsp;
           <b>Generate New Workout </b>
         </Button>
 
