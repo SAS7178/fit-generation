@@ -9,7 +9,10 @@ fieldset {
     margin: 0;
     border: 0;
 }
+.login-fields{
 
+  
+}
 .form--login {
     display: inline-block;
     margin: 0 auto;
@@ -46,6 +49,7 @@ fieldset {
 
 .container--login {
     text-align: center;
+    border: 2px solid black;
 }
 
 .form--login {

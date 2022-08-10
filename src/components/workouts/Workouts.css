@@ -6,10 +6,15 @@ h1 {
     font-size: 50px;
     padding-bottom: .5em;
 }
+.gen-page{
+    background-image: url("https://img.wallpapersafari.com/desktop/1600/900/67/54/zf1Ups.jpg");
+
+}
 .nav__image {
 margin-top: 1em;
 }
 .navbar__link{
+    color: black;
     margin-left: 2em;
     margin-right: 2em;
 }
@@ -18,26 +23,26 @@ margin-top: 1em;
     justify-content: space-between;
     position: relative;
     background-color: rgb(116, 123, 123);
+    border-bottom: 2px solid black;
 }
 .form-weight{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .form-height{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .choice{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    
 }
-/* .determinables {
-    display: flex;
-    justify-content: center;
-} */
 body{
     margin-left: 3em;
 }
@@ -61,11 +66,9 @@ body{
 .generate__header {
     display: flex;
     justify-content: center;
-    background-color: #8f969e;
     position: relative;
     display: flex;
-    border: 2px solid rgb(161, 232, 232);
-    border-radius: 50%;
+    border-radius: 10%;
     margin-right: 3em;
     margin-top: 2em;
 }
@@ -87,14 +90,18 @@ legend {
 .advanced{
     font-weight: 800;
 }
-.form-control {
-  width: 5em;
+.form-controlGen {
+  width: 15em;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+.ExperienceTitle{
+    font-size: xx-large;
+    font-style: oblique;
+    font-weight: 600;
 }
 .form-select {
     width: 15em;
-}
-.btn-primary {
-    margin-left: 2em;
 }
 #exampleFile{
     width: 7rem;
@@ -104,8 +111,13 @@ legend {
     justify-content: center;
     margin: 3em;
 }
+.btn-UpdateGen {
+    display: flex;
+    background-color: lightgray;
+}
 .gen-btns{
     display: flex;
     justify-content: center;
+    justify-content: space-around;
     position: relative;;
 }

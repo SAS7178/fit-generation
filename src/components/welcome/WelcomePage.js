@@ -6,7 +6,7 @@ import { WelcomeFooter } from "./WelcomeFooter.js";
 
 export const WelcomePage = () => {
   const navigate = useNavigate()
-  // const [qoute, setQoute] = useState({})
+ // const [qoute, setQoute] = useState({})
   const handleGenerateButtonClick = () => {
     navigate(`/generateWorkout`)
   }
@@ -22,8 +22,8 @@ export const WelcomePage = () => {
   // fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
   //   .then(response => response.json())
   //   .then(response => console.log(response))
-  //   // .then(response => {setQoute(response)})
-  //   .catch(err => console.error(err));
+  //    .then(response => setQoute(response))
+ 
 
   return (
     <div className="background__home">
@@ -39,7 +39,7 @@ export const WelcomePage = () => {
               Fit Generation Mission
             </CardTitle>
             <CardText>
-              {/* <div>{...qoute.qoute}</div> */}
+              {/* {qoute.qoute} */}
             </CardText>
             <CardText>
               <small className="text-muted">

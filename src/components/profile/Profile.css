@@ -1,13 +1,13 @@
 .profile__nav {
     display: flex;
     justify-content: space-between;
-    height: 2em;
+    height: 1.5em;
     top: -1;
     background-color: rgb(116, 123, 123);
     border-bottom: 2px solid black;
 }
 .background{
-    background-image: url(https://secure.img1-fg.wfcdn.com/im/81908704/resize-h445%5Ecompr-r85/3636/36365904/Nautical+Living+33%2527+L+x+20.5%2522+W+Removable+Wallpaper+Roll.jpg);
+    background-image: url("https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?auto=compress&cs=tinysrgb&w=1600");
 
 } 
 .welcome__header {
@@ -53,18 +53,24 @@ button {
 .card__Element{
     display: flex;
     justify-content: center;
-
+}
+.fileLoad{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 3em;
 }
 .welcome-msg{
-    margin-top: 8em;
+    margin-top: 1em;
 }
 .customer-name {
     font-size: x-large;
     color: rgb(121, 217, 89);
-    
 }
+
 .save-primary{
     background-color: darkgrey;
+    width: 10em;
     color: black;
 }
 
@@ -86,11 +92,12 @@ button {
 
 .w__Item {
     display: flex;
-    background-image: url("") ;
+    /* background-image: url("https://images.pexels.com/photos/1151282/pexels-photo-1151282.jpeg?auto=compress&cs=tinysrgb&w=1600") ; */
     flex-wrap: wrap;
+    background-color:azure;
     justify-content: center;
     border: groove 5px;
-    border-radius: 25%;
+    border-radius: 5%;
     flex-direction: column;
     align-items: center;
     align-self: center;
@@ -109,4 +116,10 @@ h3{
     display: flex;
     justify-content: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.navbar__home{
+    color: black;
+}
+.navbar__generate{
+    color: black;
 }

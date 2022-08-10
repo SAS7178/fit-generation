@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
-import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
+import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, FormGroup, FormText, Input, Label } from "reactstrap"
+import { ExerciseSearch } from "../search/ExerciseSearch"
 import { WelcomeFooter } from "../welcome/WelcomeFooter"
 import "./Profile.css"
 
@@ -81,7 +82,20 @@ export const Profile = () => {
         <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <b>{customer.name}</b></div>
       </div>
-      <br></br>
+      <ExerciseSearch/>
+      <FormGroup className="fileLoad">
+        <Label for="exampleFile">
+        </Label>
+        <Input
+          id="exampleFile"
+          name="file"
+          type="file"
+        />
+        <FormText >
+        <b>Track your progress</b>
+        </FormText>
+      </FormGroup>
+      
       <div className="card__Element">
         <Card inverse className="profile__card">
           <CardImg
@@ -130,11 +144,11 @@ export const Profile = () => {
               <Button outline onClick={() =>
                 navigate(`/exerciseView/${workout.id}`)}
                 className="save-primary" >
-                - View Workout -
+                 View Workout 
               </Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>
               <Button outline onClick={() => deleteButton(workout.id)}
                 className="save-primary">
-                - Delete Workout -
+                 Delete Workout 
               </Button>
             </div>
           </li>)}
