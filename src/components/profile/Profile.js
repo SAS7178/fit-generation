@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useNavigate, useParams } from "react-router-dom"
+import { Link, NavLink, useNavigate, useParams } from "react-router-dom"
 import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, FormGroup, FormText, Input, Label, Spinner, UncontrolledCarousel } from "reactstrap"
 import { ExerciseSearch } from "../search/ExerciseSearch"
 import { WelcomeFooter } from "../welcome/WelcomeFooter"
@@ -83,7 +83,7 @@ export const Profile = () => {
           <div className="welcome-msg" >
             &nbsp;&nbsp;&nbsp;&nbsp;<b>Welcome back,</b>
             <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <b>{customer.name}</b></div>
+              <b>{customer.name}</b></div><br></br><br></br><br></br><br></br><br></br>
           </div>
           <FormGroup className="fileLoad">
             <Label for="exampleFile">
@@ -93,6 +93,7 @@ export const Profile = () => {
               name="file"
               type="file"
             />
+            <NavLink className="InlineScan__link" to="/generateWorkout">Healthy Lifestyle</NavLink>
             <FormText >
               <b>Track your progress</b>
             </FormText>
@@ -129,7 +130,7 @@ export const Profile = () => {
 
               <Button outline onClick={() => { window.open(URL = "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
                 className="max-link">
-                OneRep Max
+                Underst
               </Button>
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -145,9 +146,9 @@ export const Profile = () => {
                 Max Calculator
               </Button>
 
-              <Button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
+              <Button outline onClick={() => { window.open(URL = "https://www.calculator.net/bmi-calculator.html") }}
                 className="max-link">
-                Max Calculator
+                BMI Calculator
               </Button>
             </div>
           </div>
@@ -188,6 +189,7 @@ export const Profile = () => {
             }
           ]}
         />
+        <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
       </div>
       <section className="workout__list">
         <ul className="w__List">
