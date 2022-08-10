@@ -22,7 +22,7 @@ export const WelcomePage = () => {
     }
   };
 
-  //fetches and set all workouts for cust sets to var to make available for iteration globally
+  
   useEffect(
     () => {
      fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
@@ -39,6 +39,7 @@ export const WelcomePage = () => {
           <CardImg
             alt="Card image cap"
             src="https://picsum.photos/900/270?grayscale"
+            className="card-img"
           />
           <CardImgOverlay>
             <CardTitle tag="h5">

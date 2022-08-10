@@ -97,69 +97,49 @@ export const Profile = () => {
       </FormGroup>
 
       <div className="card__Element">
-        <Card inverse className="profile__card">
-          <CardImg
-            alt="Card image cap"
-            src="https://picsum.photos/900/270?grayscale"
-            style={{
-              height: 270
-            }}
-            width="100%"
-          />
-          <CardImgOverlay className="profile__card-text">
-            <CardTitle tag="h5">
-              {/* overlayTitle */}
-            </CardTitle>
-            <CardText>
-            </CardText>
-            <CardText>
-              <small className="text-muted">
-              </small>
-            </CardText>
-          </CardImgOverlay>
-        </Card>
       </div>
       <h2 className="workout"><b>My Workout List</b></h2>
 
-      <b>Understanding</b>
-      <section className="understandMax">
-        <Button outline onClick={() => { window.open(URL = "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
-          className="max-link">
-          Learn Here
-        </Button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <Button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
-          className="max-link">
-          Max Calculator
-        </Button>
-      </section>
       <div className="max">
+        <b>Understanding</b>
+        <section className="understandMax">
+          <Button outline onClick={() => { window.open(URL = "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
+            className="max-link">
+            Learn Here
+          </Button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
+            className="max-link">
+            Max Calculator
+          </Button>
+        </section>
         <Button className="generateNew" onClick={() => { navigate("/GenerateWorkout") }}>
           <b>Generation New </b>
         </Button>
-      <UncontrolledCarousel className="carousel"
-        items={[
-          {
-            altText: 'Slide 1',
-            caption: 'Slide 1',
-            key: 1,
-            src: 'https://picsum.photos/id/123/1200/600'
-          },
-          {
-            altText: 'Slide 2',
-            caption: 'Slide 2',
-            key: 2,
-            src: 'https://picsum.photos/id/456/1200/600'
-          },
-          {
-            altText: 'Slide 3',
-            caption: 'Slide 3',
-            key: 3,
-            src: 'https://picsum.photos/id/678/1200/600'
-          }
-        ]}
+
+        <UncontrolledCarousel className="carousel"
+          items={[
+            {
+              altText: 'Slide 1',
+              caption: 'Slide 1',
+              key: 1,
+              src: 'https://picsum.photos/id/123/1200/600'
+            },
+            {
+              altText: 'Slide 2',
+              caption: 'Slide 2',
+              key: 2,
+              src: 'https://picsum.photos/id/456/1200/600'
+            },
+            {
+              altText: 'Slide 3',
+              caption: 'Slide 3',
+              key: 3,
+              src: 'https://picsum.photos/id/678/1200/600'
+            }
+          ]}
         />
-        </div>
+      </div>
       <section className="workout__list">
         <ul className="w__List">
 

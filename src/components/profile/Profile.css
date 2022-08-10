@@ -20,8 +20,6 @@
 .carousel{
     display: flex;
     justify-content: center;
-    margin-top: 2em;
-    margin-left:18em;
     width: 40%;
 }
 
@@ -42,9 +40,10 @@
     
 }
 .max-link{
-    background-color: rgb(96, 207, 40);
+    background-color: ghostwhite;
+    width: 12em;
     border: 3px solid black;
-    color: whitesmoke;
+    color: blue;
 }
 
 
@@ -100,7 +99,7 @@ button {
 .generateNew{
     display:flex;
     border: 1px solid black;
-    color: black;
+    color: ghostwhite;
     background-color:grayscale;
     border-radius: 10%;
 }
