@@ -3,12 +3,21 @@ body {
     margin: 0;
 }
 .welcome__header{
-    position:fixed;
+    position: relative;
     top:1;
+}
+.exerciseList{
+    display: flex;
+    flex-wrap: wrap;
 }
 .workout__exercises {
     display: flex;
     flex-wrap: wrap;
+}
+.nameText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .exercise__link {
