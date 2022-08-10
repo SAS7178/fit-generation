@@ -37,7 +37,7 @@ export const NavBar = (args) => {
               <h1> <strong>Fit Generation</strong> </h1>
               <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
-            card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
+            card-make-stencil.jpg_640x640.jpg" width="100" height="90"></img>
             </div>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />

@@ -8,17 +8,24 @@
 }
 .background{
     background-image: url("https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?auto=compress&cs=tinysrgb&w=1600");
-
 } 
 .welcome__header {
     display: flex;
     justify-content: center;
-   margin: 2em;
+    position: relative;
+    margin-left: 8em;
 }
+.carousel{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-left:18em;
+    width: 40%;
+}
+
 
 .navbar__home {
     margin-left: 1em;
-  
 }
 .navbar__generate {
    margin-right: 1em;
@@ -70,7 +77,8 @@ button {
 
 .save-primary{
     background-color: darkgrey;
-    width: 10em;
+   width: 10em;
+    border: 2px solid black;
     color: black;
 }
 
@@ -83,7 +91,15 @@ button {
     width: 35rem;
 
 }
-
+.generateNew{
+    display:flex;
+    border: 1px solid black;
+    color: black;
+    background-color:grayscale;
+    border-radius: 10%;
+    margin-left:22em;
+    margin-bottom:3em;
+}
 .workout__list {
     display: flex;
     justify-content: center;

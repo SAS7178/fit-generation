@@ -111,9 +111,11 @@ legend {
     justify-content: center;
     margin: 3em;
 }
+
 .btn-UpdateGen {
     display: flex;
     background-color: lightgray;
+
 }
 .gen-btns{
     display: flex;
@@ -121,3 +123,4 @@ legend {
     justify-content: space-around;
     position: relative;;
 }
+

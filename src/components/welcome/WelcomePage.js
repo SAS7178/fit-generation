@@ -1,3 +1,4 @@
+
 //import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
@@ -5,8 +6,10 @@ import "./Welcome.css"
 import { WelcomeFooter } from "./WelcomeFooter.js";
 
 export const WelcomePage = () => {
+
   const navigate = useNavigate()
- // const [qoute, setQoute] = useState({})
+  // const [qoute, setQoute] = useState({})
+
   const handleGenerateButtonClick = () => {
     navigate(`/generateWorkout`)
   }
@@ -70,7 +73,6 @@ export const WelcomePage = () => {
         </div>
 
       </section>
-
       <WelcomeFooter />
     </div>
 

@@ -2,6 +2,10 @@ body {
     background-color: rgb(232, 232, 232);
     margin: 0;
 }
+.welcome__header{
+    position:fixed;
+    top:1;
+}
 .workout__exercises {
     display: flex;
     flex-wrap: wrap;
