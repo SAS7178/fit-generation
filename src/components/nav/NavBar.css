@@ -10,6 +10,10 @@
     display: flex;
     width: min-content;
 }
+.navbar-toggler-icon{
+    background-image: url("https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-%20exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-%20card-make-stencil.jpg_640x640.jpg");
+    border-radius: 50%;
+}
 
 .welcome__home {
     display: flex;

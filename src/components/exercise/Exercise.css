@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 .welcome__header{
-    position:fixed;
+    position: relative;
     top:1;
 }
 .workout__exercises {

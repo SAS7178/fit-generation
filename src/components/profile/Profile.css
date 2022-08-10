@@ -46,14 +46,32 @@
     color: blue;
 }
 
-
 .workout_name {
     font-style: oblique;
     color: blue;
 }
-
+.tracking{
+    position: relative;
+    margin-top: 5em;
+    margin-left: 7em;
+    height: 15em;
+    width: 60%;
+}
 button {
     width: 20%;
+}
+.welcomebtn{
+    margin-bottom: em;
+
+}
+.top-half{
+    display: flex;
+    margin: 2em;
+}
+.tableLine{
+    display: flex;
+    justify-content: center;
+    background-image: url("https://www.longrangelogistics.co.ke/wp-content/uploads/2017/12/vertical-line.png");
 }
 
 .profile__card {
@@ -62,15 +80,13 @@ button {
     border: 3px solid aqua;
     width: 85%;
 }
-.card__Element{
-    display: flex;
-    justify-content: center;
-}
+
 .fileLoad{
     display: flex;
     flex-direction: column;
-    align-items: end;
-    margin-right: 3em;
+    height: 3em;
+    align-items: start;
+    margin: 1em;
 }
 .welcome-msg{
     margin-top: 9em;
@@ -85,6 +101,10 @@ button {
    width: 10em;
     border: 2px solid black;
     color: black;
+}
+.edu-zone{
+    display: flex;
+    margin-right: 3em;
 }
 
 .workout__btns {

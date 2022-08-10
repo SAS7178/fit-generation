@@ -61,12 +61,13 @@
     flex-wrap: wrap;
 }
 .btn-generate {
-    background-color: rgb(112, 251, 61);
-
+    background-color: rgb(24, 81, 151);
+    color: ghostwhite;
     width: 14em;
 }
 .btn-games {
-    background-color: rgb(112, 251, 61);
+    background-color:  rgb(24, 81, 151);
+    color: ghostwhite;
     width: 14em;
 }
 
