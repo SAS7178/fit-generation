@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
-import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, FormGroup, FormText, Input, Label } from "reactstrap"
+import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, FormGroup, FormText, Input, Label, UncontrolledCarousel } from "reactstrap"
 import { ExerciseSearch } from "../search/ExerciseSearch"
 import { WelcomeFooter } from "../welcome/WelcomeFooter"
 
@@ -77,13 +77,12 @@ export const Profile = () => {
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
-
       <div className="welcome-msg" >
         &nbsp;&nbsp;&nbsp;&nbsp;Welcome back,
         <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <b>{customer.name}</b></div>
       </div>
-      <ExerciseSearch/>
+
       <FormGroup className="fileLoad">
         <Label for="exampleFile">
         </Label>
@@ -93,10 +92,10 @@ export const Profile = () => {
           type="file"
         />
         <FormText >
-        <b>Track your progress</b>
+          <b>Track your progress</b>
         </FormText>
       </FormGroup>
-      
+
       <div className="card__Element">
         <Card inverse className="profile__card">
           <CardImg
@@ -121,46 +120,46 @@ export const Profile = () => {
         </Card>
       </div>
       <h2 className="workout"><b>My Workout List</b></h2>
+
+      <b>Understanding</b>
+      <section className="understandMax">
+        <Button outline onClick={() => { window.open(URL = "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
+          className="max-link">
+          Learn Here
+        </Button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
+          className="max-link">
+          Max Calculator
+        </Button>
+      </section>
       <div className="max">
-
-        <b>Understanding</b><Button outline onClick={() => { window.open(URL= "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
-            className="max-link">
-            Learn Here
-          </Button>
-
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Button outline onClick={() => { window.open(URL= "https://www.nasm.org/resources/one-rep-max-calculator") }}
-            className="max-link">
-            Max Calculator
-          </Button>
-          <Button className="generateNew"  onClick={() => { navigate("/GenerateWorkout") }}>
-            <b>Generation New </b>
-            </Button>
-          </div>
-       
-     
-        <UncontrolledCarousel className="carousel"
-  items={[
-    {
-      altText: 'Slide 1',
-      caption: 'Slide 1',
-      key: 1,
-      src: 'https://picsum.photos/id/123/1200/600'
-    },
-    {
-      altText: 'Slide 2',
-      caption: 'Slide 2',
-      key: 2,
-      src: 'https://picsum.photos/id/456/1200/600'
-    },
-    {
-      altText: 'Slide 3',
-      caption: 'Slide 3',
-      key: 3,
-      src: 'https://picsum.photos/id/678/1200/600'
-    }
-  ]}
-  />
+        <Button className="generateNew" onClick={() => { navigate("/GenerateWorkout") }}>
+          <b>Generation New </b>
+        </Button>
+      <UncontrolledCarousel className="carousel"
+        items={[
+          {
+            altText: 'Slide 1',
+            caption: 'Slide 1',
+            key: 1,
+            src: 'https://picsum.photos/id/123/1200/600'
+          },
+          {
+            altText: 'Slide 2',
+            caption: 'Slide 2',
+            key: 2,
+            src: 'https://picsum.photos/id/456/1200/600'
+          },
+          {
+            altText: 'Slide 3',
+            caption: 'Slide 3',
+            key: 3,
+            src: 'https://picsum.photos/id/678/1200/600'
+          }
+        ]}
+        />
+        </div>
       <section className="workout__list">
         <ul className="w__List">
 
@@ -171,11 +170,11 @@ export const Profile = () => {
               <Button outline onClick={() =>
                 navigate(`/exerciseView/${workout.id}`)}
                 className="save-primary" >
-                 View Workout 
+                View Workout
               </Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>
               <Button outline onClick={() => deleteButton(workout.id)}
                 className="save-primary">
-                 Delete Workout 
+                Delete Workout
               </Button>
             </div>
           </li>)}
