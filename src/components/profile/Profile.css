@@ -8,8 +8,8 @@
 }
 
 .background{
-    /* background-image: url("https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?auto=compress&cs=tinysrgb&w=1600"); */
-    background-color:aliceblue;
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTllIQxL93uNxbNUUTk-BfLuJU-gjqTApvioA&usqp=CAU"); */
+    background-color: whitesmoke;
 } 
 .welcome__header {
     display: flex;
@@ -137,12 +137,11 @@ button {
 
 .w__Item {
     display: flex;
-    /* background-image: url("https://images.pexels.com/photos/1151282/pexels-photo-1151282.jpeg?auto=compress&cs=tinysrgb&w=1600") ; */
     flex-wrap: wrap;
     background-color:azure;
     justify-content: center;
-    border: groove 5px;
-    border-radius: 5%;
+    border: groove 1px red;
+    border-radius: 20px 3px 20px 3px;
     flex-direction: column;
     align-items: center;
     align-self: center;

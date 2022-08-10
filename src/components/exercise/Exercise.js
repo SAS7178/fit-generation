@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { Button, FormGroup } from "reactstrap"
+import { WelcomeFooter } from "../welcome/WelcomeFooter"
 import "./Exercise.css"
 
 // func to find all customerWorkouts then most recent generated customerWorkout in database and set
@@ -84,7 +85,7 @@ export const Exercise = () => {
       //func to map exercises info and tutorial button/add to workout butn
     const exerciseList = () => {
         return filteredExercises.map(exercise => {
-            return <ul key={exercise.id}>
+            return <ul className="exerciseList" key={exercise.id}>
                 <li className="w__e" key={exercise.id} type="checkbox">
                     <strong>{exercise.name}</strong>&nbsp;<br />
                     sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
@@ -139,6 +140,7 @@ export const Exercise = () => {
     // fetches and set all exercises to var to make available for iteration globally
     return (
         <>
+        
             <div className='generator__nav'>
                 <nav>
                     <Link className="navbar__link" to="/">Home</Link>
@@ -153,15 +155,16 @@ export const Exercise = () => {
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
             </div>
+            <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
             {exerciseList()}
-            <h2 className="workout"><b>Workout</b></h2>
-            <fieldset></fieldset>
-            <h3>MyWorkout</h3>
+            <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
+            <h2 className="workout"><b>Workout Name</b></h2>
+            <fieldset className="nameText">
             <input type="name"
                 value={workoutName}
                 onChange={evt => set(evt.target.value)}
                 className="form-control"
-                placeholder="Name..."
+                placeholder="...Name me..."
                 required autoFocus />
             <div>
                 <Button outline onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
@@ -169,6 +172,8 @@ export const Exercise = () => {
                     Save to MyWorkouts List
                 </Button>
             </div>
+            </fieldset>
+            <WelcomeFooter/>
         </>
     )
 }

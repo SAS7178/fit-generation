@@ -46,6 +46,7 @@
     justify-content: flex-end;
     background-color: rgb(80, 85, 85);
     border-bottom: 2px solid rgb(217, 41, 41);
+    border-radius: 0px 0px 0px 15px;
     height: 2em;
 }
 .fb__logo{
