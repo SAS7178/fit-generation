@@ -17,6 +17,11 @@
     position: relative;
     margin-left: 8em;
 }
+.btn-UpdateImage{
+    width: 5em;
+    background-color: ghostwhite;
+    color: goldenrod;
+}
 .btn-primary {
     background-color: lightsteelblue;
     margin-bottom: 2em;
@@ -30,7 +35,11 @@
     justify-content: center;
     width: 40%;
 }
-
+#addImage{
+    width: 5em;
+    background-color: ghostwhite;
+    color: blue;
+}
 .navbar__home {
     margin-left: 1em;
 }

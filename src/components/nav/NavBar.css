@@ -98,7 +98,10 @@ margin-right: .5em;
     margin-left: 2em;
     border-radius: 100%;
 }
+.nav__run{
+    background-color: black;
 
+}
 .nonMember {
     display: flex;
     color: red;
