@@ -70,6 +70,7 @@ export const NavBar = (args) => {
                 }}><b>Logout</b>
                 </NavLink>
               </NavItem>
+                <div className="seperation"></div>
             </Nav>
 
             <NavbarText className='welcome__home'><strong>Welcome!</strong></NavbarText>

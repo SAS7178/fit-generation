@@ -17,6 +17,14 @@
     position: relative;
     margin-left: 8em;
 }
+.btn-primary {
+    background-color: lightsteelblue;
+    margin-bottom: 2em;
+    width: 10em;
+    height: 2em;
+    border-radius: 10%;
+    border: 2px solid blue;
+}
 .carousel{
     display: flex;
     justify-content: center;
@@ -29,7 +37,10 @@
 .navbar__generate {
    margin-right: 1em;
 } 
-
+.topPro{
+    opacity: 80%;
+    border-style: ridge;
+}
 .max{
     display: flex;
     flex-direction: column;
@@ -55,7 +66,7 @@
     color: blue;
 }
 .tracking{
-    border: 3px solid red;
+    border: 2px solid lightsteelblue;
     position: relative;
     margin-top: 5em;
     margin-left: 9em;
@@ -125,7 +136,16 @@ button {
    justify-content: center;
     width: relative;
     width: 35rem;
-
+}
+.seperation-pro{
+    display: flex;
+    margin: 1em;
+    background-image: radial-gradient(rgb(45, 59, 208), #FFF), radial-gradient(#CCC, #FFF);
+    background-position: 0, 100%, 0, 100%;
+    border-radius: 40%;
+    opacity: 40%;
+    height: 1em;
+    width: 70%;
 }
 .generateNew{
     display:flex;
@@ -134,6 +154,7 @@ button {
     background-color:grayscale;
     border-radius: 10%;
 }
+
 .workout__list {
     display: flex;
     justify-content: center;

@@ -34,6 +34,8 @@ export const WelcomePage = () => {
 
   return (
     <div className="">
+   
+  
       <section className="card-box">
         <Card inverse className="welcome__card">
           <CardImg
@@ -53,6 +55,7 @@ export const WelcomePage = () => {
           </CardImgOverlay>
         </Card>
       </section>
+      <div className="seperation"></div>
       
       <section className="tagline" >
 
@@ -72,7 +75,6 @@ export const WelcomePage = () => {
             Exercise Games
           </button>
         </div>
-
       </section>
       <WelcomeFooter />
     </div>

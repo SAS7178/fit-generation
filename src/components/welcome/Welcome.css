@@ -41,20 +41,23 @@
     margin-bottom: 4em;
 }
 
-.btn-primary {
-    background-color: rgb(112, 251, 61);
-    margin-bottom: 2em;
-    width: 14em;
-    height: 3em;
-    border-radius: 10%;
-    border: 2px solid black;
-}
+
 
 .exercise-games {
     display: flex;
     justify-content: center;
 }
+.seperation{
+    display: flex;
+    margin: 1em;
+    background-image: radial-gradient(rgb(231, 27, 27), #FFF), radial-gradient(#CCC, #FFF);
+    background-position: 0, 100%, 0, 100%;
+    border-radius: 40%;
+    opacity: 40%;
+    height: 1em;
+    width: 100%;
 
+}
 .footer__link {
     opacity: 100%;
     color: blue;

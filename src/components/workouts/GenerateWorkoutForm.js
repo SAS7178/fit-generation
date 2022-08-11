@@ -108,7 +108,7 @@ export const GenerateWorkoutForm = () => {
             </Label>
           </FormGroup>
         </div>
-
+    
         <FormGroup>
           <fieldset>
             <div className="form-height">
