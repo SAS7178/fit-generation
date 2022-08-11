@@ -8,7 +8,7 @@ export const ExerciseSearch = ({setterFunction}) => {
                    setterFunction(changeEvent.target.value)
                }
            }
-            type="text" placeholder="Search for Exercise" />
+            type="text" placeholder="&nbsp;&nbsp;&nbsp;Search for Exercise..." />
        </div>
         
     )

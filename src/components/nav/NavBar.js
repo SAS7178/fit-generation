@@ -12,9 +12,10 @@ import {
   NavbarText
 } from 'reactstrap';
 import { ExerciseSearch } from '../search/ExerciseSearch';
+import { ExerciseList } from '../search/ExerciseList';
 
 export const NavBar = (args) => {
-  // hamburger w initial state of closed
+  const [searchTerms, setSearchTerms] = useState("")
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate()
   const toggle = () => setIsOpen(!isOpen);
@@ -28,7 +29,8 @@ export const NavBar = (args) => {
     return (
       <>
       <div className='Header'>
-      <ExerciseSearch/>
+      <ExerciseSearch setterFunction={setSearchTerms}/>
+      <ExerciseList searchTermState={searchTerms} />
       </div>
       
         <Navbar {...args}>

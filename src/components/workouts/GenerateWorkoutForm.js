@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom"
-import { Form, FormGroup, FormText, Input, Label, Progress } from 'reactstrap';
+import { Form, FormGroup, Input, Label, Progress } from 'reactstrap';
 import { WelcomeFooter } from '../welcome/WelcomeFooter';
 import "./Workouts.css"
 

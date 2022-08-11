@@ -7,6 +7,9 @@ import { Profile } from "./profile/Profile"
 import { WelcomePage } from "./welcome/WelcomePage"
 import { Exercise } from "./exercise/Exercise"
 import { ExerciseView } from "./exercise/ExerciseView"
+import { ExerciseWatch } from "./search/ExerciseWatch"
+
+
 
 export const FitGeneration = () => {
 	return <Routes>
@@ -23,6 +26,7 @@ export const FitGeneration = () => {
 		<Route path="/profile/:customerId" element={<Profile />} />
 		<Route path="/exerciseView/:workoutId" element={<ExerciseView />} />
 		<Route path="/exercise/:customerId" element={<Exercise />} />
+		<Route path="/exerciseWatch/:exerciseId" element={<ExerciseWatch />} />
 	</Routes>
 }
 
