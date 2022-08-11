@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
+import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, Offcanvas, OffcanvasBody, OffcanvasHeader } from "reactstrap"
 import "./Welcome.css"
 import { WelcomeFooter } from "./WelcomeFooter.js";
 
@@ -34,7 +34,6 @@ export const WelcomePage = () => {
 
   return (
     <div className="">
-   
   
       <section className="card-box">
         <Card inverse className="welcome__card">

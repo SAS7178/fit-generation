@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
-import { Button,FormGroup, FormText, Input, Label, Spinner, UncontrolledCarousel } from "reactstrap"
+import { Button, FormGroup, FormText, Input, Label, Spinner, UncontrolledCarousel } from "reactstrap"
 //import { ExerciseSearch } from "../search/ExerciseSearch"
 import { WelcomeFooter } from "../welcome/WelcomeFooter"
 
@@ -9,9 +9,16 @@ import "./Profile.css"
 export const Profile = () => {
   const [workoutExercises, setworkoutExercises] = useState([])
   const [filteredWorkouts, setFilteredWorkouts] = useState([])
+  const [customerObject, setCustomerObject] = useState([])
   const [customer, setCustomers] = useState({})
   const { customerId } = useParams()
   const navigate = useNavigate()
+  const [updateTest , setUpdateTest] = useState(false)
+  const [customerProgress, update] = useState({
+    customerId: 0,
+    image: "",
+    dateCompleted: new Date()
+  })
 
   const localFitCustomer = localStorage.getItem("fit_customer")
   const fitCustomerObject = JSON.parse(localFitCustomer)
@@ -64,6 +71,37 @@ export const Profile = () => {
       .then(() => { getAllWorkouts() })
 
   }
+  const handleUpdateButtonClick = (event) => {
+    event.preventDefault()
+    setUpdateTest(true)
+
+    // TODO: Create the object to be saved to the API
+    const workoutToSendToApi = {
+      customerId: fitCustomerObject.id,
+      image: customerProgress.image,
+      dateCompleted: new Date()
+    }
+    return fetch(`http://localhost:8088/customerProgress`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(workoutToSendToApi)
+    })
+  }
+
+  useEffect(
+    () => {
+      fetch(`http://localhost:8088/customerProgress?customerId=${fitCustomerObject.id}`)
+        .then(response => response.json())
+        .then((data) => {
+          console.log(data)
+          setCustomerObject(data.last)
+        })
+    },
+    [customerProgress] // When this array is empty, you are observing initial component state
+  )
+ 
 
   return (
     <body className="background">
@@ -78,38 +116,52 @@ export const Profile = () => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
       <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
-      
+    <div>{customerObject}</div>
       <div className="topPro">
-      <div className="top-half">
-        <section className="welcomebtn">
-          <div className="welcome-msg" >
-            &nbsp;&nbsp;&nbsp;&nbsp;<b>Welcome back,</b>
-            <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <b>{customer.name}</b></div><br></br><br></br><br></br><br></br><br></br>
-          </div>
-          <FormGroup className="fileLoad">
-            <Label for="exampleFile">
-            </Label>
-            <Input
-              id="exampleFile"
-              name="file"
-              type="file"
-            />
-            {/* <NavLink className="InlineScan__link" to="https://youtu.be/PNeLRc3b3C8">Healthy Lifestyle</NavLink> */}
-            
-            <FormText >
-              <b>Track your progress</b>
-            </FormText>
-          </FormGroup>
-        </section>
-        <img className="tracking" alt="" src="https://uk.inbody.com/wp-content/uploads/2018/09/23.png"></img>
-      </div>
+        <div className="top-half">
+          <section className="welcomebtn">
+            <div className="welcome-msg" >
+              &nbsp;&nbsp;&nbsp;&nbsp;<b>Welcome back,</b>
+              <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b>{customer.name}</b></div><br></br><br></br><br></br><br></br><br></br>
+            </div>
+          //////////////////////////////////////////
+            <FormGroup className="fileLoad">
+              <Label for="exampleFile"></Label>
+              <Input type="file"
+                 id="addImage"
+                className="addImage"
+                value={customerProgress.image}
+                onChange={
+                  //take current obj value and update with user selected value
+                  (evt) => {
+                    const copy = { ...customerProgress }
+                    copy.image = evt.target.value
+                    update(copy)
+                    console.log(copy)
+                  }
+                } />
+                      <button 
+        onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
+        className="btn-UpdateImage">
+        Update
+      </button>
+      ///////////////////////////////////////////////
+              <FormText >
+                <b>..Track your Gainz..</b>
+              </FormText>
+            </FormGroup>
+          </section>
+
+          <img className="tracking" alt="" src="https://uk.inbody.com/wp-content/uploads/2018/09/23.png"></img>
+        
+        </div>
       </div>
       <div className="card__Element">
       </div>
 
       <div className="max">
-      <div className="seperation-pro"></div>
+        <div className="seperation-pro"></div>
 
         <div className="edu-zone"><b> &nbsp;&nbsp;(Education Zone)&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -172,30 +224,33 @@ export const Profile = () => {
         <div className="seperation-pro"></div>
 
         <UncontrolledCarousel className="carousel"
-          items={[ 
-            
-            { 
+          items={[
+
+            {
               altText: 'Learn about Crossfit',
               caption: 'Get into Crossfit!',
               key: 1,
               src: 'https://assets.website-files.com/6233518c68804f1e9ed11958/6233705d07c7252d292159dc_Homepage%20in%20Jacksonville%20Hero.jpg'
+              // https://www.crossfit.com/
             },
             {
               altText: 'trauma yoga room',
               caption: 'Trauma Yoga',
               key: 2,
               src: 'https://images.squarespace-cdn.com/content/v1/5e629534caa5281c111f060d/1590536808236-QI2MNON9ON8NQQL9RRHD/hero-image?format=1500w'
+              // https://www.thetrymethod.com/
             },
             {
               altText: 'Toughest Race in the World',
               caption: 'Echo Challenge(World/s Toughest)',
               key: 3,
-              src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2qTHxQK6PT5Oi84IJn4kq1DoqYcRTY0D0A&usqp=CAU' 
+              src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2qTHxQK6PT5Oi84IJn4kq1DoqYcRTY0D0A&usqp=CAU'
+              // https://mybigplunge.com/culture/movies-documentaries/new-reality-show-worlds-toughest-race-eco-challenge-fiji-amazon-prime-video-keeps-viewers-engaged/
             }
           ]}
         />
         <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
-          <h2 className="workout"><b>My Workout List</b></h2>
+        <h2 className="workout"><b>My Workout List</b></h2>
       </div>
       <section className="workout__list">
         <ul className="w__List">
