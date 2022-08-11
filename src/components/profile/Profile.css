@@ -58,16 +58,18 @@
     border: 3px solid red;
     position: relative;
     margin-top: 5em;
-    margin-left: 7em;
-    height: 25em;
+    margin-left: 9em;
+    margin-bottom: 5em;
+    height: 20em;
     width: 60%;
 }
 button {
     width: 20%;
 }
 .welcomebtn{
-    margin-bottom: em;
-
+    margin-bottom: 3em;
+    margin-left: 2em;
+    padding: 1em;
 }
 .top-half{
     display: flex;

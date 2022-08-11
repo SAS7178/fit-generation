@@ -29,8 +29,10 @@ export const NavBar = (args) => {
     return (
       <>
       <div className='Header'>
+      <div className='searching'>
       <ExerciseSearch setterFunction={setSearchTerms}/>
       <ExerciseList searchTermState={searchTerms} />
+      </div>
       </div>
       
         <Navbar {...args}>

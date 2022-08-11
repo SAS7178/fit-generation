@@ -39,13 +39,14 @@ export const ExerciseList = ({ searchTermState }) => {
         <article className="tickets">
 
             {filteredExercises.map(
-                (exercise) => <ExerciseEdit key={`exercise--${exercise.id}`}
+                (exercise) => 
+                <ExerciseEdit key={`exercise--${exercise.id}`}
                     getAllExercises={getAllExercises}
                     exerciseObject={exercise}
                 />
             )
             }
-
+        
         </article>
     </>
 }

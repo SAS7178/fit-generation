@@ -14,23 +14,23 @@ export const WelcomePage = () => {
     navigate(`/generateWorkout`)
   }
 
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'df702358e3msh0a60399ba97f41ap1be78cjsn2053bd221176',
-      'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com'
-    }
-  };
+  // const options = {
+  //   method: 'GET',
+  //   headers: {
+  //     'X-RapidAPI-Key': 'df702358e3msh0a60399ba97f41ap1be78cjsn2053bd221176',
+  //     'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com'
+  //   }
+  // };
 
   
-  useEffect(
-    () => {
-     fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
-       .then(response => response.json())
-       .then((response) => {setQoute(response)}) 
-       },
-    [] // When this array is empty, you are observing initial component state
-  )
+  // useEffect(
+  //   () => {
+  //    fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
+  //      .then(response => response.json())
+  //      .then((response) => {setQoute(response)}) 
+  //      },
+  //   [] // When this array is empty, you are observing initial component state
+  // )
 
   return (
     <div className="">
@@ -43,11 +43,11 @@ export const WelcomePage = () => {
           />
           <CardImgOverlay>
             <CardTitle tag="h5">
-              Fit Generation Mission
+            {/* {`${qoute.qoute}`} */}
             </CardTitle>
             <CardText>
               <small className="text-muted">
-              {`${qoute.qoute}`}
+              {/* {`${qoute.qoute}`} */}
               </small>
             </CardText>
           </CardImgOverlay>
