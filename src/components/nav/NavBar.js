@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom"
 import "./NavBar.css";
 import {
@@ -15,11 +15,18 @@ import { ExerciseSearch } from '../search/ExerciseSearch';
 import { ExerciseList } from '../search/ExerciseList';
 
 export const NavBar = (args) => {
-  const [searchTerms, setSearchTerms] = useState("")
+  const [searchTerms, setSearchTerms] = useState(null)
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate()
   const toggle = () => setIsOpen(!isOpen);
 
+  useEffect(
+    () => {
+         if(searchTerms === "")
+        setSearchTerms(null)
+    },
+    [searchTerms]
+)
 
   //get fitCustomer from local set to var
   const localFitCustomer = localStorage.getItem("fit_customer")
@@ -63,6 +70,7 @@ export const NavBar = (args) => {
                 }}><b>Logout</b>
                 </NavLink>
               </NavItem>
+                <div className="seperation"></div>
             </Nav>
 
             <NavbarText className='welcome__home'><strong>Welcome!</strong></NavbarText>
@@ -77,7 +85,6 @@ export const NavBar = (args) => {
     return (
       <>
        <div className='Header'>
-       <ExerciseSearch/>
       </div>
       
         <Navbar {...args}>

@@ -34,6 +34,8 @@ export const WelcomePage = () => {
 
   return (
     <div className="">
+   
+  
       <section className="card-box">
         <Card inverse className="welcome__card">
           <CardImg
@@ -41,18 +43,19 @@ export const WelcomePage = () => {
             src="https://picsum.photos/900/270?grayscale"
             className="card-img"
           />
-          <CardImgOverlay>
+          <CardImgOverlay className="overLay">
             <CardTitle tag="h5">
             {/* {`${qoute.qoute}`} */}
             </CardTitle>
             <CardText>
-              <small className="text-muted">
+              <small className="text-quote">
               {/* {`${qoute.qoute}`} */}
               </small>
             </CardText>
           </CardImgOverlay>
         </Card>
       </section>
+      <div className="seperation"></div>
       
       <section className="tagline" >
 
@@ -72,7 +75,6 @@ export const WelcomePage = () => {
             Exercise Games
           </button>
         </div>
-
       </section>
       <WelcomeFooter />
     </div>

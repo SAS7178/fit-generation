@@ -78,6 +78,8 @@ export const Profile = () => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
       <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
+      
+      <div className="topPro">
       <div className="top-half">
         <section className="welcomebtn">
           <div className="welcome-msg" >
@@ -102,11 +104,12 @@ export const Profile = () => {
         </section>
         <img className="tracking" alt="" src="https://uk.inbody.com/wp-content/uploads/2018/09/23.png"></img>
       </div>
-
+      </div>
       <div className="card__Element">
       </div>
 
       <div className="max">
+      <div className="seperation-pro"></div>
 
         <div className="edu-zone"><b> &nbsp;&nbsp;(Education Zone)&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -157,7 +160,6 @@ export const Profile = () => {
 
 
 
-        <h2 className="workout"><b>My Workout List</b></h2>
         <Button className="generateNew" onClick={() => { navigate("/GenerateWorkout") }}>
           <Spinner
             color="primary"
@@ -167,30 +169,33 @@ export const Profile = () => {
           </Spinner>&nbsp;&nbsp;&nbsp;
           <b>Generate New Workout </b>
         </Button>
+        <div className="seperation-pro"></div>
 
         <UncontrolledCarousel className="carousel"
-          items={[
-            {
-              altText: 'Slide 1',
-              caption: 'Slide 1',
+          items={[ 
+            
+            { 
+              altText: 'Learn about Crossfit',
+              caption: 'Get into Crossfit!',
               key: 1,
-              src: 'https://picsum.photos/id/123/1200/600'
+              src: 'https://assets.website-files.com/6233518c68804f1e9ed11958/6233705d07c7252d292159dc_Homepage%20in%20Jacksonville%20Hero.jpg'
             },
             {
-              altText: 'Slide 2',
-              caption: 'Slide 2',
+              altText: 'trauma yoga room',
+              caption: 'Trauma Yoga',
               key: 2,
-              src: 'https://picsum.photos/id/456/1200/600'
+              src: 'https://images.squarespace-cdn.com/content/v1/5e629534caa5281c111f060d/1590536808236-QI2MNON9ON8NQQL9RRHD/hero-image?format=1500w'
             },
             {
-              altText: 'Slide 3',
-              caption: 'Slide 3',
+              altText: 'Toughest Race in the World',
+              caption: 'Echo Challenge(World/s Toughest)',
               key: 3,
-              src: 'https://picsum.photos/id/678/1200/600'
+              src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2qTHxQK6PT5Oi84IJn4kq1DoqYcRTY0D0A&usqp=CAU' 
             }
           ]}
         />
         <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
+          <h2 className="workout"><b>My Workout List</b></h2>
       </div>
       <section className="workout__list">
         <ul className="w__List">
