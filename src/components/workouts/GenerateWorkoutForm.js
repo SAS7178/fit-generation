@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom"
-import { Form, FormGroup, FormText, Input, Label, Progress } from 'reactstrap';
+import { Form, FormGroup, Input, Label, Progress } from 'reactstrap';
 import { WelcomeFooter } from '../welcome/WelcomeFooter';
 import "./Workouts.css"
 
@@ -76,7 +76,7 @@ export const GenerateWorkoutForm = () => {
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
-      
+      <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
       <FormGroup tag="fieldset">
         <legend className='ExperienceTitle'>
           Experience Level
@@ -146,7 +146,7 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
-        
+        <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
       </FormGroup>
       
       <div className='choice'>

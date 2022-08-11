@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { Button } from "reactstrap"
+import { WelcomeFooter } from "../welcome/WelcomeFooter"
 import "./Exercise.css"
 
 export const ExerciseView = () => {
@@ -93,6 +94,7 @@ export const ExerciseView = () => {
 
                 </div>
             </>
+            <WelcomeFooter/>
         </>
     )
 }

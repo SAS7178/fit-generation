@@ -25,7 +25,8 @@ margin-top: 1em;
     justify-content: space-between;
     position: relative;
     background-color: rgb(116, 123, 123);
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid red;
+    border-radius: 0px 0px 5px 15px;
 }
 .form-weight{
     display: flex;
@@ -109,6 +110,7 @@ legend {
 }
 #exampleFile{
     width: 7rem;
+    
 }
 .img-file{
     display: flex;
@@ -118,7 +120,8 @@ legend {
 
 .btn-UpdateGen {
     display: flex;
-    background-color: lightgray;
+    color: blue;
+    background-color: ghostwhite;
 
 }
 .gen-btns{
