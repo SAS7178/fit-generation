@@ -1,6 +1,9 @@
 
 
+
 export const ExerciseSearch = ({setterFunction}) => {
+
+
     return (
 
        <div className="search" >

@@ -41,12 +41,12 @@ export const WelcomePage = () => {
             src="https://picsum.photos/900/270?grayscale"
             className="card-img"
           />
-          <CardImgOverlay>
+          <CardImgOverlay className="overLay">
             <CardTitle tag="h5">
             {/* {`${qoute.qoute}`} */}
             </CardTitle>
             <CardText>
-              <small className="text-muted">
+              <small className="text-quote">
               {/* {`${qoute.qoute}`} */}
               </small>
             </CardText>
