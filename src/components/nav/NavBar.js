@@ -77,7 +77,6 @@ export const NavBar = (args) => {
     return (
       <>
        <div className='Header'>
-       <ExerciseSearch/>
       </div>
       
         <Navbar {...args}>
