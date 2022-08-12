@@ -83,27 +83,36 @@ export const GenerateWorkoutForm = () => {
         </legend>
         <div className='experience'>
           <FormGroup>
+          &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Input
               name="radio1"
               type="radio" />
-            <Label className='beginner'>
+           &nbsp;&nbsp;<Label className='beginner'>
               Beginner
             </Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </FormGroup>
           <FormGroup >
             <Input
               name="radio1"
               type="radio" />
-            <Label className='intermediate'>
+            &nbsp;<Label className='intermediate'>
               Intermediate
             </Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </FormGroup>
           <FormGroup>
             <Input
               name="radio1"
               type="radio" />
             {' '}
-            <Label className='advanced'>
+            &nbsp;<Label className='advanced'>
               Advanced
             </Label>
           </FormGroup>
@@ -146,10 +155,10 @@ export const GenerateWorkoutForm = () => {
             </div>
           </fieldset>
         </FormGroup>
-        <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
+        <br></br>  <br></br><br></br><br></br><img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
       </FormGroup>
       
-      <div className='choice'>
+      <div className='choices'>
       <FormGroup className='choice'>
         <Label for="goal">
           Fitness Goal

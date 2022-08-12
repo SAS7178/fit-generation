@@ -72,7 +72,7 @@ export const Profile = () => {
   }
   const handleUpdateButtonClick = (event) => {
     event.preventDefault()
-   
+
     // TODO: Create the object to be saved to the API
     const workoutToSendToApi = {
       customerId: fitCustomerObject.id,
@@ -93,7 +93,7 @@ export const Profile = () => {
       fetch(`http://localhost:8088/customerProgress?customerId=${fitCustomerObject.id}`)
         .then(response => response.json())
         .then((data) => {
-          let length = data.length -1
+          let length = data.length - 1
           let cust = data[length]
           console.log(cust.image)
           setCustomerObject(cust.image)
@@ -101,7 +101,7 @@ export const Profile = () => {
     },
     [customerProgress] // When this array is empty, you are observing initial component state
   )
- 
+
 
   return (
     <article className="background">
@@ -110,15 +110,13 @@ export const Profile = () => {
         <Link className="navbar__generate" to="/generateWorkout"><b>Generation Form </b></Link>
       </div>
       <div className='welcome__header'>
-        <h1> Fit Generation </h1>
+        <h1 className="tit"> Fit Generation </h1>
         <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
       <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
-          //////////////////////////////////////////
-    <div>{customerObject}</div>
-            ///////////////////////////////////////////////
+
       <div className="topPro">
         <div className="top-half">
           <section className="welcomebtn">
@@ -129,8 +127,8 @@ export const Profile = () => {
             </div>
             <FormGroup className="fileLoad">
               <Label for="exampleFile"></Label>
-              <Input type="file"
-                 id="addImage"
+              &nbsp;&nbsp;<Input type="file"
+                id="addImage"
                 className="addImage"
                 value={customerProgress.image}
                 onChange={
@@ -142,21 +140,21 @@ export const Profile = () => {
                     console.log(copy)
                   }
                 } />
-                      <button 
-        onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
-        className="btn-UpdateImage">
-        Update
-      </button>
+              <button
+                onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
+                className="btn-UpdateImage">
+                Update
+              </button>
               <FormText >
-                <b>..Track your Gainz..</b>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>..Track your Gainz..</b>
               </FormText>
             </FormGroup>
           </section>
-
-          <img className="tracking" alt="" src="https://uk.inbody.com/wp-content/uploads/2018/09/23.png"></img>
-        
+          {/* uploaded customer image returned to page */}
+          <img className="profileObject" alt="" src={`${customerObject}`} />
         </div>
       </div>
+
       <div className="card__Element">
       </div>
 

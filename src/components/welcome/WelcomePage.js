@@ -5,6 +5,7 @@ import { Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
 import "./Welcome.css"
 import { WelcomeFooter } from "./WelcomeFooter.js";
 
+
 export const WelcomePage = () => {
 
   const navigate = useNavigate()

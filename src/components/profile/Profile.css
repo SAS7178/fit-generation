@@ -8,19 +8,27 @@
 }
 
 .background{
-    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTllIQxL93uNxbNUUTk-BfLuJU-gjqTApvioA&usqp=CAU"); */
-    background-color: whitesmoke;
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/images5/4K-White-Wallpaper-for-Desktop.jpg");
+    /* background-color: whitesmoke; */
 } 
+.tit{
+    font-size: 70px;
+}
 .welcome__header {
     display: flex;
     justify-content: center;
     position: relative;
-    margin-left: 8em;
+   
 }
 .btn-UpdateImage{
-    width: 5em;
+    width: 9em;
+    margin-left: 2.5em;
     background-color: ghostwhite;
     color: goldenrod;
+}
+.profileObject{
+   margin: 2em;
+   margin-left: 9em;
 }
 .btn-primary {
     background-color: lightsteelblue;
@@ -36,7 +44,8 @@
     width: 40%;
 }
 #addImage{
-    width: 5em;
+    padding-bottom: 30px;
+    width: 16em;
     background-color: ghostwhite;
     color: blue;
 }
@@ -115,6 +124,7 @@ button {
 .fileLoad{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 4em;
     align-items: start;
     margin: 1em;
