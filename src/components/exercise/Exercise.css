@@ -13,6 +13,8 @@ body {
 .workout__exercises {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 2em;
 }
 .nameText{
     display: flex;
@@ -29,7 +31,7 @@ width: 8em;
     align-items: center;
     flex-wrap: wrap;
     position: relative;
-    width: 75%;
+    width: 65%;
     margin-left: 7em;
     margin-bottom: 1em;
     border-radius: 25%;
