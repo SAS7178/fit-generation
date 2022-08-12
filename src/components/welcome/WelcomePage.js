@@ -1,14 +1,15 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Card, CardImg, CardImgOverlay, CardText, CardTitle, Offcanvas, OffcanvasBody, OffcanvasHeader } from "reactstrap"
+import { Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap"
 import "./Welcome.css"
 import { WelcomeFooter } from "./WelcomeFooter.js";
+
 
 export const WelcomePage = () => {
 
   const navigate = useNavigate()
-   const [qoute, setQoute] = useState("")
+   const [quote, setQoute] = useState({})
 
   const handleGenerateButtonClick = () => {
     navigate(`/generateWorkout`)
@@ -27,7 +28,8 @@ export const WelcomePage = () => {
   //   () => {
   //    fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
   //      .then(response => response.json())
-  //      .then((response) => {setQoute(response)}) 
+  //          .then(response => {setQoute(response)
+  //       })
   //      },
   //   [] // When this array is empty, you are observing initial component state
   // )
@@ -43,12 +45,13 @@ export const WelcomePage = () => {
             className="card-img"
           />
           <CardImgOverlay className="overLay">
-            <CardTitle tag="h5">
-            {/* {`${qoute.qoute}`} */}
+            <CardTitle className="qoute-box" tag="h5">
+            "{`${quote.quote}`}"
+            -{`${quote.author}`}-
             </CardTitle>
             <CardText>
               <small className="text-quote">
-              {/* {`${qoute.qoute}`} */}
+             
               </small>
             </CardText>
           </CardImgOverlay>

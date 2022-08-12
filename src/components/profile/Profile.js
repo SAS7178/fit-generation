@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { Button, FormGroup, FormText, Input, Label, Spinner, UncontrolledCarousel } from "reactstrap"
-//import { ExerciseSearch } from "../search/ExerciseSearch"
 import { WelcomeFooter } from "../welcome/WelcomeFooter"
 
 import "./Profile.css"
@@ -9,11 +8,11 @@ import "./Profile.css"
 export const Profile = () => {
   const [workoutExercises, setworkoutExercises] = useState([])
   const [filteredWorkouts, setFilteredWorkouts] = useState([])
-  const [customerObject, setCustomerObject] = useState([])
+  const [customerObject, setCustomerObject] = useState("")
   const [customer, setCustomers] = useState({})
   const { customerId } = useParams()
   const navigate = useNavigate()
-  const [updateTest , setUpdateTest] = useState(false)
+  //const [updateTest , setUpdateTest] = useState(false)
   const [customerProgress, update] = useState({
     customerId: 0,
     image: "",
@@ -73,7 +72,6 @@ export const Profile = () => {
   }
   const handleUpdateButtonClick = (event) => {
     event.preventDefault()
-    setUpdateTest(true)
 
     // TODO: Create the object to be saved to the API
     const workoutToSendToApi = {
@@ -95,28 +93,30 @@ export const Profile = () => {
       fetch(`http://localhost:8088/customerProgress?customerId=${fitCustomerObject.id}`)
         .then(response => response.json())
         .then((data) => {
-          console.log(data)
-          setCustomerObject(data.last)
+          let length = data.length - 1
+          let cust = data[length]
+          console.log(cust.image)
+          setCustomerObject(cust.image)
         })
     },
     [customerProgress] // When this array is empty, you are observing initial component state
   )
- 
+
 
   return (
-    <body className="background">
+    <article className="background">
       <div className="profile__nav">
         <Link className="navbar__home" to="/"><b>Home</b></Link>
         <Link className="navbar__generate" to="/generateWorkout"><b>Generation Form </b></Link>
       </div>
       <div className='welcome__header'>
-        <h1> Fit Generation </h1>
+        <h1 className="tit"> Fit Generation </h1>
         <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
       <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
-    <div>{customerObject}</div>
+
       <div className="topPro">
         <div className="top-half">
           <section className="welcomebtn">
@@ -125,11 +125,10 @@ export const Profile = () => {
               <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <b>{customer.name}</b></div><br></br><br></br><br></br><br></br><br></br>
             </div>
-          //////////////////////////////////////////
             <FormGroup className="fileLoad">
               <Label for="exampleFile"></Label>
-              <Input type="file"
-                 id="addImage"
+              &nbsp;&nbsp;<Input type="file"
+                id="addImage"
                 className="addImage"
                 value={customerProgress.image}
                 onChange={
@@ -141,22 +140,21 @@ export const Profile = () => {
                     console.log(copy)
                   }
                 } />
-                      <button 
-        onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
-        className="btn-UpdateImage">
-        Update
-      </button>
-      ///////////////////////////////////////////////
+              <button
+                onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
+                className="btn-UpdateImage">
+                Update
+              </button>
               <FormText >
-                <b>..Track your Gainz..</b>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>..Track your Gainz..</b>
               </FormText>
             </FormGroup>
           </section>
-
-          <img className="tracking" alt="" src="https://uk.inbody.com/wp-content/uploads/2018/09/23.png"></img>
-        
+          {/* uploaded customer image returned to page */}
+          <img className="profileObject" alt="" src={`${customerObject}`} />
         </div>
       </div>
+
       <div className="card__Element">
       </div>
 
@@ -215,7 +213,7 @@ export const Profile = () => {
         <Button className="generateNew" onClick={() => { navigate("/GenerateWorkout") }}>
           <Spinner
             color="primary"
-            size=""
+            size="sm"
           >
             Loading...
           </Spinner>&nbsp;&nbsp;&nbsp;
@@ -274,6 +272,6 @@ export const Profile = () => {
         </ul>
       </section>
       <WelcomeFooter />
-    </body>
+    </article>
   )
 }

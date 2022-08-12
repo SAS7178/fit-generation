@@ -33,20 +33,26 @@ margin-top: 1em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 40em;
+    margin-right: 45em;
 }
 .form-height{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 30em;
+    margin-right: 45em;
 }
 
 .choice{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 0em;
+    margin: 2em;
+}
+.choices{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em;
 }
 
 body{
@@ -86,7 +92,7 @@ legend {
 }
 .experience {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
 }
 .beginner{
     font-weight: 200;
@@ -106,6 +112,9 @@ legend {
     font-size: xx-large;
     font-style: oblique;
     font-weight: 600;
+    margin-top: -1em;
+    margin-left: -11.5em;
+    text-decoration: underline;
 }
 .form-select {
     width: 15em;

@@ -47,13 +47,15 @@ export const NavBar = (args) => {
         <Navbar {...args}>
           <NavbarBrand className="title__home" href="/">
 
-            <div className='welcome__header'>
+            <div className='welcome__head'>
               <h1> <strong>Fit Generation</strong> </h1> 
               <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="90"></img>
             </div>
-            <img alt='' className='sit-logo' path='src/components/images/Fitlogo.jpeg'></img>
+            <div>
+            {/* <img alt="" className='fit__logo' path="/src/components/images/ScreenShot.png" width="200" height="100" ></img> */}
+            </div>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>

@@ -139,7 +139,7 @@ export const Exercise = () => {
 
     // fetches and set all exercises to var to make available for iteration globally
     return (
-        <>
+        <div className="exercisePage">
         
             <div className='generator__nav'>
                 <nav>
@@ -174,6 +174,6 @@ export const Exercise = () => {
             </div>
             </fieldset>
             <WelcomeFooter/>
-        </>
+        </div>
     )
 }

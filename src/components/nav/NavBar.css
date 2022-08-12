@@ -21,8 +21,12 @@
     font-size: 60px;
 }
 
-.welcome__header {
+.welcome__head {
     display: flex;
+    justify-content: center;
+    margin-left: 50em;
+    position: relative;
+    
 }
 
 .navbar-toggler {
@@ -71,7 +75,7 @@ div.johns{
 } 
 .tickets{
     background-color: lightsteelblue;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     border-radius: 10px 15px 20px 25px;
 }
 
@@ -97,6 +101,14 @@ margin-right: .5em;
 .nav__image {
     margin-left: 2em;
     border-radius: 100%;
+    border: .5px solid black;
+}
+.fit__logo {
+    margin-left: 2em;
+    width: 18em;
+    position: inherit;
+    height: 100%;
+    border: 2px solid black;
 }
 .nav__run{
     background-color: black;
