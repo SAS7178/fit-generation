@@ -73,8 +73,7 @@ export const Profile = () => {
   }
   const handleUpdateButtonClick = (event) => {
     event.preventDefault()
-    setUpdateTest(true)
-
+   
     // TODO: Create the object to be saved to the API
     const workoutToSendToApi = {
       customerId: fitCustomerObject.id,
@@ -135,6 +134,7 @@ export const Profile = () => {
                 onChange={
                   //take current obj value and update with user selected value
                   (evt) => {
+                    setUpdateTest(true)
                     const copy = { ...customerProgress }
                     copy.image = evt.target.value
                     update(copy)
