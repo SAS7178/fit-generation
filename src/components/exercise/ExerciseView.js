@@ -29,7 +29,7 @@ export const ExerciseView = () => {
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
-                   
+
                 })
         },
         [] // When this array is empty, you are observing initial component state
@@ -62,7 +62,7 @@ export const ExerciseView = () => {
                         reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                         rest time:&nbsp;{exercise.rest}<br />
                         <a href={exercise.exampleVid}>
-                            <Button className="exercise__link">Watch tutorial</Button>
+                            <Button className="exerciseView__link">Watch tutorial</Button>
                         </a>
                     </li>
                 }
@@ -71,7 +71,8 @@ export const ExerciseView = () => {
     }
 
     return (
-        <>
+        
+        <div className="exView">
             <div className='generator__nav'>
                 <nav>
                     <Link className="navbar__link" to="/">Home</Link>
@@ -80,24 +81,25 @@ export const ExerciseView = () => {
                     <Link className="navbar__link" to="/profile/:customerId">Profile</Link>
                 </nav>
             </div>
+<br></br>
+<br></br>
             <div className='welcome__header'>
                 <h1> Fit Generation </h1>
                 <img className='nav__image' alt="mehhh" src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
             </div>
-            <>
-                <h2 className="workout">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <b>Workout Exercises</b></h2>
-                <br></br>
-                <div className="workout__exercises">
-                    {/* call function with func as argument */}
-                    {displayExercises(currentWorkoutExercises)}
+            <br></br>
+            <h2 className="workout">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b><i>~</i> Workout Exercises <i>~</i></b></h2>
+            <br></br>
 
-                </div>
-            </>
-            <WelcomeFooter/>
-        </>
+            <div className="workout__exercises">
+                {/* call function with func as argument */}
+                {displayExercises(currentWorkoutExercises)}
+            </div>
+            <WelcomeFooter />
+        </div>
     )
 }
 

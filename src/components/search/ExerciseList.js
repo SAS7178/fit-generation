@@ -1,21 +1,17 @@
 import { useEffect, useState } from "react"
 import { ExerciseEdit } from "./ExerciseEdit"
 
-
-
 export const ExerciseList = ({ searchTermState }) => {
     const [exercises, setExercises] = useState([])
     const [filteredExercises, setFiltered] = useState([])
 
     useEffect(
         () => {
-            console.log(searchTermState)
             const searchedExercises = exercises.filter(exercise => exercise.name.startsWith(searchTermState))
             setFiltered(searchedExercises)
         },
         [searchTermState, exercises]
     )
-
 
     useEffect(
         () => {
@@ -39,14 +35,13 @@ export const ExerciseList = ({ searchTermState }) => {
         <article className="tickets">
 
             {filteredExercises.map(
-                (exercise) => 
-                <ExerciseEdit key={`exercise--${exercise.id}`}
-                    getAllExercises={getAllExercises}
-                    exerciseObject={exercise}
-                />
+                (exercise) =>
+                    <ExerciseEdit key={`exercise--${exercise.id}`}
+                        getAllExercises={getAllExercises}
+                        exerciseObject={exercise}
+                    />
             )
             }
-        
         </article>
     </>
 }

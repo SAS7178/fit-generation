@@ -5,7 +5,6 @@
     color: rgb(119, 205, 205);
  
 }
-
 .login__input {
     display: flex;
     width: min-content;
@@ -14,13 +13,11 @@
     background-image: url("https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-%20exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-%20card-make-stencil.jpg_640x640.jpg");
     border-radius: 50%;
 }
-
 .welcome__home {
     display: flex;
     justify-content: center;
     font-size: 60px;
 }
-
 .welcome__head {
     display: flex;
     justify-content: center;
@@ -28,24 +25,21 @@
     position: relative;
     
 }
-
 .navbar-toggler {
     width: 4em;
     top: 0;
     margin-bottom:5em;
     margin-right: 2em;
 }
-
 .welcome__menu {
     color: rgb(0, 187, 255);
     display: flex;
     position: relative;
 }
 .nav-link{
-    color:black ;
+    color:darkblue ;
+    font-weight: 600;
 }
-
-
 .searching{
     display: flex;
     flex-direction: column;
@@ -78,8 +72,6 @@ div.johns{
     /* border: 2px solid gray; */
     border-radius: 10px 15px 20px 25px;
 }
-
-
 .Header {
     display: flex;
     justify-content: flex-end;
@@ -111,6 +103,8 @@ margin-right: .5em;
 }
 .nav__run{
     background-color: black;
+    border-radius: 100%;
+    margin-right: 1em;
 
 }
 .nonMember {
@@ -125,5 +119,6 @@ margin-right: .5em;
 .exercise__link{
     border: 1px solid red;
     color: black;
+    width: 8em;
     background-color: ghostwhite;
 }

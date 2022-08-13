@@ -4,10 +4,6 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 export const ExerciseEdit = ({ exerciseObject, getAllExercises }) => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
-    console.log(exerciseObject)
-    // const mapObject = (exerciseObject) => {
-
-    // } 
 
     return (
         <div className="searchBarDrop">
@@ -33,7 +29,7 @@ export const ExerciseEdit = ({ exerciseObject, getAllExercises }) => {
                             rest time:&nbsp;{exerciseObject.rest}<br />
                             <a href={exerciseObject.exampleVid}>
                                 <Button className="exercise__link">Watch tutorial</Button>
-                                
+
                             </a>
                         </section>
                     </>
