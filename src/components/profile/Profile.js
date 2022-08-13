@@ -12,7 +12,6 @@ export const Profile = () => {
   const [customer, setCustomers] = useState({})
   const { customerId } = useParams()
   const navigate = useNavigate()
-  //const [updateTest , setUpdateTest] = useState(false)
   const [customerProgress, update] = useState({
     customerId: 0,
     image: "",
@@ -70,10 +69,24 @@ export const Profile = () => {
       .then(() => { getAllWorkouts() })
 
   }
+
   const handleUpdateButtonClick = (event) => {
     event.preventDefault()
 
-    // TODO: Create the object to be saved to the API
+    //  let fileInputElement = document.getElementById('addImage');
+    //  let container = new DataTransfer();
+    //  //load data
+    //  for(let i=0; i<5; i++){
+    //   let data = new Blob();
+    //   let file = new File([data], "g"+i+".jpg",{type:"image/jpeg",lastModified:new
+    // Date().getTime()});
+    // container.items.add(file);
+    //  }
+
+    //  fileInputElement.files = container.files;
+    //  console.log(fileInputElement.files);
+    // }   
+    // Create the object to be saved to the API
     const workoutToSendToApi = {
       customerId: fitCustomerObject.id,
       image: customerProgress.image,
@@ -127,7 +140,10 @@ export const Profile = () => {
             </div>
             <FormGroup className="fileLoad">
               <Label for="exampleFile"></Label>
-              &nbsp;&nbsp;<Input type="file"
+              &nbsp;&nbsp;
+              /////////////////////////////////////////////////
+         
+              <Input type="file"
                 id="addImage"
                 className="addImage"
                 value={customerProgress.image}
@@ -135,17 +151,21 @@ export const Profile = () => {
                   //take current obj value and update with user selected value
                   (evt) => {
                     const copy = { ...customerProgress }
-                    copy.image = evt.target.value
+                     const image = [JSON.stringify(evt.target.value)]
+                    // const array = [{image}]; // an array consisting of a single string
+                     const blob = new Blob(image, {type : 'text/html'}); // the blob
+                    copy.image = blob
                     update(copy)
                     console.log(copy)
                   }
-                } />
+                } />//////////////////////////////////////////////
               <button
                 onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
                 className="btn-UpdateImage">
                 Update
               </button>
-              <FormText >
+              
+              <FormText>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>..Track your Gainz..</b>
               </FormText>
             </FormGroup>
@@ -229,7 +249,7 @@ export const Profile = () => {
               caption: 'Get into Crossfit!',
               key: 1,
               src: 'https://assets.website-files.com/6233518c68804f1e9ed11958/6233705d07c7252d292159dc_Homepage%20in%20Jacksonville%20Hero.jpg'
-              // https://www.crossfit.com/
+              // onClick = navigate(https://www.crossfit.com/)
             },
             {
               altText: 'trauma yoga room',

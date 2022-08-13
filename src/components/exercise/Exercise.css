@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(232, 232, 232);
+    background-color: white;
     margin: 0;
 }
 .welcome__header{
@@ -68,15 +68,19 @@ ul{
     justify-content: center;
     position: relative;
     background-color: aliceblue;
-    color: lightslategrey;
-    border: solid 1px;
+    color: rgb(8, 107, 206);
+    font-weight: 600;
+    text-transform: uppercase;
+    border: solid 3px black;
+    padding-top: 8px;
+    height: 18em;
     border-radius: 20%;
     width: 30%;
     flex-direction: column;
     align-items: center;
     align-self: center;
     justify-content: center;
-    margin-top: 4em;
+    margin: 4em;
 }
 .navbar__link{
     display: flex;
@@ -84,6 +88,8 @@ ul{
 }
 
 .exercisePage {
-    background-image: url(https://t3.ftcdn.net/jpg/03/01/90/18/360_F_301901899_lalLiJJTviVxRPTpJ8ShYIe6TcpLbFqC.jpg );
-    /* background-color:aliceblue; */
+    background-image: url(https://st.depositphotos.com/1143769/4284/v/950/depositphotos_42847699-stock-illustration-fitness-and-healthy-exercise-word.jpg);
+}
+.exHead{
+    background-color: aliceblue;
 }

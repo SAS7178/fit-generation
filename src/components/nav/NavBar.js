@@ -54,7 +54,7 @@ export const NavBar = (args) => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="90"></img>
             </div>
             <div>
-            {/* <img alt="" className='fit__logo' path="/src/components/images/ScreenShot.png" width="200" height="100" ></img> */}
+            <img alt="" className='fit__logo' src="/ScreenShot.png" width="200" height="100" ></img>
             </div>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
