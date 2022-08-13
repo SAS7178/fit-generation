@@ -104,11 +104,10 @@ margin-right: .5em;
     border: .5px solid black;
 }
 .fit__logo {
-    margin-left: 2em;
-    width: 18em;
+    margin-left: -12em;
     position: inherit;
-    height: 100%;
-    border: 2px solid black;
+    height: 90%;
+    /* border: 2px solid black; */
 }
 .nav__run{
     background-color: black;

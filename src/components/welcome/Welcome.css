@@ -35,7 +35,10 @@
     display: flex;
     background-color: black;
 }
-
+.tag-logo{
+    display: flex;
+    flex-direction: column;
+}
 .tagline {
     display: flex;
     justify-content: center;
@@ -80,12 +83,14 @@
     background-color: rgb(24, 81, 151);
     color: ghostwhite;
     width: 14em;
+    height: 2em;
 }
 
 .btn-games {
     background-color: rgb(24, 81, 151);
     color: ghostwhite;
     width: 14em;
+    height: 2em;
 }
 .overlay{
     border-radius: 40px;
