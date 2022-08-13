@@ -196,6 +196,7 @@ export const Profile = () => {
 
         <section className="understandMax">
           <div className="tableLine">
+          <img alt="" className='fit__logo' src="/2E5049CB-BAED-4DAC-97C5-065C0E195D5E_4_5005_c.jpeg" width="200" height="100" ></img>
             <div className="edu">
               <Button outline onClick={() => { window.open(URL = "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
                 className="max-link">
@@ -206,6 +207,7 @@ export const Profile = () => {
                 className="max-link">
                 InLine Body Scan
               </Button>
+              
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -225,6 +227,7 @@ export const Profile = () => {
                 BMI Calculator
               </Button>
             </div>
+            
           </div>
         </section>
 
