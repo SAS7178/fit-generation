@@ -13,7 +13,7 @@ export const Exercise = () => {
     const [filteredExercises, setFilteredExercises] = useState([])
     const [latestCustomerWorkout, setLatest] = useState({})
     const [newWorkoutId, setId] = useState(null)
-     const workoutId = Number(newWorkoutId)
+    const workoutId = Number(newWorkoutId)
     const navigate = useNavigate()
 
     //fetch exercises set to var
@@ -47,7 +47,7 @@ export const Exercise = () => {
                 .then(response => response.json())
                 .then((data) => {
                     const WObj = (data.slice(-1))
-                    setId(WObj[0].id +1)
+                    setId(WObj[0].id + 1)
                 })
         },
         [] // When this array is empty, you are observing initial component state
@@ -66,23 +66,23 @@ export const Exercise = () => {
     )
     //post function for onclick of workout Exercise
     const handleAddExerciseClick = (exerciseId) => {
-      
+
         // TODO: Create the object to be saved to the API
         const exerciseToSendToApi = {
-          workoutId: workoutId,
-          exerciseId: parseInt(exerciseId)
+            workoutId: workoutId,
+            exerciseId: parseInt(exerciseId)
         }
         //post Object in this APi array
         return fetch(`http://localhost:8088/workoutExercises`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(exerciseToSendToApi)
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(exerciseToSendToApi)
         })
-      }
+    }
 
-      //func to map exercises info and tutorial button/add to workout butn
+    //func to map exercises info and tutorial button/add to workout butn
     const exerciseList = () => {
         return filteredExercises.map(exercise => {
             return <ul className="exerciseList" key={exercise.id}>
@@ -92,10 +92,10 @@ export const Exercise = () => {
                     reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                     rest time:&nbsp;{exercise.rest}<br />
                     <a href={exercise.exampleVid}> <Button className="exercise__link"
-                    >Watch tutorial</Button></a>    
-                     <FormGroup>
+                    >Video tutorial</Button></a>
+                    <FormGroup>
                         <button
-                             onClick={() => handleAddExerciseClick(`${exercise.id}`)}
+                            onClick={() => handleAddExerciseClick(`${exercise.id}`)}
                             className="btn btn-primary">
                             Add to Workout
                         </button>
@@ -139,8 +139,8 @@ export const Exercise = () => {
 
     // fetches and set all exercises to var to make available for iteration globally
     return (
-        <div className="exercisePage">
-        
+        <>
+
             <div className='generator__nav'>
                 <nav>
                     <Link className="navbar__link" to="/">Home</Link>
@@ -149,6 +149,7 @@ export const Exercise = () => {
                     <Link className="navbar__link" to="/profile/:customerId">Profile</Link>
                 </nav>
             </div>
+            <section className="exHead">
             <div className='welcome__header'>
                 <h1> Fit Generation </h1>
                 <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
@@ -156,24 +157,30 @@ export const Exercise = () => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
             </div>
             <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
-            {exerciseList()}
+            </section>
+            <section className="exHead">
+            <div className="exercisePage">
+                {exerciseList()}
+            </div>
+            
             <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
             <h2 className="workout"><b>Workout Name</b></h2>
             <fieldset className="nameText">
-            <input type="name"
-                value={workoutName}
-                onChange={evt => set(evt.target.value)}
-                className="form-control"
-                placeholder="...Name me..."
-                required autoFocus />
-            <div>
-                <Button outline onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                    className="save-primary">
-                    Save to MyWorkouts List
-                </Button>
-            </div>
+                <input type="name"
+                    value={workoutName}
+                    onChange={evt => set(evt.target.value)}
+                    className="form-control"
+                    placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...Name This Workout..."
+                    required autoFocus />
+                <div>
+                    <Button outline onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+                        className="save-primary">
+                        Save to MyWorkouts List
+                    </Button>
+                </div>
             </fieldset>
-            <WelcomeFooter/>
-        </div>
+            <WelcomeFooter />
+            </section>
+        </>
     )
 }

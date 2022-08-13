@@ -87,7 +87,9 @@ export const ExerciseView = () => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
             </div>
             <>
-                <h2 className="workout"><b>MyWorkout</b></h2>
+                <h2 className="workout">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b>Workout Exercises</b></h2>
+                <br></br>
                 <div className="workout__exercises">
                     {/* call function with func as argument */}
                     {displayExercises(currentWorkoutExercises)}
