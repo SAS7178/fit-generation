@@ -123,7 +123,7 @@ export const Profile = () => {
             <FormGroup className="fileLoad">
               <Label for="exampleFile"></Label>
               &nbsp;&nbsp;
-              /////////////////////////////////////////////////
+              {/* ///////////////////////////////////////////////// */}
               <Input type="file"
                 id="addImage"
                 className="addImage"
@@ -139,7 +139,8 @@ export const Profile = () => {
                     update(copy)
                     console.log(copy)
                   }
-                } />//////////////////////////////////////////////
+                } />
+                {/* ////////////////////////////////////////////// */}
               <button
                 onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
                 className="btn-UpdateImage">

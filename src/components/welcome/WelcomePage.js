@@ -12,23 +12,23 @@ export const WelcomePage = () => {
   const handleGenerateButtonClick = () => {
     navigate(`/generateWorkout`)
   }
-  // const options = {
-  //   method: 'GET',
-  //   headers: {
-  //     'X-RapidAPI-Key': 'df702358e3msh0a60399ba97f41ap1be78cjsn2053bd221176',
-  //     'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com'
-  //   }
-  // };
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'df702358e3msh0a60399ba97f41ap1be78cjsn2053bd221176',
+      'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com'
+    }
+  };
 
-  // useEffect(
-  //   () => {
-  //    fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
-  //      .then(response => response.json())
-  //          .then(response => {setQoute(response)
-  //       })
-  //      },
-  //   [] // When this array is empty, you are observing initial component state
-  // )
+  useEffect(
+    () => {
+     fetch('https://bodybuilding-quotes1.p.rapidapi.com/random-quote', options)
+       .then(response => response.json())
+           .then(response => {setQoute(response)
+        })
+       },
+    [] // When this array is empty, you are observing initial component state
+  )
 
   return (
     <div className="">
@@ -74,8 +74,12 @@ export const WelcomePage = () => {
             className="btn-games">
             Exercise Games
           </button>
+          <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png"  width="50%" height="100em"></img>
+          <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="90%" height="100em"></img>
         </div>
         <img alt="" className='gorilla-home' src="/2E5049CB-BAED-4DAC-97C5-065C0E195D5E_4_5005_c.jpeg" width="200" height="200" ></img>
+        <div className="lin">
+        </div>
       </section>
       <WelcomeFooter />
     </div>
