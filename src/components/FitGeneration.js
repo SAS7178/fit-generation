@@ -8,9 +8,6 @@ import { WelcomePage } from "./welcome/WelcomePage"
 import { Exercise } from "./exercise/Exercise"
 import { ExerciseView } from "./exercise/ExerciseView"
 
-
-
-
 export const FitGeneration = () => {
 	return <Routes>
 		

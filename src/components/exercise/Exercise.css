@@ -2,6 +2,11 @@ body {
     background-color: white;
     margin: 0;
 }
+.exView{
+    background-image: url(https://images.unsplash.com/photo-1590487988256-9ed24133863e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGd5bXxlbnwwfHwwfHw%3D&w=1000&q=80);
+    opacity: 90%;
+}
+
 .welcome__header{
     position: relative;
     top:1;
@@ -22,13 +27,21 @@ body {
     align-items: center;
 }
 
-.exercise__link {
-width: 8em;
+.exerciseView__link {
+    border: 3px solid red;
+    color: black;
+    background-color: ghostwhite;
+    width: 9em;
 }
 .workout__exercise {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: lightsteelblue;
+    color: rgb(0, 42, 42);
+    font-weight: bolder;
+    text-transform: uppercase;
+    opacity: 80%;
     flex-wrap: wrap;
     position: relative;
     width: 65%;
@@ -54,6 +67,9 @@ button {
  .workout {
     display: flex;
     justify-content: center;
+    color: ghostwhite;
+    font-weight: bold;
+    text-decoration:solid;
     margin-top: 1.5em;
  }
 
@@ -89,7 +105,19 @@ ul{
 
 .exercisePage {
     background-image: url(https://st.depositphotos.com/1143769/4284/v/950/depositphotos_42847699-stock-illustration-fitness-and-healthy-exercise-word.jpg);
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
 }
 .exHead{
     background-color: aliceblue;
+}
+.workoutName{
+    display: flex;
+    justify-content: center;
+}
+.save-workout{
+    width: 15em;
+    background-color: darkblue;
+    color: ghostwhite;
+    border: 3px solid red;
 }

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { Button, FormGroup, FormText, Input, Label, Spinner, UncontrolledCarousel } from "reactstrap"
 import { WelcomeFooter } from "../welcome/WelcomeFooter"
-
 import "./Profile.css"
 
 export const Profile = () => {
@@ -72,21 +71,6 @@ export const Profile = () => {
 
   const handleUpdateButtonClick = (event) => {
     event.preventDefault()
-
-    //  let fileInputElement = document.getElementById('addImage');
-    //  let container = new DataTransfer();
-    //  //load data
-    //  for(let i=0; i<5; i++){
-    //   let data = new Blob();
-    //   let file = new File([data], "g"+i+".jpg",{type:"image/jpeg",lastModified:new
-    // Date().getTime()});
-    // container.items.add(file);
-    //  }
-
-    //  fileInputElement.files = container.files;
-    //  console.log(fileInputElement.files);
-    // }   
-    // Create the object to be saved to the API
     const workoutToSendToApi = {
       customerId: fitCustomerObject.id,
       image: customerProgress.image,
@@ -115,7 +99,6 @@ export const Profile = () => {
     [customerProgress] // When this array is empty, you are observing initial component state
   )
 
-
   return (
     <article className="background">
       <div className="profile__nav">
@@ -129,7 +112,6 @@ export const Profile = () => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
       <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
-
       <div className="topPro">
         <div className="top-half">
           <section className="welcomebtn">
@@ -142,7 +124,6 @@ export const Profile = () => {
               <Label for="exampleFile"></Label>
               &nbsp;&nbsp;
               /////////////////////////////////////////////////
-         
               <Input type="file"
                 id="addImage"
                 className="addImage"
@@ -151,9 +132,9 @@ export const Profile = () => {
                   //take current obj value and update with user selected value
                   (evt) => {
                     const copy = { ...customerProgress }
-                     const image = [JSON.stringify(evt.target.value)]
+                    const image = [JSON.stringify(evt.target.value)]
                     // const array = [{image}]; // an array consisting of a single string
-                     const blob = new Blob(image, {type : 'text/html'}); // the blob
+                    const blob = new Blob(image, { type: 'text/html' }); // the blob
                     copy.image = blob
                     update(copy)
                     console.log(copy)
@@ -164,9 +145,8 @@ export const Profile = () => {
                 className="btn-UpdateImage">
                 Update
               </button>
-              
               <FormText>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>..Track your Gainz..</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>..Track your Gainz..</b>
               </FormText>
             </FormGroup>
           </section>
@@ -174,13 +154,10 @@ export const Profile = () => {
           <img className="profileObject" alt="" src={`${customerObject}`} />
         </div>
       </div>
-
       <div className="card__Element">
       </div>
-
       <div className="max">
         <div className="seperation-pro"></div>
-
         <div className="edu-zone"><b> &nbsp;&nbsp;(Education Zone)&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -193,21 +170,18 @@ export const Profile = () => {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Tools)</b>
         </div>
-
         <section className="understandMax">
           <div className="tableLine">
-          <img alt="" className='fit__logo' src="/2E5049CB-BAED-4DAC-97C5-065C0E195D5E_4_5005_c.jpeg" width="200" height="100" ></img>
+            <img alt="" className='fit__logo' src="/2E5049CB-BAED-4DAC-97C5-065C0E195D5E_4_5005_c.jpeg" width="200" height="100" ></img>
             <div className="edu">
               <Button outline onClick={() => { window.open(URL = "https://cdn.jwplayer.com/previews/tsMR14Nv") }}
                 className="max-link">
                 OneRep Max
               </Button>
-
               <Button outline onClick={() => { window.open(URL = "https://youtu.be/PNeLRc3b3C8") }}
                 className="max-link">
                 InLine Body Scan
               </Button>
-              
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -227,7 +201,7 @@ export const Profile = () => {
                 BMI Calculator
               </Button>
             </div>
-            
+
           </div>
         </section>
 
@@ -243,7 +217,6 @@ export const Profile = () => {
           <b>Generate New Workout </b>
         </Button>
         <div className="seperation-pro"></div>
-
         <UncontrolledCarousel className="carousel"
           items={[
 
@@ -271,22 +244,22 @@ export const Profile = () => {
           ]}
         />
         <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
-        <h2 className="workout"><b>My Workout List</b></h2>
+        <h2 className="workoutList-Profile"><b><i>~</i>My Workout List<i>~</i></b></h2>
       </div>
       <section className="workout__list">
         <ul className="w__List">
 
           {filteredWorkouts.map(workout => <li className="w__Item" key={workout.id}>
             <h3 className="workout_name"><strong>{workout.workoutName}</strong></h3>&nbsp;<br />
-            <i>Generated on Date:</i>&nbsp;{workout.dateCompleted}&nbsp;&nbsp;
+            <b><i>Generated on Date:</i></b>&nbsp;{workout.dateCompleted}&nbsp;&nbsp;
             <div className="workout__btns">
               <Button outline onClick={() =>
                 navigate(`/exerciseView/${workout.id}`)}
-                className="save-primary" >
+                className="pro-primary" >
                 View Workout
               </Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></br>
               <Button outline onClick={() => deleteButton(workout.id)}
-                className="save-primary">
+                className="pro-primary">
                 Delete Workout
               </Button>
             </div>

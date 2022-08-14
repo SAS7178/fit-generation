@@ -3,12 +3,10 @@
     font-size: xx-large;
     font-weight: bolder;
 }
-
 .welcome__header {
     display: flex;
     top: 0;
 }
-
 .card-img {
     opacity: 80%;
     margin-top: -4em;
@@ -16,15 +14,19 @@
     border: 3px solid red;
     border-radius: 0px 30px 0px 30px;
 }
-
 .card-box {
     display: flex;
     justify-content: center;
     width: 100%;
+    height: 20em;
     margin-bottom: 12em;
     margin-top: -9em;
 }
-
+.gorilla-home{
+    padding-bottom: 2em;
+    margin-left: 2em;
+    height: 15em;
+}
 .welcome__card {
     display: flex;
     justify-content: center;
@@ -43,11 +45,10 @@
     display: flex;
     justify-content: center;
     margin-top: -11em;
-    margin-bottom: 4em;
+    position: relative;
+    margin-bottom: 2em;
+    margin-left: 28em;
 }
-
-
-
 .exercise-games {
     display: flex;
     justify-content: center;
@@ -69,23 +70,19 @@
     text-decoration: underline;
 
 }
-
 .snap__logo {
     border-radius: 30%;
 }
-
 .welcome-btns {
     display: flex;
     flex-wrap: wrap;
 }
-
 .btn-generate {
     background-color: rgb(24, 81, 151);
     color: ghostwhite;
     width: 14em;
     height: 2em;
 }
-
 .btn-games {
     background-color: rgb(24, 81, 151);
     color: ghostwhite;
@@ -107,18 +104,15 @@
     flex-direction: column;
     align-items: center;
 }
-
 .footer-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
 .contact-about {
     display: flex;
 
 }
-
 .about-link {
     font-size: smaller;
     background-color: goldenrod;
@@ -139,7 +133,6 @@
     font-size: xxx-large;
     color: ghostwhite;
 }
-
 .contact-link {
     font-size: smaller;
     background-color: goldenrod;
@@ -148,62 +141,56 @@
     height: 1.5em;
     margin-top: 0.5em;
 }
-
 .footer-features {
     display: flex;
     flex-direction: column;
 }
-
 .footer-resources {
     display: flex;
     flex-direction: column;
 }
-
 .font {
     font-size: large;
     font-weight: 800;
 }
-
 .myPT {
     display: flex;
     justify-content: space-around;
     margin-top: 3em;
 }
-
 .footer-logos {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
-
 .footer-foot {
     display: flex;
     flex-direction: column;
     margin-top: 3em;
 }
-
 .font {
     font-size: x-large;
 }
-
-
 .myPT {
     display: flex;
     justify-content: space-around;
     margin-top: 3em;
 }
-
 .copyright {
     color: antiquewhite;
 }
-
 .background__home {
-    /* background-image: url(https://i.etsystatic.com/28921914/r/il/bbc969/3595321057/il_794xN.3595321057_qc9y.jpg  ); */
     background-color: aliceblue;
 }
-
 .li {
     display: flex;
     justify-content: space-between;
+}
+.welcomeIframe{
+    border-radius: 140px 140px 10% 10%;
+    margin-left: 8em;
+    margin-top: 1em;
+    margin-bottom: -4em;
+    padding-top: 6em;
 }
