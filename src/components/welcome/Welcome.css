@@ -23,8 +23,9 @@
     margin-top: -9em;
 }
 .gorilla-home{
-    padding-bottom: 2em;
-    margin-left: 2em;
+  
+    padding-top: 6em;
+    margin-bottom: -4em;
     height: 15em;
 }
 .welcome__card {
@@ -40,6 +41,8 @@
 .tag-logo{
     display: flex;
     flex-direction: column;
+    margin-left: 8em;
+    margin-top: -7em;
 }
 .tagline {
     display: flex;
@@ -75,7 +78,9 @@
 }
 .welcome-btns {
     display: flex;
-    flex-wrap: wrap;
+  justify-content: center;
+    margin-left: -9em;
+    margin-top: -5em;
 }
 .btn-generate {
     background-color: rgb(24, 81, 151);
@@ -190,7 +195,6 @@
 .welcomeIframe{
     border-radius: 140px 140px 10% 10%;
     margin-left: 8em;
-    margin-top: 1em;
-    margin-bottom: -4em;
+    margin-bottom: -2em;
     padding-top: 6em;
 }

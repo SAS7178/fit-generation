@@ -58,8 +58,9 @@ export const WelcomePage = () => {
       <section className="tagline" >
         <div className="tag-logo">
           <b>Where <strong>Fitness Generation</strong> is our Mission!</b>
-          <img alt="" className='gorilla-home' src="/2E5049CB-BAED-4DAC-97C5-065C0E195D5E_4_5005_c.jpeg" width="200" height="200" ></img>
+
         </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div className="welcome-btns">
           <button
@@ -74,6 +75,7 @@ export const WelcomePage = () => {
             Exercise Games
           </button>
         </div>
+        <img alt="" className='gorilla-home' src="/2E5049CB-BAED-4DAC-97C5-065C0E195D5E_4_5005_c.jpeg" width="200" height="200" ></img>
       </section>
       <WelcomeFooter />
     </div>
