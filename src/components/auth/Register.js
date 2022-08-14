@@ -26,7 +26,7 @@ export const Register = () => {
                         email: createdCustomer.email
                     }))
 
-                    navigate("/generateWorkout")
+                    navigate("/")
                 }
             })
     }
