@@ -61,7 +61,7 @@ export const ExerciseView = () => {
                         sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
                         reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                         rest time:&nbsp;{exercise.rest}<br />
-                        <a href={exercise.exampleVid}>
+                        <a target="_blank" href={exercise.exampleVid}>
                             <Button className="exerciseView__link">Watch tutorial</Button>
                         </a>
                     </li>

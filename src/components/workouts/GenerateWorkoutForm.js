@@ -159,7 +159,6 @@ export const GenerateWorkoutForm = () => {
               Fitness Goal
             </Label>
             <Input
-             value={null}
               id="goal"
               name="select"
               type="select"
@@ -193,7 +192,6 @@ export const GenerateWorkoutForm = () => {
               Muscle Group
             </Label>
             <Input
-             value={null}
               id="muscleGroup"
               name="select"
               type="select"
@@ -246,7 +244,6 @@ export const GenerateWorkoutForm = () => {
             <Progress
               animated
               bar
-              color="success"
               value="20"
             />
           </Progress>

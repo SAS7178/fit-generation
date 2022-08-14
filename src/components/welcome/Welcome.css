@@ -18,11 +18,14 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    height: 20em;
     margin-bottom: 12em;
     margin-top: -9em;
 }
 .gorilla-home{
-    padding-bottom: 3em;
+    padding-bottom: 2em;
+    margin-left: 2em;
+    height: 15em;
 }
 .welcome__card {
     display: flex;
@@ -42,7 +45,9 @@
     display: flex;
     justify-content: center;
     margin-top: -11em;
-    margin-bottom: 4em;
+    position: relative;
+    margin-bottom: 2em;
+    margin-left: 28em;
 }
 .exercise-games {
     display: flex;
@@ -181,4 +186,11 @@
 .li {
     display: flex;
     justify-content: space-between;
+}
+.welcomeIframe{
+    border-radius: 140px 140px 10% 10%;
+    margin-left: 8em;
+    margin-top: 1em;
+    margin-bottom: -4em;
+    padding-top: 6em;
 }

@@ -105,7 +105,19 @@ ul{
 
 .exercisePage {
     background-image: url(https://st.depositphotos.com/1143769/4284/v/950/depositphotos_42847699-stock-illustration-fitness-and-healthy-exercise-word.jpg);
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
 }
 .exHead{
     background-color: aliceblue;
+}
+.workoutName{
+    display: flex;
+    justify-content: center;
+}
+.save-workout{
+    width: 15em;
+    background-color: darkblue;
+    color: ghostwhite;
+    border: 3px solid red;
 }

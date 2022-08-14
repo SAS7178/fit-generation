@@ -91,7 +91,9 @@ export const Exercise = () => {
                     sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
                     reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                     rest time:&nbsp;{exercise.rest}<br />
-                    <a href={exercise.exampleVid}> <Button className="exercise__link"
+                    <a target="_blank" href={exercise.exampleVid}  onClick="window.open(`popup`)">
+                         <Button className="exercise__link"
+                   
                     >Video tutorial</Button></a>
                     <FormGroup>
                         <button
@@ -164,7 +166,7 @@ export const Exercise = () => {
             </div>
             
             <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
-            <h2 className="workout"><b>Workout Name</b></h2>
+            <h2 className="workoutName"><b><i>~</i>Workout Name<i>~</i></b></h2>
             <fieldset className="nameText">
                 <input type="name"
                     value={workoutName}
@@ -174,7 +176,7 @@ export const Exercise = () => {
                     required autoFocus />
                 <div>
                     <Button outline onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                        className="save-primary">
+                        className="save-workout">
                         Save to MyWorkouts List
                     </Button>
                 </div>

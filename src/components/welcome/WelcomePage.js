@@ -52,6 +52,9 @@ export const WelcomePage = () => {
         </Card>
       </section>
       <div className="seperation"></div>
+      <iframe className="welcomeIframe" width="460" height="350" src="https://www.youtube.com/embed/Kpbo9SXbGXE" 
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+      encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <section className="tagline" >
         <div className="tag-logo">
           <b>Where <strong>Fitness Generation</strong> is our Mission!</b>
