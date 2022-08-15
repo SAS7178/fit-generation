@@ -86,7 +86,7 @@ export const NavBar = (args) => {
 
         <Navbar {...args}>
           <NavbarBrand className="title__home" href="/">
-            <div className='welcome__header'>
+            <div className='welcome__headernon'>
               <h1> Fit Generation </h1>
               <img alt='' className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
@@ -94,15 +94,15 @@ export const NavBar = (args) => {
             </div>
           </NavbarBrand>
           <NavbarToggler className='hamburger' onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            <Nav fill pills >
+        <Collapse isOpen={isOpen} navbar>
+          <Nav fill pills >
               <NavItem className='nonMember'>
                 <NavLink href="/register" className='nonMember'>
                   <b>Register</b>
                 </NavLink>
                 <NavItem className='nonMember'>
-                  <NavLink href="/login" className='nonMember'>
-                    <b>Login</b>
+                <NavLink href="/login" className='nonMember'>
+                  <b>Login</b>
                   </NavLink>
                 </NavItem>
               </NavItem>

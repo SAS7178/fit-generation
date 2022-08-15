@@ -3,8 +3,9 @@
     justify-content: space-between;
     height: 1.5em;
     top: -1;
+    border-radius: 0px 0px 0px 15px;
     background-color: rgb(116, 123, 123);
-    border-bottom: 1px solid red;
+    border-bottom: 3px solid red;
 }
 .background{
     background-image: url("https://www.pixelstalk.net/wp-content/uploads/images5/4K-White-Wallpaper-for-Desktop.jpg");
