@@ -6,6 +6,8 @@ In this project, Stephen Smith was by the Nashville Software School(Capestone) t
 ## Technologies Used
 
 - Javascript
+- REACT
+- REACTStrap
 - Json
 - HTML
 - CSS
