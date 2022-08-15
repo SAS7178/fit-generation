@@ -229,6 +229,10 @@
     border-radius: 140px 140px 10% 10%;
     padding-top: 6em;
 }
+.vertline{
+    margin-left: 13em;
+    margin-right: -22em;
+}
 .nonVids{
     display: flex;
     flex-direction: row-reverse;

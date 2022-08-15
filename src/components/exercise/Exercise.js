@@ -64,6 +64,7 @@ export const Exercise = () => {
         },
         [latestCustomerWorkout, exercises] // When this array is empty, you are observing initial component state
     )
+    
     //post function for onclick of workout Exercise
     const handleAddExerciseClick = (exerciseId) => {
 
@@ -81,7 +82,6 @@ export const Exercise = () => {
             body: JSON.stringify(exerciseToSendToApi)
         })
     }
-
     //func to map exercises info and tutorial button/add to workout butn
     const exerciseList = () => {
         return filteredExercises.map(exercise => {
@@ -91,10 +91,10 @@ export const Exercise = () => {
                     sets:&nbsp;{exercise.sets}&nbsp;&nbsp;
                     reps:&nbsp;{exercise.reps}&nbsp;&nbsp;
                     rest time:&nbsp;{exercise.rest}<br />
-                    <a target="_blank" href={exercise.exampleVid}  onClick="window.open(`popup`)">
-                         <Button className="exercise__link"
-                   
-                    >Video tutorial</Button></a>
+                    <a target="_blank" href={exercise.exampleVid} onClick="window.open(`popup`)">
+                        <Button className="exercise__link"
+                        >Video tutorial</Button></a>
+                    
                     <FormGroup>
                         <button
                             onClick={() => handleAddExerciseClick(`${exercise.id}`)}
@@ -136,13 +136,11 @@ export const Exercise = () => {
                 navigate(`/profile/${fitCustomerObject.id}`)
 
             })
-
     }
 
     // fetches and set all exercises to var to make available for iteration globally
     return (
         <>
-
             <div className='generator__nav'>
                 <nav>
                     <Link className="navbar__link" to="/">Home</Link>
@@ -152,36 +150,36 @@ export const Exercise = () => {
                 </nav>
             </div>
             <section className="exHead">
-            <div className='welcome__header'>
-                <h1> Fit Generation </h1>
-                <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
+                <div className='welcome__header'>
+                    <h1> Fit Generation </h1>
+                    <img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
             exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
-            </div>
-            <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
+                </div>
+                <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
             </section>
             <section className="exHead">
-            <div className="exercisePage">
-                {exerciseList()}
-            </div>
-            
-            <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
-            <h2 className="workoutName"><b><i>~</i>Workout Name<i>~</i></b></h2>
-            <fieldset className="nameText">
-                <input type="name"
-                    value={workoutName}
-                    onChange={evt => set(evt.target.value)}
-                    className="form-control"
-                    placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...Name This Workout..."
-                    required autoFocus />
-                <div>
-                    <Button outline onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                        className="save-workout">
-                        Save to MyWorkouts List
-                    </Button>
+                <div className="exercisePage">
+                    {exerciseList()}
                 </div>
-            </fieldset>
-            <WelcomeFooter />
+
+                <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
+                <h2 className="workoutName"><b><i>~</i>Workout Name<i>~</i></b></h2>
+                <fieldset className="nameText">
+                    <input type="name"
+                        value={workoutName}
+                        onChange={evt => set(evt.target.value)}
+                        className="form-control"
+                        placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...Name This Workout..."
+                        required autoFocus />
+                    <div>
+                        <Button outline onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+                            className="save-workout">
+                            Save to MyWorkouts List
+                        </Button>
+                    </div>
+                </fieldset>
+                <WelcomeFooter />
             </section>
         </>
     )
