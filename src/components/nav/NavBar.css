@@ -25,6 +25,12 @@
     position: relative;
     
 }
+.welcome__headernon{
+    display: flex;
+    justify-content: center;
+    margin-left: 50em;
+    position: relative;
+}
 .navbar-toggler {
     width: 4em;
     top: 0;
