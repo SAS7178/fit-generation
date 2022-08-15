@@ -15,7 +15,7 @@ In this project, Stephen Smith was by the Nashville Software School(Capestone) t
 - Postman
 
 ## Figma- 
-![](/images/FigmaWireframe FitGen.png)
+![]([/images/FigmaWireframe FitGen.png](https://github.com/SAS7178/fit-generation/blob/main/images/FigmaWireframe%20FitGen.png?raw=true))
 
 ## Lucid Charts(ERD)
 ![](/images/Lucid ERD.png](https://github.com/SAS7178/fit-generation/blob/main/images/Lucid%20ERD.png?raw=true))
