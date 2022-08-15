@@ -73,6 +73,7 @@ export const Profile = () => {
     event.preventDefault()
     const workoutToSendToApi = {
       customerId: fitCustomerObject.id,
+      // image needs to be converted to a blob
       image: customerProgress.image,
       dateCompleted: new Date()
     }
@@ -196,7 +197,6 @@ export const Profile = () => {
                 className="max-link">
                 Max Calculator
               </Button>
-
               <Button outline onClick={() => { window.open(URL = "https://www.calculator.net/bmi-calculator.html") }}
                 className="max-link">
                 BMI Calculator
@@ -205,9 +205,6 @@ export const Profile = () => {
 
           </div>
         </section>
-
-
-
         <Button className="generateNew" onClick={() => { navigate("/GenerateWorkout") }}>
           <Spinner
             color="primary"
