@@ -13,10 +13,10 @@ In this project the team Badland Bandits were contracted by the National Parks S
 - Postman
 
 ## Figma- 
-![](/images/figmaBadlandBandits.png)
+![](/Users/barracuda/workspace/fit-generation/src/components/images/FigmaWireframe FitGen.png)
 
 ## Application
-![](/images/app-badland.png)
+![](/Users/barracuda/workspace/fit-generation/src/components/images/Lucid ERD.png)
 
 ### Contributors 
 
