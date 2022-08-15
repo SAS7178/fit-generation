@@ -18,6 +18,6 @@ In this project, Stephen Smith was by the Nashville Software School(Capestone) t
 ![](/images/FigmaWireframe FitGen.png)
 
 ## Lucid Charts(ERD)
-![](/Users/barracuda/workspace/fit-generation/src/components/images/Lucid ERD.png)
+![](/images/Lucid ERD.png](https://github.com/SAS7178/fit-generation/blob/main/images/Lucid%20ERD.png?raw=true))
 
 
