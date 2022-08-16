@@ -77,6 +77,9 @@ export const Profile = () => {
       image: customerProgress.image,
       dateCompleted: new Date()
     }
+  
+// const blob = new Blob([JSON.stringify(workoutToSendToApi, null, 2)], {type : 'application/json'});
+
     return fetch(`http://localhost:8088/customerProgress`, {
       method: "POST",
       headers: {
@@ -93,13 +96,13 @@ export const Profile = () => {
         .then((data) => {
           let length = data.length - 1
           let cust = data[length]
-          console.log(cust.image)
           setCustomerObject(cust.image)
         })
     },
     [customerProgress] // When this array is empty, you are observing initial component state
   )
 
+  
   return (
     <article className="background">
       <div className="profile__nav">
@@ -133,12 +136,8 @@ export const Profile = () => {
                   //take current obj value and update with user selected value
                   (evt) => {
                     const copy = { ...customerProgress }
-                    const image = [JSON.stringify(evt.target.value)]
-                    // const array = [{image}]; // an array consisting of a single string
-                    const blob = new Blob(image, { type: 'text/html' }); // the blob
-                    copy.image = blob
+                     copy.image = [JSON.stringify(evt.target.value)]
                     update(copy)
-                    console.log(copy)
                   }
                 } />
                 {/* ////////////////////////////////////////////// */}
