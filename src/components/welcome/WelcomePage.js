@@ -12,6 +12,7 @@ export const WelcomePage = () => {
   const handleGenerateButtonClick = () => {
     navigate(`/generateWorkout`)
   }
+
   // const options = {
   //   method: 'GET',
   //   headers: {
@@ -61,7 +62,7 @@ export const WelcomePage = () => {
         <iframe className="welcomeIframe" width="460" height="350" src="https://www.youtube.com/embed/Kpbo9SXbGXE"
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
       encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        {/* <iframe className="welcomeIframe" width="560" height="315" src="https://www.youtube.com/embed/BHY0FxzoKZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+
         <section className="tagline" >
         <img  className="vertline" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBsaahKP7BJT6okiK4RHijvgPZH4NyzubFdA&usqp=CAU" width="100" height="200em"></img>
           <div className="tag-logo">

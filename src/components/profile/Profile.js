@@ -222,7 +222,8 @@ export const Profile = () => {
               caption: 'Get into Crossfit!',
               key: 1,
               src: 'https://assets.website-files.com/6233518c68804f1e9ed11958/6233705d07c7252d292159dc_Homepage%20in%20Jacksonville%20Hero.jpg'
-              // onClick = navigate(https://www.crossfit.com/)
+              //  onClick(href = "https://www.crossfit.com")
+              
             },
             {
               altText: 'trauma yoga room',

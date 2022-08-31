@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { NavLink } from "reactstrap"
-
+import {Contact} from "/Users/barracuda/workspace/fit-generation/src/components/contact&about/contact.js"
+import {About} from "/Users/barracuda/workspace/fit-generation/src/components/contact&about/aboutus"
 
 export const WelcomeFooter = () => {
 
@@ -18,28 +19,23 @@ export const WelcomeFooter = () => {
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+
                         <nav className="footer-features">&nbsp;&nbsp;&nbsp;&nbsp; <div className="font">
-                            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us & Info</b></div>
-                            {/* <Link className="footer__link" to="/profile/:customerId">About </Link>
-                            <Link className="footer__link" to="/profile/:customerId">contact info </Link> */}
-                            <div className="contact-about">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
-                                    className="about-link">
-                                    About Us
-                                </button>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
-                                    className="contact-link">
-                                    Contact
-                                </button>
+                            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Contact us & Info</b></div>
+                            <div className="modals">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <About/> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <Contact/>
                             </div>
                         </nav>
+
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
 
                         <nav className="footer-resources">&nbsp;&nbsp;&nbsp;&nbsp; <div className="font"><b>Helpful Resources</b></div>
-                            <NavLink className="footer__link" to="/generateWorkout">
+                            <NavLink className="footer__link" href="https://www.healthline.com/health/fitness-nutrition/healthy-lifestyle-benefits#healthy-lifestyle-definition">
                                 Healthy Lifestyle                            </NavLink>
                             <NavLink className="footer__link" href="https://www.online-tech-tips.com/cool-websites/12-best-fitness-websites-for-accurate-health-advice/">
                                 Fitness Education</NavLink>
