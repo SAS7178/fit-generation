@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { NavLink } from "reactstrap"
-
+import {Contact} from "/Users/barracuda/workspace/fit-generation/src/components/contact&about/contact.js"
+import {About} from "/Users/barracuda/workspace/fit-generation/src/components/contact&about/aboutus"
 
 export const WelcomeFooter = () => {
 
@@ -22,17 +23,10 @@ export const WelcomeFooter = () => {
                         <nav className="footer-features">&nbsp;&nbsp;&nbsp;&nbsp; <div className="font">
                             <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 Contact us & Info</b></div>
-                            <div className="contact-about">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
-                                    className="about-link">
-                                    About Us
-                                </button>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <button outline onClick={() => { window.open(URL = "https://www.nasm.org/resources/one-rep-max-calculator") }}
-                                    className="contact-link">
-                                    Contact
-                                </button>
+                            <div className="modals">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <About/> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <Contact/>
                             </div>
                         </nav>
 
