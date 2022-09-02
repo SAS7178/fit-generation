@@ -32,4 +32,5 @@ In this project I ,Stephen Smith, initiated by Nashville Software School this pr
 
 4.Open browser and navigate to your localHost:3000
 
-Fit-Generation-API: https://github.com/SAS7178/Fit-Generation-API  Fit-Generation repository: https://github.com/SAS7178/fit-generation
+- Fit-Generation-API: https://github.com/SAS7178/Fit-Generation-API  
+- Fit-Generation repository: https://github.com/SAS7178/fit-generation
