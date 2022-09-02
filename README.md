@@ -21,9 +21,12 @@ In this project I ,Stephen Smith, initiated by Nashville Software School this pr
 ![](https://github.com/SAS7178/fit-generation/blob/main/images/Lucid%20ERD.png?raw=true)
 
 To run this Appliaction:
-
 1.Pull down both the fit-Generation and fit-generation-api code
+
 2.Navigate to the file fit-generation-api in terminal and serve with: database.json -p 8088
+
 3.Navigate to fit-generation in another terminal window and serve with: npm start (default serve to localHost:3000)--this may open your browser automatically 
+
 4.Open browser and navigate to your localHost:3000
-Fit-Generation-API: https://github.com/SAS7178/Fit-Generation-API  Fit-Generation repository: 
+
+Fit-Generation-API: https://github.com/SAS7178/Fit-Generation-API  Fit-Generation repository: https://github.com/SAS7178/fit-generation
