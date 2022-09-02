@@ -1,6 +1,6 @@
 # Fit-Generation
 
-In this project I ,Stephen Smith, initiated by Nashville Software School this project for a front-end Capestone. The goal, to build an application that will provide people with fitness tools and information, aswell as generate personalized workout programs based on a users criteria. This project was my first solo sprint front-end application, where I created both UI and styling...aswell, I implemented fetched remote API data in addition to creating my own local database-API(fit-generation-API which is saved in its own repository here: https://github.com/SAS7178/Fit-Generation-API).
+In this project I, Stephen Smith, initiated by Nashville Software School this project for a front-end Capestone. The goal, to build an application that will provide people with fitness tools and information, aswell as generate personalized workout programs based on a users criteria. This project was my first solo sprint front-end application, where I created both UI and styling...aswell, I implemented fetched remote API data in addition to creating my own local database-API(fit-generation-API which is saved in its own repository here: https://github.com/SAS7178/Fit-Generation-API).
 
 
 ## Technologies Used
