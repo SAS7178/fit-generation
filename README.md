@@ -26,9 +26,10 @@ In this project I ,Stephen Smith, initiated by Nashville Software School this pr
 
 1.Pull down both the fit-Generation and fit-generation-api code from GitHub
 
-2.Navigate to the file fit-generation-api in terminal and serve with: database.json -p 8088
+2.Navigate to the file fit-generation-api in terminal and serve with: json-server -p 8088 database.json 
 
-3.Navigate to fit-generation in another terminal window and serve with: npm start (default serve to localHost:3000)
+3.Navigate to fit-generation in another terminal window and serve with: npm start 
+( with node.js default serves to localHost:3000)
       
       --your browser may open automatically-- 
 
