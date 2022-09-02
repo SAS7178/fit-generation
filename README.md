@@ -27,6 +27,7 @@ To run this Appliaction:
 2.Navigate to the file fit-generation-api in terminal and serve with: database.json -p 8088
 
 3.Navigate to fit-generation in another terminal window and serve with: npm start (default serve to localHost:3000)
+      
       --your browser may open automatically-- 
 
 4.Open browser and navigate to your localHost:3000
