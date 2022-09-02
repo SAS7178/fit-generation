@@ -14,6 +14,8 @@ In this project I ,Stephen Smith, initiated by Nashville Software School this pr
 - Figma
 - Postman
 
+![](https://github.com/SAS7178/project-gifs/blob/main/public/Fit-Gen%20Gif.gif?raw=true)
+
 ## Figma- 
 ![](https://github.com/SAS7178/fit-generation/blob/main/images/FigmaWireframe%20FitGen.png?raw=true)
 
