@@ -20,7 +20,7 @@ In this project I ,Stephen Smith, initiated by Nashville Software School this pr
 ## Lucid Charts(ERD)
 ![](https://github.com/SAS7178/fit-generation/blob/main/images/Lucid%20ERD.png?raw=true)
 
-To run this Appliaction:
+##To Run This Appliaction:
 
 1.Pull down both the fit-Generation and fit-generation-api code
 
