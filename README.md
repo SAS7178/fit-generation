@@ -48,8 +48,10 @@ Application GIF below
             npm install
             npm start
 
-stephen@gmail.com
-Regular User Login
+4.User Login
+
+      stephen@gmail.com
+
 
 - Fit-Generation-API: https://github.com/SAS7178/Fit-Generation-API  
 - Fit-Generation repository: https://github.com/SAS7178/fit-generation
