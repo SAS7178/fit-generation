@@ -16,7 +16,7 @@ In this project I, Stephen Smith, initiated by Nashville Software School this pr
 Technologies Used
 image image image image image image image image
 
-Running This Application
+## Running This Application
 First, a note about authentication... This application uses mock authentication which is purely for demonstration purposes. Therefore the login and registration code written here is completely insecure and would never be implemented in a professional application.
 
 Clone This Repository And Change To The Directory In The Terminal.
