@@ -17,16 +17,16 @@ Technologies Used
 image image image image image image image image
 
 ## Running This Application
-First, a note about authentication... This application uses mock authentication which is purely for demonstration purposes. Therefore the login and registration code written here is completely insecure and would never be implemented in a professional application.
+      1.First, a note about authentication... This application uses mock authentication which is purely for demonstration purposes. Therefore the login and registration code written here is completely insecure and would never be implemented in a professional application.
 
 Clone This Repository And Change To The Directory In The Terminal.
 git clone git@github.com:WilsonTBell/StatSlinger.git
 cd StatSlinger
-2.Access And Run The Database
+      2.Access And Run The Database
 
 git clone git@github.com:WilsonTBell/statslinger-API.git
 json-server -p 8088 database.json -w
-3.Launch the client.
+      3.Launch the client.
 
 npm install
 npm start
