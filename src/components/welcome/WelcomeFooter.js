@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { NavLink } from "reactstrap"
-import {Contact} from "/Users/barracuda/workspace/fit-generation/src/components/contact&about/contact.js"
-import {About} from "/Users/barracuda/workspace/fit-generation/src/components/contact&about/aboutus"
+import {Contact} from "./contact&about/contact.js"
+import {About} from "./contact&about/aboutus"
 
 export const WelcomeFooter = () => {
 
