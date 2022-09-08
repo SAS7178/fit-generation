@@ -17,7 +17,7 @@ export const WelcomePage = () => {
     () => {
       fetch(`http://localhost:8088/qoutes`)
        .then(response => response.json())
-           .then(response => {setQoute(response[1])
+           .then(response => {setQoute(response[Math.floor(Math.random() * response.length)])
         })
        },
     [] // When this array is empty, you are observing initial component state
