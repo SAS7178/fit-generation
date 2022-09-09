@@ -125,7 +125,7 @@
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI4YQGwDhArxFDOyulHTSctieoQsyXiwXD-6iray7H2inWKO8G6hdOz7ry4Bp6AuQ8J-Y&usqp=CAU");
     border-top: 4px double rgb(216, 9, 9);
     border-radius: 15px 5px 0px 0px;
-    justify-content: space-evenly;
+    justify-content: center;
     position: relative;
     bottom: -3em;
     width: 100%;
