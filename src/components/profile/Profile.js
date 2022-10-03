@@ -5,6 +5,10 @@ import { WelcomeFooter } from "../welcome/WelcomeFooter"
 import "./Profile.css"
 
 export const Profile = () => {
+
+  const localFitCustomer = localStorage.getItem("fit_customer")
+  const fitCustomerObject = JSON.parse(localFitCustomer)
+
   const [workoutExercises, setworkoutExercises] = useState([])
   const [filteredWorkouts, setFilteredWorkouts] = useState([])
   const [customerObject, setCustomerObject] = useState("")
@@ -17,94 +21,95 @@ export const Profile = () => {
     dateCompleted: new Date()
   })
 
-  const localFitCustomer = localStorage.getItem("fit_customer")
-  const fitCustomerObject = JSON.parse(localFitCustomer)
 
+  
+  
   // fetches and set all workouts for cust sets to var to make available for iteration globally
   useEffect(
     () => {
       fetch(`http://localhost:8088/workouts`)
-        .then(response => response.json())
-        .then((data) => {
-          setworkoutExercises(data)
-        })
+      .then(response => response.json())
+      .then((data) => {
+        setworkoutExercises(data)
+      })
     },
     [customerId] // When this array is empty, you are observing initial component state
-  )
-  useEffect(
-    () => {
-      fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
+    )
+    useEffect(
+      () => {
+        fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
         .then(response => response.json())
         .then((data) => {
           setCustomers(data[0])
         })
-    },
-    [fitCustomerObject.id] // When this array is empty, you are observing initial component state
-  )
-
-  //set customer workoutExercises to var dep on workoutexercises change 
-  useEffect(
-    () => {
-      let filteredWorkouts = workoutExercises.filter(
-        (workout) =>
-          fitCustomerObject.id === workout.customerId)
-      setFilteredWorkouts(filteredWorkouts)
-    },
-    [workoutExercises, fitCustomerObject.id] // When this array is empty, you are observing initial component state
-  )
-  //funt to reerender all workouts to be used where needed
-  const getAllWorkouts = () => {
-    fetch(`http://localhost:8088/workouts`)
-      .then(response => response.json())
-      .then((workoutArray) => {
-        setworkoutExercises(workoutArray)
-      })
-  }
-  //func to delete workout from database if has wworkoutid
-  const deleteButton = (workoutId) => {
-    fetch(`http://localhost:8088/workouts/${workoutId}`, {
-      method: "DELETE"
-    })
-      .then(() => { getAllWorkouts() })
-
-  }
-
-  const handleUpdateButtonClick = (event) => {
-    event.preventDefault()
-    const workoutToSendToApi = {
-      customerId: fitCustomerObject.id,
-      // image needs to be converted to a blob
-      image: customerProgress.image,
-      dateCompleted: new Date()
-    }
-  
-// const blob = new Blob([JSON.stringify(workoutToSendToApi, null, 2)], {type : 'application/json'});
-
-    return fetch(`http://localhost:8088/customerProgress`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
       },
-      body: JSON.stringify(workoutToSendToApi)
-    })
-  }
+      [fitCustomerObject.id] // When this array is empty, you are observing initial component state
+      )
+      
+      //set customer workoutExercises to var dep on workoutexercises change 
+      useEffect(
+        () => {
+          let filteredWorkouts = workoutExercises.filter(
+            (workout) =>
+            fitCustomerObject.id === workout.customerId)
+            setFilteredWorkouts(filteredWorkouts)
+          },
+          [workoutExercises, fitCustomerObject.id] // When this array is empty, you are observing initial component state
+          )
+          //func to reerender all workouts to be used where needed
+          const getAllWorkouts = () => {
+            fetch(`http://localhost:8088/workouts`)
+            .then(response => response.json())
+            .then((workoutArray) => {
+              setworkoutExercises(workoutArray)
+            })
+          }
+          //func to delete workout from database if has wworkoutid
+          const deleteButton = (workoutId) => {
+            fetch(`http://localhost:8088/workouts/${workoutId}`, {
+              method: "DELETE"
+            })
+            .then(() => { getAllWorkouts() })
+            
+          }
+          
+          const handleUpdateButtonClick = (event) => {
+            event.preventDefault()
+            const customerImageToSendToApi = {
+              customerId: fitCustomerObject.id,
+              // image needs to be converted to a blob
+              image: customerProgress.image,
+              dateCompleted: new Date()
+            }
+            
+            
+            return fetch(`http://localhost:8088/customerProgress`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify(customerImageToSendToApi)
+            })
+          }
+          
+          useEffect(
+            () => {
+              fetch(`http://localhost:8088/customerProgress?customerId=${fitCustomerObject.id}`)
+              .then(response => response.json())
+              .then((data) => {
+                let length = data.length - 1
+                let cust = data[length]
+                setCustomerObject(cust.image)
+              })
+            },
+            [customerProgress] // When this array is empty, you are observing initial component state
+            )
+            let fileSelectorHandler = event => {
+              console.log(event)
+            }
 
-  useEffect(
-    () => {
-      fetch(`http://localhost:8088/customerProgress?customerId=${fitCustomerObject.id}`)
-        .then(response => response.json())
-        .then((data) => {
-          let length = data.length - 1
-          let cust = data[length]
-          setCustomerObject(cust.image)
-        })
-    },
-    [customerProgress] // When this array is empty, you are observing initial component state
-  )
-
-  
-  return (
-    <article className="background">
+            return (
+              <article className="background">
       <div className="profile__nav">
         <Link className="navbar__home" to="/"><b>Home</b></Link>
         <Link className="navbar__generate" to="/generateWorkout"><b>Generation Form </b></Link>
@@ -128,19 +133,35 @@ export const Profile = () => {
               <Label for="exampleFile"></Label>
               &nbsp;&nbsp;
               {/* ///////////////////////////////////////////////// */}
-              <Input type="file"
+
+              {/* <input type="file"
+                value={customerProgress.image}
                 id="addImage"
                 className="addImage"
-                value={customerProgress.image}
                 onChange={
                   //take current obj value and update with user selected value
                   (evt) => {
+                    // Read in the image file as a data URL.
                     const copy = { ...customerProgress }
-                     copy.image = [JSON.stringify(evt.target.value)]
+                    copy.image = reader.readAsDataURL(evt.target.value)
                     update(copy)
                   }
-                } />
-                {/* ////////////////////////////////////////////// */}
+                } /> */}
+                <input type="file"
+                  defaultvalue={customerProgress.image}
+                  id="addImage"
+                  // onChange={ this.fileSelectorHandler
+                    onChange={ 
+                    //take current obj value and update with user selected value
+                    (evt) => {
+                      let copy = { ...customerProgress }
+                      let reader = new FileReader(); 
+                      let image = reader.readAsDataURL(evt.target.files[0])
+                      copy.image = image
+                      update(copy)
+                    }
+                  } />
+              {/* ////////////////////////////////////////////// */}
               <button
                 onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
                 className="btn-UpdateImage">
@@ -159,17 +180,17 @@ export const Profile = () => {
       </div>
       <div className="max">
         <div className="seperation-pro"></div>
-        <div className="edu-zone"><b> &nbsp;&nbsp;(Education Zone)&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div className="edu-zone"><b> &nbsp;&nbsp;Education Zone&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Tools)</b>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tools</b>
         </div>
         <section className="understandMax">
           <div className="tableLine">
@@ -223,7 +244,7 @@ export const Profile = () => {
               key: 1,
               src: 'https://assets.website-files.com/6233518c68804f1e9ed11958/6233705d07c7252d292159dc_Homepage%20in%20Jacksonville%20Hero.jpg'
               //  onClick(href = "https://www.crossfit.com")
-              
+
             },
             {
               altText: 'trauma yoga room',
