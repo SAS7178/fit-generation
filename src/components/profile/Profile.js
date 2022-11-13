@@ -17,7 +17,7 @@ export const Profile = () => {
   const navigate = useNavigate()
   const [customerProgress, update] = useState({
     customerId: 0,
-    image: "",
+    image: Blob,
     dateCompleted: new Date()
   })
 
@@ -104,9 +104,10 @@ export const Profile = () => {
             },
             [customerProgress] // When this array is empty, you are observing initial component state
             )
-            let fileSelectorHandler = event => {
-              console.log(event)
-            }
+            // let fileSelectedHandler = event => {
+            //   console.log(event)
+            // }
+// addimage.addEventListener("change",fil)
 
             return (
               <article className="background">
@@ -133,31 +134,25 @@ export const Profile = () => {
               <Label for="exampleFile"></Label>
               &nbsp;&nbsp;
               {/* ///////////////////////////////////////////////// */}
-
-              {/* <input type="file"
-                value={customerProgress.image}
-                id="addImage"
-                className="addImage"
-                onChange={
-                  //take current obj value and update with user selected value
-                  (evt) => {
-                    // Read in the image file as a data URL.
-                    const copy = { ...customerProgress }
-                    copy.image = reader.readAsDataURL(evt.target.value)
-                    update(copy)
-                  }
-                } /> */}
+                {/* <div>
+                  <input type="file" onChange={fileSelectedHandler()} />
+                </div> */}
+               
                 <input type="file"
-                  defaultvalue={customerProgress.image}
+                  defaultValue={customerProgress.image}
                   id="addImage"
                   // onChange={ this.fileSelectorHandler
                     onChange={ 
                     //take current obj value and update with user selected value
                     (evt) => {
                       let copy = { ...customerProgress }
-                      let reader = new FileReader(); 
-                      let image = reader.readAsDataURL(evt.target.files[0])
-                      copy.image = image
+                      let fileReader = new FileReader(); 
+                      // let image = fileReader.readAsDataURL(evt.target.files[0])
+                      let j = new Blob(fileReader.readAsDataURL(evt.target.files[0]))
+                      console.log(j)
+                      // const blobFile = fileReader.readAsText(j)
+                      // console.log(fileReader.readAsDataURL(j))
+                      copy.image = j
                       update(copy)
                     }
                   } />
@@ -173,7 +168,7 @@ export const Profile = () => {
             </FormGroup>
           </section>
           {/* uploaded customer image returned to page */}
-          <img className="profileObject" alt="" src={`${customerObject}`} />
+          <img className="profileObject" alt="No Progress Image loaded..." src={`${customerObject}`} />
         </div>
       </div>
       <div className="card__Element">
