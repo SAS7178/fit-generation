@@ -21,8 +21,8 @@ export const WelcomeFooter = () => {
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
 
                         <nav className="footer-features">&nbsp;&nbsp;&nbsp;&nbsp; <div className="font">
-                            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                Contact us & Info</b></div>
+                            <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Contact & Info </b></div>
                             <div className="modals">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <About/> &nbsp;&nbsp;&nbsp;&nbsp;

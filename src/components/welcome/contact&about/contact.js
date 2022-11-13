@@ -10,7 +10,6 @@ export const Contact = () => {
         <div className="">
             <div className=''>
                 <button className='cont-btn' onClick={toggle}>Contact</button>
-                <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="35em"></img>
             </div>
 
             <Modal isOpen={modal} toggle={toggle}>

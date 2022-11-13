@@ -141,6 +141,7 @@ button {
     margin-top: 9em;
 }
 .customer-name {
+    font-style: oblique;
     font-size: x-large;
     color: blue;
 }

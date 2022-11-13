@@ -98,8 +98,8 @@ export const WelcomePage = () => {
             />
             <CardImgOverlay className="overLay">
               <CardTitle className="qoute-box" tag="h5">
-                "{`${quote.quote}`}"
-                -{`${quote.author}`}-
+                "{`${quote.Quote}`}"
+                -{`${quote.Author}`}-
               </CardTitle>
               <CardText>
                 <small className="text-quote">
