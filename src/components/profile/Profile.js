@@ -135,7 +135,7 @@ export const Profile = () => {
               &nbsp;&nbsp;
               {/* ///////////////////////////////////////////////// */}
                 {/* <div>
-                  <input type="file" onChange={fileSelectedHandler()} />
+                  <input type="file" onChange={fileSelectedHandler()} />git 
                 </div> */}
                
                 <input type="file"
