@@ -6,6 +6,9 @@ The goal, in this application build was to provide an individual with health and
 
 This project was my first solo sprint front-end application, where I created both UI and styling...I also implemented fetched' remote API data, in addition to creating my own local database-API(fit-generation-API) which has its own repo.(link is provided below in the, Running This Application section).
 
+<br><b>Deployed Fit-Generation!</b> 
+(Pardon our progress...backend functionality under construction.)
+<br>visit site: https://fitgeneration.netlify.app/	
 
 ## Technologies Used
 
