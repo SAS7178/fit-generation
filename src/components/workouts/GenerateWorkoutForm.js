@@ -36,7 +36,8 @@ export const GenerateWorkoutForm = () => {
       muscleId: customerWorkout.muscleId,//
       dateCompleted: new Date()//
     }
-    return fetch(`http://localhost:8088/customerWorkouts`, {
+    // return fetch(`http://localhost:8088/customerWorkouts`, {
+    return fetch(`https://fitgenapi.herokuapp.com/customerWorkouts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
