@@ -27,7 +27,8 @@ export const Profile = () => {
   // fetches and set all workouts for cust sets to var to make available for iteration globally
   useEffect(
     () => {
-      fetch(`http://localhost:8088/workouts`)
+      // fetch(`http://localhost:8088/workouts`)
+      fetch(`https://fitgenapi.herokuapp.com/workouts`)
       .then(response => response.json())
       .then((data) => {
         setworkoutExercises(data)
@@ -37,7 +38,8 @@ export const Profile = () => {
     )
     useEffect(
       () => {
-        fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
+        // fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
+        fetch(`https://fitgenapi.herokuapp.com/customers?id=${fitCustomerObject.id}`)
         .then(response => response.json())
         .then((data) => {
           setCustomers(data[0])
@@ -58,7 +60,8 @@ export const Profile = () => {
           )
           //func to reerender all workouts to be used where needed
           const getAllWorkouts = () => {
-            fetch(`http://localhost:8088/workouts`)
+            // fetch(`http://localhost:8088/workouts`)
+            fetch(`https://fitgenapi.herokuapp.com/workouts`)
             .then(response => response.json())
             .then((workoutArray) => {
               setworkoutExercises(workoutArray)
@@ -66,7 +69,8 @@ export const Profile = () => {
           }
           //func to delete workout from database if has wworkoutid
           const deleteButton = (workoutId) => {
-            fetch(`http://localhost:8088/workouts/${workoutId}`, {
+            // fetch(`http://localhost:8088/workouts/${workoutId}`, {
+            fetch(`https://fitgenapi.herokuapp.com/workouts/${workoutId}`, {
               method: "DELETE"
             })
             .then(() => { getAllWorkouts() })
@@ -83,7 +87,8 @@ export const Profile = () => {
             }
             
             
-            return fetch(`http://localhost:8088/customerProgress`, {
+            // return fetch(`http://localhost:8088/customerProgress`, {
+            return fetch(`https://fitgenapi.herokuapp.com/customerProgress`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
@@ -94,7 +99,8 @@ export const Profile = () => {
           
           useEffect(
             () => {
-              fetch(`http://localhost:8088/customerProgress?customerId=${fitCustomerObject.id}`)
+              // fetch(`http://localhost:8088/customerProgress?customerId=${fitCustomerObject.id}`)
+              fetch(`https://fitgenapi.herokuapp.com/customerProgress?customerId=${fitCustomerObject.id}`)
               .then(response => response.json())
               .then((data) => {
                 let length = data.length - 1
