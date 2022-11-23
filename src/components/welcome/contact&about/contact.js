@@ -26,8 +26,8 @@ export const Contact = () => {
                             </div>
                             <h2>General Contact</h2>
                             <div className='contact-gen'>
-                            Toll-Free: 888-968-6822
-                            Phone: 706-562-4634
+                            Toll-Free: 888-968-6822<br></br>
+                            Phone: 706-562-4634<br></br>
                             Email: contact@fitgeneration.com
                             </div>
                         </div>

@@ -19,8 +19,8 @@ export const Exercise = () => {
     //fetch exercises set to var
     useEffect(
         () => {
-            // fetch(`http://localhost:8088/exercises`)
-            fetch(`https://fitgenapi.herokuapp.com/exercises`)
+            fetch(`http://localhost:8088/exercises`)
+            // fetch(`https://fitgenapi.herokuapp.com/exercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
@@ -31,8 +31,8 @@ export const Exercise = () => {
     //fetch customerWorkouts set var to customersWorkouts with queried customerId last index
     useEffect(
         () => {
-            // fetch(`http://localhost:8088/customerWorkouts?customerId=${customerId}`)
-            fetch(`https://fitgenapi.herokuapp.com/customerWorkouts?customerId=${customerId}`)
+            fetch(`http://localhost:8088/customerWorkouts?customerId=${customerId}`)
+            // fetch(`https://fitgenapi.herokuapp.com/customerWorkouts?customerId=${customerId}`)
                 .then(response => response.json())
                 .then((data) => {
                     const workoutLength = data.length - 1
@@ -45,8 +45,8 @@ export const Exercise = () => {
     //fetch workouts and set workout id to next workout id that will made 
     useEffect(
         () => {
-            // fetch(`http://localhost:8088/workouts`)
-            fetch(`https://fitgenapi.herokuapp.com/workouts`)
+            fetch(`http://localhost:8088/workouts`)
+            // fetch(`https://fitgenapi.herokuapp.com/workouts`)
                 .then(response => response.json())
                 .then((data) => {
                     const WObj = (data.slice(-1))
@@ -77,8 +77,8 @@ export const Exercise = () => {
             exerciseId: parseInt(exerciseId)
         }
         //post Object in this APi array
-        // return fetch(`http://localhost:8088/workoutExercises`, {
-        return fetch(`https://fitgenapi.herokuapp.com/workoutExercises`, {
+        return fetch(`http://localhost:8088/workoutExercises`, {
+        // return fetch(`https://fitgenapi.herokuapp.com/workoutExercises`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
