@@ -126,8 +126,8 @@ export const Exercise = () => {
             dateCompleted: date.toDateString()
         }
 
-        return fetch(`http://localhost:8088/workouts`, {
-        // return fetch(`https://fitgenapi.herokuapp.com/workouts`, {
+        // return fetch(`http://localhost:8088/workouts`, {
+        return fetch(`https://fitgenapi.herokuapp.com/workouts`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
