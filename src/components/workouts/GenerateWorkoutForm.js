@@ -13,8 +13,8 @@ export const GenerateWorkoutForm = () => {
   const [customerWorkout, update] = useState({
     customerId: null,
     experienceId: "",
-    height: null,
-    weight: null,
+    height: 0,
+    weight: 0,
     goalId: 0,
     muscleId: 0
   })
@@ -36,8 +36,8 @@ export const GenerateWorkoutForm = () => {
       muscleId: customerWorkout.muscleId,//
       dateCompleted: new Date()//
     }
-    // return fetch(`http://localhost:8088/customerWorkouts`, {
-    return fetch(`https://fitgenapi.herokuapp.com/customerWorkouts`, {
+    return fetch(`http://localhost:8088/customerWorkouts`, {
+    // return fetch(`https://fitgenapi.herokuapp.com/customerWorkouts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -83,7 +83,7 @@ export const GenerateWorkoutForm = () => {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <Input
-              value={null}
+                value={null}
                 name="radio1"
                 type="radio" />
               &nbsp;&nbsp;<Label className='beginner'>
@@ -94,7 +94,7 @@ export const GenerateWorkoutForm = () => {
             </FormGroup>
             <FormGroup >
               <Input
-               value={null}
+                value={null}
                 name="radio1"
                 type="radio" />
               &nbsp;<Label className='intermediate'>
@@ -105,7 +105,7 @@ export const GenerateWorkoutForm = () => {
             </FormGroup>
             <FormGroup>
               <Input
-               value={null}
+                value={null}
                 name="radio1"
                 type="radio" />
               {' '}
@@ -114,39 +114,73 @@ export const GenerateWorkoutForm = () => {
               </Label>
             </FormGroup>
           </div>
-          <FormGroup>
-            <fieldset>
-              <div className="form-height">
-                <label htmlFor="number">Height</label>
-                <input type="height"
-                  className="form-controlGen"
-                  value={customerWorkout.height}
-                  onChange={
-                    //take current obj value and update with user selected value
-                    (evt) => {
-                      const copy = { ...customerWorkout }
-                      copy.height = parseFloat(evt.target.value)
-                      update(copy)
-                    }
-                  } />
-              </div>
-            </fieldset>
-          </FormGroup>
+        
+          <div id='height'>
+            <FormGroup>
+              <fieldset>
+                <div id="form-height">
+                  <label for="ft"><b>Feet</b></label>
+                  <input type="feet"
+                    name='ft'
+                    id='ft'
+                    className="form-controlGen"
+                    placeholder=" 0'"
+                    // value={customerWorkout.height}
+                    // onChange={
+                    //   //take current obj value and update with user selected value
+                    //   (evt) => {
+                    //     const copy = { ...customerWorkout }
+                    //     copy.height = parseFloat(evt.target.value)
+                    //     update(copy)
+                    //   }
+                    // } 
+                    />
+                </div>
+              </fieldset>
+            </FormGroup>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h6 className='inputs'>Input Height</h6>
+            <FormGroup>
+              <fieldset>
+                <div id="form-height">
+                  <label htmlFor="number"><b>Inches</b></label>
+                  <input type="inches"
+                    name='ft'
+                    id='ft'
+                    className="form-controlGen"
+                    placeholder=' "0"'
+                    // value={customerWorkout.height}
+                    // onChange={
+                    //   //take current obj value and update with user selected value
+                    //   (evt) => {
+                    //     const copy = { ...customerWorkout }
+                    //     copy.height = parseFloat(evt.target.value)
+                    //     update(copy)
+                    //   }
+                    // } 
+                    />
+                </div>
+              </fieldset>
+            </FormGroup>
+          </div>
+
           <FormGroup>
             <fieldset>
               <div className="form-weight">
-                <label htmlFor="number">Weight</label>
+                <label htmlFor="number"><h6 className='inputs'>Input Weight</h6></label>
                 <input type="weight"
+                id='ft'
                   className="form-controlGen"
-                  value={customerWorkout.weight}
-                  onChange={
-                    //take current obj value and update with user selected value
-                    (evt) => {
-                      const copy = { ...customerWorkout }
-                      copy.weight = parseInt(evt.target.value)
-                      update(copy)
-                    }
-                  } />
+                  placeholder=' lbs.'
+                  // value={customerWorkout.weight}
+                  // onChange={
+                  //   //take current obj value and update with user selected value
+                  //   (evt) => {
+                  //     const copy = { ...customerWorkout }
+                  //     copy.weight = parseInt(evt.target.value)
+                  //     update(copy)
+                  //   }
+                  // }
+                   />
               </div>
             </fieldset>
           </FormGroup>
