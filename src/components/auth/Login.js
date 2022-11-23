@@ -10,8 +10,8 @@ export const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        return fetch(`http://localhost:8088/customers?email=${email}`)
-        // return fetch(`https://fitgenapi.herokuapp.com/customers?email=${email}`)
+        // return fetch(`http://localhost:8088/customers?email=${email}`)
+        return fetch(`https://fitgenapi.herokuapp.com/customers?email=${email}`)
             .then(res => res.json())
             .then(foundCustomers => {
                 if (foundCustomers.length === 1) {
