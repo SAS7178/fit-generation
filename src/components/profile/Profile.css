@@ -13,6 +13,9 @@
 .tit{
     font-size: 70px;
 }
+#main-slider-container{
+width: 60%;
+}
 .welcome__header {
     display: flex;
     justify-content: center;
@@ -25,7 +28,10 @@
     background-color: ghostwhite;
     color: goldenrod;
 }
+
 .profileObject{
+    display: flex;
+    justify-content: center;
    margin: 2em;
    margin-left: 9em;
 }
@@ -37,6 +43,7 @@
     border-radius: 10%;
     border: 2px solid blue;
 }
+
 .carousel{
     display: flex;
 

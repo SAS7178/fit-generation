@@ -1,0 +1,57 @@
+/* // *{
+//     margin:0;
+//      padding:0;
+// }
+// $Raleway: 'Raleway',sans-serif  */
+
+body{
+    display:block;
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    background: #333;
+}
+
+.card-wrapper{
+    position: relative;
+    width: 100%;
+    padding:0 10px;
+    box-sizing: border-box;
+     &:active,&:hover,&:focus{
+        outline: none;
+        border:none;
+    } 
+}
+
+.card{
+    width: 100%;
+    margin: 1em;
+    height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    .card-image{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        z-index:2;
+        background-color: #0000;
+        transition: .5s;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }//card-image
+    &:hover{
+        img{
+            opacity: .4;
+            transition: .5s;
+        }
+    }
+}
