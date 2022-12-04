@@ -19,8 +19,8 @@ export const Exercise = () => {
     //fetch exercises set to var
     useEffect(
         () => {
-            // fetch(`https://git.heroku.com/fitgenapi.gitexercises`)
-            fetch(`https://git.heroku.com/fitgenapi.gitexercises`)
+            // fetch(`https://fitgenapi.herokuapp.com/exercises`)
+            fetch(`https://fitgenapi.herokuapp.com/exercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
@@ -31,8 +31,8 @@ export const Exercise = () => {
     //fetch customerWorkouts set var to customersWorkouts with queried customerId last index
     useEffect(
         () => {
-            // fetch(`https://git.heroku.com/fitgenapi.gitcustomerWorkouts?customerId=${customerId}`)
-            fetch(`https://git.heroku.com/fitgenapi.gitcustomerWorkouts?customerId=${customerId}`)
+            // fetch(`https://fitgenapi.herokuapp.com/customerWorkouts?customerId=${customerId}`)
+            fetch(`https://fitgenapi.herokuapp.com/customerWorkouts?customerId=${customerId}`)
                 .then(response => response.json())
                 .then((data) => {
                     const workoutLength = data.length - 1
@@ -45,8 +45,8 @@ export const Exercise = () => {
     //fetch workouts and set workout id to next workout id that will made 
     useEffect(
         () => {
-            // fetch(`https://git.heroku.com/fitgenapi.gitworkouts`)
-            fetch(`https://git.heroku.com/fitgenapi.gitworkouts`)
+            // fetch(`https://fitgenapi.herokuapp.com/workouts`)
+            fetch(`https://fitgenapi.herokuapp.com/workouts`)
                 .then(response => response.json())
                 .then((data) => {
                     const WObj = (data.slice(-1))
@@ -77,8 +77,8 @@ export const Exercise = () => {
             exerciseId: parseInt(exerciseId)
         }
         //post Object in this APi array
-        // return fetch(`https://git.heroku.com/fitgenapi.gitworkoutExercises`, {
-        return fetch(`https://git.heroku.com/fitgenapi.gitworkoutExercises`, {
+        // return fetch(`https://fitgenapi.herokuapp.com/workoutExercises`, {
+        return fetch(`https://fitgenapi.herokuapp.com/workoutExercises`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -126,8 +126,8 @@ export const Exercise = () => {
             dateCompleted: date.toDateString()
         }
 
-        // return fetch(`https://git.heroku.com/fitgenapi.gitworkouts`, {
-        return fetch(`https://git.heroku.com/fitgenapi.gitworkouts`, {
+        // return fetch(`https://fitgenapi.herokuapp.com/workouts`, {
+        return fetch(`https://fitgenapi.herokuapp.com/workouts`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

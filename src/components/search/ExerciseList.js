@@ -15,8 +15,8 @@ export const ExerciseList = ({ searchTermState }) => {
 
     useEffect(
         () => {
-            // fetch(`https://git.heroku.com/fitgenapi.gitexercises`)
-            fetch(`https://git.heroku.com/fitgenapi.gitexercises`)
+            // fetch(`https://fitgenapi.herokuapp.com/exercises`)
+            fetch(`https://fitgenapi.herokuapp.com/exercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
@@ -25,8 +25,8 @@ export const ExerciseList = ({ searchTermState }) => {
         [] // When this array is empty, you are observing initial component state
     )
     const getAllExercises = () => {
-        // fetch(`https://git.heroku.com/fitgenapi.gitExercises`)
-        fetch(`https://git.heroku.com/fitgenapi.gitexercises`)
+        // fetch(`https://fitgenapi.herokuapp.com/Exercises`)
+        fetch(`https://fitgenapi.herokuapp.com/exercises`)
             .then(response => response.json())
             .then((ticketArray) => {
                 setExercises(ticketArray)
