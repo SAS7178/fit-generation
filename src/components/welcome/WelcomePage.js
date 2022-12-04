@@ -15,8 +15,8 @@ export const WelcomePage = () => {
 
   useEffect(
     () => {
-      // fetch(`https://git.heroku.com/fitgenapi.gitqoutes`)
-      fetch(`https://git.heroku.com/fitgenapi.gitqoutes`)
+      // fetch(`https://fitgenapi.herokuapp.com/qoutes`)
+      fetch(`https://fitgenapi.herokuapp.com/qoutes`)
        .then(response => response.json())
            .then(response => {setQoute(response[Math.floor(Math.random() * response.length)])
         })
