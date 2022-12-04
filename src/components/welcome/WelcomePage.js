@@ -15,8 +15,8 @@ export const WelcomePage = () => {
 
   useEffect(
     () => {
-      // fetch(`https://fitgenapi.herokuapp.com/qoutes`)
-      fetch(`https://fitgenapi.herokuapp.com/qoutes`)
+      // fetch(`https://glitch.com/edit/#!/fitgeneration-api/qoutes`)
+      fetch(`https://glitch.com/edit/#!/fitgeneration-api/qoutes`)
        .then(response => response.json())
            .then(response => {setQoute(response[Math.floor(Math.random() * response.length)])
         })
