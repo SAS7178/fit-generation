@@ -15,8 +15,8 @@ export const ExerciseList = ({ searchTermState }) => {
 
     useEffect(
         () => {
-            // fetch(`https://fitgenapi.herokuapp.com/exercises`)
-            fetch(`https://fitgenapi.herokuapp.com/exercises`)
+            // fetch(`https://glitch.com/edit/#!/fitgeneration-api/exercises`)
+            fetch(`https://glitch.com/edit/#!/fitgeneration-api/exercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
@@ -25,8 +25,8 @@ export const ExerciseList = ({ searchTermState }) => {
         [] // When this array is empty, you are observing initial component state
     )
     const getAllExercises = () => {
-        // fetch(`https://fitgenapi.herokuapp.com/Exercises`)
-        fetch(`https://fitgenapi.herokuapp.com/exercises`)
+        // fetch(`https://glitch.com/edit/#!/fitgeneration-api/Exercises`)
+        fetch(`https://glitch.com/edit/#!/fitgeneration-api/exercises`)
             .then(response => response.json())
             .then((ticketArray) => {
                 setExercises(ticketArray)

@@ -14,8 +14,8 @@ export const ExerciseView = () => {
     //get workoutExercises set to var
     useEffect(
         () => {
-            // fetch(`https://fitgenapi.herokuapp.com/workoutExercises`)
-            fetch(`https://fitgenapi.herokuapp.com/workoutExercises`)
+            // fetch(`https://glitch.com/edit/#!/fitgeneration-api/workoutExercises`)
+            fetch(`https://glitch.com/edit/#!/fitgeneration-api/workoutExercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setWorkoutExercises(data)
@@ -26,8 +26,8 @@ export const ExerciseView = () => {
     //get exercises add to var
     useEffect(
         () => {
-            // fetch(`https://fitgenapi.herokuapp.com/exercises`)
-            fetch(`https://fitgenapi.herokuapp.com/exercises`)
+            // fetch(`https://glitch.com/edit/#!/fitgeneration-api/exercises`)
+            fetch(`https://glitch.com/edit/#!/fitgeneration-api/exercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)

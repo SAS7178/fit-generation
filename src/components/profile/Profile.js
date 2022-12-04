@@ -23,8 +23,8 @@ export const Profile = () => {
   // fetches and set all workouts for cust sets to var to make available for iteration globally
   useEffect(
     () => {
-      // fetch(`https://fitgenapi.herokuapp.com/workouts`)
-      fetch(`https://fitgenapi.herokuapp.com/workouts`)
+      // fetch(`https://glitch.com/edit/#!/fitgeneration-api/workouts`)
+      fetch(`https://glitch.com/edit/#!/fitgeneration-api/workouts`)
         .then(response => response.json())
         .then((data) => {
           setworkoutExercises(data)
@@ -34,8 +34,8 @@ export const Profile = () => {
   )
   useEffect(
     () => {
-      // fetch(`https://fitgenapi.herokuapp.com/customers?id=${fitCustomerObject.id}`)
-      fetch(`https://fitgenapi.herokuapp.com/customers?id=${fitCustomerObject.id}`)
+      // fetch(`https://glitch.com/edit/#!/fitgeneration-api/customers?id=${fitCustomerObject.id}`)
+      fetch(`https://glitch.com/edit/#!/fitgeneration-api/customers?id=${fitCustomerObject.id}`)
         .then(response => response.json())
         .then((data) => {
           setCustomers(data[0])
@@ -75,8 +75,8 @@ export const Profile = () => {
   )
   //func to reerender all workouts to be used where needed
   const getAllWorkouts = () => {
-    // fetch(`https://fitgenapi.herokuapp.com/workouts`)
-    fetch(`https://fitgenapi.herokuapp.com/workouts`)
+    // fetch(`https://glitch.com/edit/#!/fitgeneration-api/workouts`)
+    fetch(`https://glitch.com/edit/#!/fitgeneration-api/workouts`)
       .then(response => response.json())
       .then((workoutArray) => {
         setworkoutExercises(workoutArray)
@@ -84,8 +84,8 @@ export const Profile = () => {
   }
   //func to delete workout from database if has wworkoutid
   const deleteButton = (workoutId) => {
-    // fetch(`https://fitgenapi.herokuapp.com/workouts/${workoutId}`, {
-    fetch(`https://fitgenapi.herokuapp.com/workouts/${workoutId}`, {
+    // fetch(`https://glitch.com/edit/#!/fitgeneration-api/workouts/${workoutId}`, {
+    fetch(`https://glitch.com/edit/#!/fitgeneration-api/workouts/${workoutId}`, {
       method: "DELETE"
     })
       .then(() => { getAllWorkouts() })
@@ -98,8 +98,8 @@ export const Profile = () => {
       dateCompleted: new Date()
     }
 
-    // return fetch(`https://fitgenapi.herokuapp.com/customerProgress`, {
-    return fetch(`https://fitgenapi.herokuapp.com/customerProgress`, {
+    // return fetch(`https://glitch.com/edit/#!/fitgeneration-api/customerProgress`, {
+    return fetch(`https://glitch.com/edit/#!/fitgeneration-api/customerProgress`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -109,8 +109,8 @@ export const Profile = () => {
   }
 
   const updateImage = () => {
-      // fetch(`https://fitgenapi.herokuapp.com/customerProgress?customerId=${fitCustomerObject.id}`)
-      fetch(`https://fitgenapi.herokuapp.com/customerProgress?customerId=${fitCustomerObject.id}`)
+      // fetch(`https://glitch.com/edit/#!/fitgeneration-api/customerProgress?customerId=${fitCustomerObject.id}`)
+      fetch(`https://glitch.com/edit/#!/fitgeneration-api/customerProgress?customerId=${fitCustomerObject.id}`)
         .then(response => response.json())
         .then((data) => {
           let length = data.length - 1
