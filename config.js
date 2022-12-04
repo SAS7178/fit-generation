@@ -1,7 +1,7 @@
 
 
-// const _apiUrl = "https://fitgenapi.herokuapp.com/";
-const _apiUrl = "http://localhost:8088/";
+// const _apiUrl = "https://git.heroku.com/fitgenapi.git";
+const _apiUrl = "https://git.heroku.com/fitgenapi.git";
 
 export var config = () => {
     _apiUrl

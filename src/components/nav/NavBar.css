@@ -10,9 +10,10 @@
     width: min-content;
 }
 .navbar-toggler-icon{
-    background-image: url("https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-%20exercise-metal-Cutting-Dies-Scrapbooking-craft-Dies-cuts-thin-paper-emboss-%20card-make-stencil.jpg_640x640.jpg");
+    background-image: url("https://e7.pngegg.com/pngimages/217/548/png-clipart-drop-down-list-computer-icons-arrow-menu-hamburger-button-arrow-angle-rectangle.png");
     border-radius: 50%;
 }
+
 .welcome__home {
     display: flex;
     justify-content: center;

@@ -1,35 +1,30 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
-import { Button, FormGroup, FormText, Label, NavLink, Spinner } from "reactstrap"
+import { Button, FormGroup, FormText, Label, Spinner } from "reactstrap"
 import { WelcomeFooter } from "../welcome/WelcomeFooter"
 import ReactCardSlider from 'react-card-slider-component';
+import Axios from 'axios'
+import { Image } from 'cloudinary-react'
 import "./Profile.css"
 
 export const Profile = () => {
-
-  const localFitCustomer = localStorage.getItem("fit_customer")
-  const fitCustomerObject = JSON.parse(localFitCustomer)
-
-  const [workoutExercises, setworkoutExercises] = useState([])
-  const [filteredWorkouts, setFilteredWorkouts] = useState([])
-  const [customerObject, setCustomerObject] = useState("")
-  const [customer, setCustomers] = useState({})
   const { customerId } = useParams()
+  // current local fituser
+  const localFitCustomer = localStorage.getItem("fit_customer")
+  const fitCustomerObject = JSON.parse(localFitCustomer) 
+
+  const [workoutExercises, setworkoutExercises] = useState([]) // gets all workouts from API
+  const [filteredWorkouts, setFilteredWorkouts] = useState([]) // filtered workouts for current user
+  const [RESObject, setRESObject] = useState("") // chosen files cloudinary post response url value to push with API obj
+  const [customerObject, setCustomerObject] = useState("https://res.cloudinary.com/stephensmithdev/image/upload/v1670178379/default_Inline_Scan_stcejn.png") // url image from API for current customer to print to screen
+  const [customer, setCustomers] = useState({}) //current logged customer
   const navigate = useNavigate()
-  const [customerProgress, update] = useState({
-    customerId: 0,
-    image: Blob,
-    dateCompleted: new Date()
-  })
-
-
-
 
   // fetches and set all workouts for cust sets to var to make available for iteration globally
   useEffect(
     () => {
-      // fetch(`http://localhost:8088/workouts`)
-      fetch(`https://fitgenapi.herokuapp.com/workouts`)
+      // fetch(`https://git.heroku.com/fitgenapi.gitworkouts`)
+      fetch(`https://git.heroku.com/fitgenapi.gitworkouts`)
         .then(response => response.json())
         .then((data) => {
           setworkoutExercises(data)
@@ -39,14 +34,33 @@ export const Profile = () => {
   )
   useEffect(
     () => {
-      // fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
-      fetch(`https://fitgenapi.herokuapp.com/customers?id=${fitCustomerObject.id}`)
+      // fetch(`https://git.heroku.com/fitgenapi.gitcustomers?id=${fitCustomerObject.id}`)
+      fetch(`https://git.heroku.com/fitgenapi.gitcustomers?id=${fitCustomerObject.id}`)
         .then(response => response.json())
         .then((data) => {
           setCustomers(data[0])
         })
     },
     [fitCustomerObject.id] // When this array is empty, you are observing initial component state
+  )
+  useEffect(
+    () => {
+        if(RESObject !== ""){handleUpdateButtonClick()}
+    },
+    [RESObject] // When this array is empty, you are observing initial component state
+  )
+  useEffect(
+    () => {
+        if(customerObject !== "" || "https://res.cloudinary.com/stephensmithdev/image/upload/v1670178379/default_Inline_Scan_stcejn.png"){}
+    },
+    [customerObject] // When this array is empty, you are observing initial component state
+  )
+
+  useEffect(
+    () => {
+      updateImage()
+    },
+    [] // When this array is empty, you are observing initial component state
   )
 
   //set customer workoutExercises to var dep on workoutexercises change 
@@ -61,8 +75,8 @@ export const Profile = () => {
   )
   //func to reerender all workouts to be used where needed
   const getAllWorkouts = () => {
-    // fetch(`http://localhost:8088/workouts`)
-    fetch(`https://fitgenapi.herokuapp.com/workouts`)
+    // fetch(`https://git.heroku.com/fitgenapi.gitworkouts`)
+    fetch(`https://git.heroku.com/fitgenapi.gitworkouts`)
       .then(response => response.json())
       .then((workoutArray) => {
         setworkoutExercises(workoutArray)
@@ -70,55 +84,58 @@ export const Profile = () => {
   }
   //func to delete workout from database if has wworkoutid
   const deleteButton = (workoutId) => {
-    // fetch(`http://localhost:8088/workouts/${workoutId}`, {
-    fetch(`https://fitgenapi.herokuapp.com/workouts/${workoutId}`, {
+    // fetch(`https://git.heroku.com/fitgenapi.gitworkouts/${workoutId}`, {
+    fetch(`https://git.heroku.com/fitgenapi.gitworkouts/${workoutId}`, {
       method: "DELETE"
     })
       .then(() => { getAllWorkouts() })
-
   }
 
-  const handleUpdateButtonClick = (event) => {
-    event.preventDefault()
+  const handleUpdateButtonClick = () => {
     const customerImageToSendToApi = {
       customerId: fitCustomerObject.id,
-      // image needs to be converted to a blob
-      image: customerProgress.image,
+      image: RESObject,
       dateCompleted: new Date()
     }
 
-    // return fetch(`http://localhost:8088/customerProgress`, {
-    return fetch(`https://fitgenapi.herokuapp.com/customerProgress`, {
+    // return fetch(`https://git.heroku.com/fitgenapi.gitcustomerProgress`, {
+    return fetch(`https://git.heroku.com/fitgenapi.gitcustomerProgress`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(customerImageToSendToApi)
-    })
+    }).then(updateImage())
   }
 
-  useEffect(
-    () => {
-      // fetch(`http://localhost:8088/customerProgress?customerId=${fitCustomerObject.id}`)
-      fetch(`https://fitgenapi.herokuapp.com/customerProgress?customerId=${fitCustomerObject.id}`)
+  const updateImage = () => {
+      // fetch(`https://git.heroku.com/fitgenapi.gitcustomerProgress?customerId=${fitCustomerObject.id}`)
+      fetch(`https://git.heroku.com/fitgenapi.gitcustomerProgress?customerId=${fitCustomerObject.id}`)
         .then(response => response.json())
         .then((data) => {
           let length = data.length - 1
           let cust = data[length]
           setCustomerObject(cust.image)
         })
-    },
-    [customerProgress] // When this array is empty, you are observing initial component state
-  )
+    }
 
   const slides = [
-    {image:"https://assets.website-files.com/6233518c68804f1e9ed11958/6233705d07c7252d292159dc_Homepage%20in%20Jacksonville%20Hero.jpg",title:"Get into Crossfit!",description:"This is a description",clickEvent: () => { window.open(URL = "https://www.crossfit.com") }},
-    {image:"https://images.squarespace-cdn.com/content/v1/5e629534caa5281c111f060d/1590536808236-QI2MNON9ON8NQQL9RRHD/hero-image?format=1500w",title:"Trauma Yoga",description:"This is a second description",clickEvent: () => {window.open(URL ="https://www.thetrymethod.com/")}},
-    {image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2qTHxQK6PT5Oi84IJn4kq1DoqYcRTY0D0A&usqp=CAU",title:"Echo Challenge(World/s Toughest)",description:"This is a third description",clickEvent: () => {window.open(URL = "https://mybigplunge.com/culture/movies-documentaries/new-reality-show-worlds-toughest-race-eco-challenge-fiji-amazon-prime-video-keeps-viewers-engaged/")}},
-    {image:"https://cdn.mos.cms.futurecdn.net/XJhUdVn39K7zMPndY9TXMe-970-80.jpg.webp",title:"Best Outdoor Activities for Staying in Shape",description:"This is a fourth description",clickEvent: () => {window.open(URL = "https://www.livescience.com/59288-best-outdoor-activities-exercise.html")}},
-    {image:"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSvHBPKZRVMaU5lWNJlT80uutu0-Zk2eei1cEddUQPjSPzjVQtE",title:"Limitless With Chris Hemsworth",description:"A epic mission to discover how to live better for longer.",clickEvent: () => {window.open(URL ="https://www.disneyplus.com/series/limitless-with-chris-hemsworth/2wow8Otyubmk")}}
+    { image: "https://assets.website-files.com/6233518c68804f1e9ed11958/6233705d07c7252d292159dc_Homepage%20in%20Jacksonville%20Hero.jpg", title: "Get into Crossfit!", description: "Learn about Crossfit here.", clickEvent: () => { window.open(URL = "https://www.crossfit.com") } },
+    { image: "https://images.squarespace-cdn.com/content/v1/5e629534caa5281c111f060d/1590536808236-QI2MNON9ON8NQQL9RRHD/hero-image?format=1500w", title: "Trauma Yoga", description: "Trauma yoga and the benefits!", clickEvent: () => { window.open(URL = "https://www.thetrymethod.com/") } },
+    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2qTHxQK6PT5Oi84IJn4kq1DoqYcRTY0D0A&usqp=CAU", title: "Echo Challenge(World/s Toughest)", description: "Toughest race in the world!", clickEvent: () => { window.open(URL = "https://mybigplunge.com/culture/movies-documentaries/new-reality-show-worlds-toughest-race-eco-challenge-fiji-amazon-prime-video-keeps-viewers-engaged/") } },
+    { image: "https://cdn.mos.cms.futurecdn.net/XJhUdVn39K7zMPndY9TXMe-970-80.jpg.webp", title: "Best Outdoor Activities for Staying in Shape", description: "Get outside, stay in shape, amd have fun!", clickEvent: () => { window.open(URL = "https://www.livescience.com/59288-best-outdoor-activities-exercise.html") } },
+    { image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSvHBPKZRVMaU5lWNJlT80uutu0-Zk2eei1cEddUQPjSPzjVQtE", title: "Limitless With Chris Hemsworth", description: "A epic mission to discover how to live better for longer.", clickEvent: () => { window.open(URL = "https://www.disneyplus.com/series/limitless-with-chris-hemsworth/2wow8Otyubmk") } }
+  ]
+  const [image, setImageSelected] = useState({});
 
-]
+  const uploadImage = () => {
+    const formData = new FormData
+    formData.append('file', image)
+    formData.append('upload_preset', 'urq4tpm4')
+
+    Axios.post("http://api.cloudinary.com/v1_1/stephensmithdev/image/upload/", formData).then(resp => setRESObject(resp.data.url.toString()))
+  }
+
 
   return (
     <article className="background">
@@ -145,41 +162,20 @@ export const Profile = () => {
               <Label for="exampleFile"></Label>
               &nbsp;&nbsp;
               {/* ///////////////////////////////////////////////// */}
-              {/* <div>
-                  <input type="file" onChange={fileSelectedHandler()} />git 
-                </div> */}
-
-              <input type="file"
-                defaultValue={customerProgress.image}
-                id="addImage"
-                // onChange={ this.fileSelectorHandler
-                onChange={
-                  //take current obj value and update with user selected value
-                  (evt) => {
-                    let copy = { ...customerProgress }
-                    let fileReader = new FileReader();
-                    // let image = fileReader.readAsDataURL(evt.target.files[0])
-                    let j = new Blob(fileReader.readAsDataURL(evt.target.files[0]))
-                    console.log(j)
-                    // const blobFile = fileReader.readAsText(j)
-                    // console.log(fileReader.readAsDataURL(j))
-                    copy.image = j
-                    update(copy)
-                  }
-                } />
-              {/* ////////////////////////////////////////////// */}
-              <button
-                onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
-                className="btn-UpdateImage">
-                Update
-              </button>
+              <div>
+                <input type="file" onChange={(event) => {
+                  setImageSelected(event.target.files[0]);
+                }} />
+              </div>
+              <button onClick={() => uploadImage()}>Upload</button>
               <FormText>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>..Track your Gainz..</b>
               </FormText>
             </FormGroup>
           </section>
-          {/* uploaded customer image returned to page */}
-          <img className="profileObject" alt="No Progress Image loaded..." src={`${customerObject}`} />
+          <Image style={{ width: 570 }} className="profileObject" cloudName='stephensmithdev'
+            publicId={customerObject}
+          />
         </div>
       </div>
       <div className="card__Element">
@@ -231,6 +227,9 @@ export const Profile = () => {
 
           </div>
         </section>
+        <div className="seperation-pro"></div>
+        <ReactCardSlider className="slider" slides={slides} />
+        <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
         <Button className="generateNew" onClick={() => { navigate("/GenerateWorkout") }}>
           <Spinner
             color="primary"
@@ -239,35 +238,13 @@ export const Profile = () => {
             Loading...
           </Spinner>&nbsp;&nbsp;&nbsp;
           <b>Generate New Workout </b>
+          &nbsp;&nbsp;&nbsp;<Spinner
+            color="primary"
+            size="sm"
+          >
+            Loading...
+            </Spinner>
         </Button>
-        <div className="seperation-pro"></div>
-
-        {/* <UncontrolledCarousel className="carousel" showArrows={true}
-         items={[
-          {
-            altText: 'Learn about Crossfit',
-            caption: 'Get into Crossfit!',
-            key: 1,
-            src: 'https://assets.website-files.com/6233518c68804f1e9ed11958/6233705d07c7252d292159dc_Homepage%20in%20Jacksonville%20Hero.jpg',
-            onClickHandler: "https://www.crossfit.com"
-          },
-          {
-            altText: 'trauma yoga room',
-            caption: 'Trauma Yoga',
-            key: 2,
-            src: 'https://images.squarespace-cdn.com/content/v1/5e629534caa5281c111f060d/1590536808236-QI2MNON9ON8NQQL9RRHD/hero-image?format=1500w',
-            onClickHandler: "https://www.thetrymethod.com/"
-          },
-          {
-            altText: 'Toughest Race in the World',
-            caption: 'Echo Challenge(World/s Toughest)',
-            key: 3,
-            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2qTHxQK6PT5Oi84IJn4kq1DoqYcRTY0D0A&usqp=CAU',
-            targetURL: "https://mybigplunge.com/culture/movies-documentaries/new-reality-show-worlds-toughest-race-eco-challenge-fiji-amazon-prime-video-keeps-viewers-engaged/"
-          }
-        ]} 
-        /> */}
-    <ReactCardSlider className="slider" slides={slides} onClickHandler={slides.map(slide => slide.clickEvent)}/>
         <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
         <h2 className="workoutList-Profile"><b><i>~</i>My Workout List<i>~</i></b></h2>
       </div>
