@@ -13,8 +13,14 @@
 .tit{
     font-size: 70px;
 }
+.slider-icon.right{
+    transform: rotate(180deg);
+}
+.slider-icon.left{
+    transform: rotate(180deg);
+}
 #main-slider-container{
-width: 60%;
+width: 68%;
 }
 .welcome__header {
     display: flex;
