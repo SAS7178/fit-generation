@@ -15,8 +15,8 @@ export const WelcomePage = () => {
 
   useEffect(
     () => {
-      // fetch(`https://glitch.com/edit/#!/fitgeneration-api/qoutes`)
-      fetch(`https://glitch.com/edit/#!/fitgeneration-api/qoutes`)
+      // fetch(`https://glitch.com/edit/#!/fitgeneration-api/database.json/qoutes`)
+      fetch(`https://glitch.com/edit/#!/fitgeneration-api/database.json/qoutes`)
        .then(response => response.json())
            .then(response => {setQoute(response[Math.floor(Math.random() * response.length)])
         })

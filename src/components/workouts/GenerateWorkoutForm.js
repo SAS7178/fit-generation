@@ -36,8 +36,8 @@ export const GenerateWorkoutForm = () => {
       muscleId: customerWorkout.muscleId,//
       dateCompleted: new Date()//
     }
-    // return fetch(`https://glitch.com/edit/#!/fitgeneration-api/customerWorkouts`, {
-    return fetch(`https://glitch.com/edit/#!/fitgeneration-api/customerWorkouts`, {
+    // return fetch(`https://glitch.com/edit/#!/fitgeneration-api/database.json/customerWorkouts`, {
+    return fetch(`https://glitch.com/edit/#!/fitgeneration-api/database.json/customerWorkouts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
