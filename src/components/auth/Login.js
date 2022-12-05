@@ -10,8 +10,8 @@ export const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        // return fetch(`https://glitch.com/edit/#!/fitgeneration-api/customers?email=${email}`)
-        return fetch(`https://glitch.com/edit/#!/fitgeneration-api/customers?email=${email}`)
+        // return fetch(`https://glitch.com/edit/#!/fitgeneration-api/database.json/customers?email=${email}`)
+        return fetch(`https://glitch.com/edit/#!/fitgeneration-api/database.json/customers?email=${email}`)
             .then(res => res.json())
             .then(foundCustomers => {
                 if (foundCustomers.length === 1) {
