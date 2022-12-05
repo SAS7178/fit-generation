@@ -19,8 +19,8 @@ export const Exercise = () => {
     //fetch exercises set to var
     useEffect(
         () => {
-            // fetch(`https://glitch.com/edit/#!/fitgeneration-api/exercises`)
-            fetch(`https://glitch.com/edit/#!/fitgeneration-api/exercises`)
+            // fetch(`https://fitgeneration-api.glitch.me//exercises`)
+            fetch(`https://fitgeneration-api.glitch.me//exercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
@@ -31,8 +31,8 @@ export const Exercise = () => {
     //fetch customerWorkouts set var to customersWorkouts with queried customerId last index
     useEffect(
         () => {
-            // fetch(`https://glitch.com/edit/#!/fitgeneration-api/customerWorkouts?customerId=${customerId}`)
-            fetch(`https://glitch.com/edit/#!/fitgeneration-api/customerWorkouts?customerId=${customerId}`)
+            // fetch(`https://fitgeneration-api.glitch.me//customerWorkouts?customerId=${customerId}`)
+            fetch(`https://fitgeneration-api.glitch.me//customerWorkouts?customerId=${customerId}`)
                 .then(response => response.json())
                 .then((data) => {
                     const workoutLength = data.length - 1
@@ -45,8 +45,8 @@ export const Exercise = () => {
     //fetch workouts and set workout id to next workout id that will made 
     useEffect(
         () => {
-            // fetch(`https://glitch.com/edit/#!/fitgeneration-api/workouts`)
-            fetch(`https://glitch.com/edit/#!/fitgeneration-api/workouts`)
+            // fetch(`https://fitgeneration-api.glitch.me//workouts`)
+            fetch(`https://fitgeneration-api.glitch.me//workouts`)
                 .then(response => response.json())
                 .then((data) => {
                     const WObj = (data.slice(-1))
@@ -77,8 +77,8 @@ export const Exercise = () => {
             exerciseId: parseInt(exerciseId)
         }
         //post Object in this APi array
-        // return fetch(`https://glitch.com/edit/#!/fitgeneration-api/workoutExercises`, {
-        return fetch(`https://glitch.com/edit/#!/fitgeneration-api/workoutExercises`, {
+        // return fetch(`https://fitgeneration-api.glitch.me//workoutExercises`, {
+        return fetch(`https://fitgeneration-api.glitch.me//workoutExercises`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -126,8 +126,8 @@ export const Exercise = () => {
             dateCompleted: date.toDateString()
         }
 
-        // return fetch(`https://glitch.com/edit/#!/fitgeneration-api/workouts`, {
-        return fetch(`https://glitch.com/edit/#!/fitgeneration-api/workouts`, {
+        // return fetch(`https://fitgeneration-api.glitch.me//workouts`, {
+        return fetch(`https://fitgeneration-api.glitch.me//workouts`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
