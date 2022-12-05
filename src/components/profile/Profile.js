@@ -133,7 +133,7 @@ export const Profile = () => {
     formData.append('file', image)
     formData.append('upload_preset', 'urq4tpm4')
 
-    Axios.post("http://api.cloudinary.com/v1_1/stephensmithdev/image/upload/", formData).then(resp => setRESObject(resp.data.url.toString()))
+    Axios.post("https://api.cloudinary.com/v1_1/stephensmithdev/image/upload/", formData).then(resp => setRESObject(resp.data.url.toString()))
   }
 
 
