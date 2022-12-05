@@ -33,7 +33,7 @@ Application GIF below
 ![](https://github.com/SAS7178/fit-generation/blob/main/images/Lucid%20ERD.png?raw=true)
 
 
-## Running This Application (Test-It Out!)
+## Running This Application Locally (Test-It Out!)
 
 1.First, a note about authentication... This application uses mock authentication which is purely for demonstration purposes. Therefore the login and 
       registration code written here is completely insecure and would never be implemented in a professional application.
@@ -56,6 +56,6 @@ Application GIF below
 
       stephen@gmail.com
 
-
 - Fit-Generation-API: https://github.com/SAS7178/Fit-Generation-API  
 - Fit-Generation repository: https://github.com/SAS7178/fit-generation
+<br>(endpoints currently set to Glitch will need to replace(https://fitgeneration-api.glitch.me/) with http://localhost:8088/)
