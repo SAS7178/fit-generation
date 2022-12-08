@@ -287,13 +287,14 @@ export const GenerateWorkoutForm = () => {
           <button
             onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
             className="btn-UpdateGen">
-            Update
+            Update Data
           </button>
+          Once your Data is Updated you can Generate your exercises!
           <button
             onClick={(evt) => handleGenerateButtonClick(evt)
             }
             className="btn-UpdateGen">
-            Generate Workout
+            Generate Workout Exercises
           </button>
         </div>
       </section>

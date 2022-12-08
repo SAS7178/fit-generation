@@ -36,6 +36,13 @@ export const NavBar = (args) => {
     return (
       <>
         <div className='Header'>
+          <div className='headerLogout'>
+                <NavLink href="" onClick={() => {
+                  localStorage.removeItem("fit_customer")
+                  navigate("/login", { replace: true })
+                }}><b>Logout</b>
+                </NavLink>               
+                </div>
           <img alt="" className='nav__run' src="https://w7.pngwing.com/pngs/32/989/png-transparent-running-computer-icons-sport-jogging-text-hand-sport-thumbnail.png"></img>
           <div className='searching'>
             <ExerciseSearch setterFunction={setSearchTerms} />

@@ -9,7 +9,6 @@ export const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault()
-
         // return fetch(`https://fitgeneration-api.glitch.me//customers?email=${email}`)
         return fetch(`https://fitgeneration-api.glitch.me//customers?email=${email}`)
             .then(res => res.json())
