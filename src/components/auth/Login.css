@@ -17,6 +17,10 @@ fieldset {
 }
 .link--register{
     margin: 1em;
+    color: black;
+}
+.reg{
+    color: black;
 }
 .form--login>fieldset>input[type="email"] {
     width: 20em;
@@ -50,7 +54,7 @@ fieldset {
     display: flex;
     align-content:  center;
     flex-direction: column;
-    background-color: #babdc1;
+    background-color: steelblue;
     text-align: center;
     border: 1px solid black;
     margin: 10em;

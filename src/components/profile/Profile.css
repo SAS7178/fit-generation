@@ -311,3 +311,10 @@ h3 {
 .navbar__generate {
     color: black;
 }
+@media (max-width: 1024px) {
+    .galleryi {
+display: flex;
+align-self: center;
+    }
+
+}

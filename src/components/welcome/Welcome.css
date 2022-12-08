@@ -244,3 +244,93 @@
     flex-direction: row-reverse;
     justify-content: space-between;
 }
+@media (max-width: 1405px) {
+    .card-img {
+        display: flex;
+        justify-content: center;
+    };
+    h1{
+        display: flex;
+        align-items: center ;
+    }
+    .nonVids{
+        display: flex;
+        justify-content: center;
+        margin: 1em;
+        flex-direction: column;
+    }
+    .welcome__headernon{
+        display: flex;
+        justify-content: center ;
+        margin-left: 0;
+    }
+    .btn-games {
+        margin-top: 18em;
+        background-color: rgb(24, 81, 151);
+        color: ghostwhite;
+        border-bottom: 3px solid black;
+        border-left: 3px solid black;
+        width: 14em;
+        position: relative;
+        height: 2em;
+    }
+    .welcomeIframe{
+        border-bottom: 6px solid black;
+        border-radius: 140px 140px 10% 10%;
+        padding-top: 6em;
+    }
+    .welcomeTTIframe {
+        border-bottom: 6px solid black;
+        border-radius: 140px 140px 10% 10%;
+        margin-left: 7em;
+        padding-top: 6em;
+    }
+    .footer {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI4YQGwDhArxFDOyulHTSctieoQsyXiwXD-6iray7H2inWKO8G6hdOz7ry4Bp6AuQ8J-Y&usqp=CAU");
+        border-top: 4px double rgb(216, 9, 9);
+        border-radius: 15px 5px 0px 0px;
+        justify-content: center;
+        position: relative;
+        bottom: -3em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-items {
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        margin-left: 6em;
+        justify-content: center;
+    }
+
+    .footer-features {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .footer-resources {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contact-about {
+        display: flex;
+    
+    }
+    .font{
+        display: flex;
+        justify-content: center;
+    }
+    .about-link {
+        display: flex;
+        justify-content: center;
+        font-size: smaller;
+        background-color: goldenrod;
+        color: black;
+        width: 8em;
+        height: 1.9em;
+        margin-top: 0.5em;
+    }
+}

@@ -134,3 +134,22 @@ margin-right: .5em;
     width: 8em;
     background-color: ghostwhite;
 }
+@media (max-width: 1024px) {
+    .navbar-collapse {
+        position: relative;
+      left: 0;
+    }
+    .nonMember {
+        display: flex;
+        color: blue;
+        flex-direction: column-reverse;
+        position: relative;
+        justify-content: center;
+        text-decoration: underline;
+    }
+.welcome__home{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+}
