@@ -16,7 +16,7 @@ import { ExerciseList } from '../search/ExerciseList';
 
 export const NavBar = (args) => {
   const [searchTerms, setSearchTerms] = useState(null)
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const navigate = useNavigate()
   const toggle = () => setIsOpen(!isOpen);
 
