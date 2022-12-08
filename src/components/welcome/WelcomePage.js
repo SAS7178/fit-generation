@@ -111,12 +111,14 @@ export const WelcomePage = () => {
         </section>
         <div className="seperation"></div>
         <div className="taglinenon"><b>Where <strong>Fitness Generation</strong> is our Mission!</b></div>
+        
         <div className="nonVids">
-        <iframe className="welcomeTTIframe" width="560" height="315" src="https://www.youtube.com/embed/BHY0FxzoKZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe className="welcomeTTIframe" width="460" height="350" src="https://www.youtube.com/embed/BHY0FxzoKZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe className="welcomeIframe" width="460" height="350" src="https://www.youtube.com/embed/Kpbo9SXbGXE"
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
     encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        
         <section className="taglinenonb" >
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

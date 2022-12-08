@@ -151,4 +151,42 @@ legend {
     justify-content: space-around;
     position: relative;;
 }
+@media (max-width: 1405px) {
+    .gen-page{
+        display: flex;
+        background-color: aquamarine;
+        background-image: url("https://images.unsplash.com/photo-1535743686920-55e4145369b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80");
+        /* background-color: aqua; */
+        justify-content: center;
+        flex-direction: column;
+    }
+    .experience{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+#height{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+.mb-3{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4em;
+    align-self: flex-start;
+}
+.ExperienceTitle{
+    display: flex;
+    align-self: self-end;
+}
+.btn-UpdateGen {
+    display: flex;
+    color: black;
+    font-weight: 700;
+    background-color: steelblue;
+}
+}
 

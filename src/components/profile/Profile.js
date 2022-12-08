@@ -55,6 +55,12 @@ export const Profile = () => {
   )
   useEffect(
     () => {
+       window.scrollTo(0,0)
+    },
+    [] // When this array is empty, you are observing initial component state
+  )
+  useEffect(
+    () => {
       if (customerObject !== "" || "https://res.cloudinary.com/stephensmithdev/image/upload/v1670178379/default_Inline_Scan_stcejn.png") { }
     },
     [customerObject] // When this array is empty, you are observing initial component state
@@ -195,6 +201,7 @@ export const Profile = () => {
                 <button className="upload" onClick={() => uploadImage()}>Upload</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>..Track your Progress..</b>
               </div>
+              <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
             <div className="gallery">
             <Image style={{ width: 470 }} className="profileObject" cloudName='stephensmithdev'
               publicId={customerObject}
@@ -202,6 +209,7 @@ export const Profile = () => {
             <Image style={{ width: 470 }} className="profileObject" cloudName='stephensmithdev'
               publicId={customerObject2}
             />
+                 <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
             <Image style={{ width: 470 }} className="profileObject" cloudName='stephensmithdev'
               publicId={customerObject3}
             />
@@ -209,6 +217,7 @@ export const Profile = () => {
               publicId={customerObject4}
             />
           </div>
+          <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
           </div>
         </div>
 
