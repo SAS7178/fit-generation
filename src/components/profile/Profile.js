@@ -11,12 +11,16 @@ export const Profile = () => {
   const { customerId } = useParams()
   // current local fituser
   const localFitCustomer = localStorage.getItem("fit_customer")
-  const fitCustomerObject = JSON.parse(localFitCustomer) 
+  const fitCustomerObject = JSON.parse(localFitCustomer)
 
   const [workoutExercises, setworkoutExercises] = useState([]) // gets all workouts from API
   const [filteredWorkouts, setFilteredWorkouts] = useState([]) // filtered workouts for current user
   const [RESObject, setRESObject] = useState("") // chosen files cloudinary post response url value to push with API obj
+  const [Objects, setObjects] = useState([]) // chosen files cloudinary post response url value to push with API obj
   const [customerObject, setCustomerObject] = useState("https://res.cloudinary.com/stephensmithdev/image/upload/v1670178379/default_Inline_Scan_stcejn.png") // url image from API for current customer to print to screen
+  const [customerObject2, setCustomerObject2] = useState("https://res.cloudinary.com/stephensmithdev/image/upload/v1670178379/default_Inline_Scan_stcejn.png") // url image from API for current customer to print to screen
+  const [customerObject3, setCustomerObject3] = useState("https://res.cloudinary.com/stephensmithdev/image/upload/v1670178379/default_Inline_Scan_stcejn.png") // url image from API for current customer to print to screen
+  const [customerObject4, setCustomerObject4] = useState("https://res.cloudinary.com/stephensmithdev/image/upload/v1670178379/default_Inline_Scan_stcejn.png") // url image from API for current customer to print to screen
   const [customer, setCustomers] = useState({}) //current logged customer
   const navigate = useNavigate()
 
@@ -45,13 +49,13 @@ export const Profile = () => {
   )
   useEffect(
     () => {
-        if(RESObject !== ""){handleUpdateButtonClick()}
+      if (RESObject !== "") { handleUpdateButtonClick() }
     },
     [RESObject] // When this array is empty, you are observing initial component state
   )
   useEffect(
     () => {
-        if(customerObject !== "" || "https://res.cloudinary.com/stephensmithdev/image/upload/v1670178379/default_Inline_Scan_stcejn.png"){}
+      if (customerObject !== "" || "https://res.cloudinary.com/stephensmithdev/image/upload/v1670178379/default_Inline_Scan_stcejn.png") { }
     },
     [customerObject] // When this array is empty, you are observing initial component state
   )
@@ -61,6 +65,19 @@ export const Profile = () => {
       updateImage()
     },
     [] // When this array is empty, you are observing initial component state
+  )
+
+  useEffect(
+    () => {
+      if (Objects) {
+        // let tag = `${Objects[0].image}`
+        let length = Objects.length 
+        setCustomerObject2(Objects[length - 2]?.image)
+        setCustomerObject3(Objects[length - 3]?.image)
+        setCustomerObject4(Objects[length - 4]?.image)
+      }
+    },
+    [Objects] // When this array is empty, you are observing initial component state
   )
 
   //set customer workoutExercises to var dep on workoutexercises change 
@@ -109,15 +126,17 @@ export const Profile = () => {
   }
 
   const updateImage = () => {
-      // fetch(`https://fitgeneration-api.glitch.me//customerProgress?customerId=${fitCustomerObject.id}`)
-      fetch(`https://fitgeneration-api.glitch.me//customerProgress?customerId=${fitCustomerObject.id}`)
-        .then(response => response.json())
-        .then((data) => {
-          let length = data.length - 1
-          let cust = data[length]
-          setCustomerObject(cust.image)
-        })
-    }
+    // fetch(`https://fitgeneration-api.glitch.me//customerProgress?customerId=${fitCustomerObject.id}`)
+    fetch(`https://fitgeneration-api.glitch.me//customerProgress?customerId=${fitCustomerObject.id}`)
+      .then(response => response.json())
+      .then((data) => {
+        let length = data.length - 1
+        let cust = data[length]
+        setObjects(data)
+        setCustomerObject(cust.image)
+      })
+  }
+
 
   const slides = [
     { image: "https://assets.website-files.com/6233518c68804f1e9ed11958/6233705d07c7252d292159dc_Homepage%20in%20Jacksonville%20Hero.jpg", title: "Get into Crossfit!", description: "Learn about Crossfit here.", clickEvent: () => { window.open(URL = "https://www.crossfit.com") } },
@@ -133,7 +152,9 @@ export const Profile = () => {
     formData.append('file', image)
     formData.append('upload_preset', 'urq4tpm4')
 
-    Axios.post("https://api.cloudinary.com/v1_1/stephensmithdev/image/upload/", formData).then(resp => setRESObject(resp.data.url.toString()))
+    Axios.post("https://api.cloudinary.com/v1_1/stephensmithdev/image/upload/", formData).then(resp => setRESObject(resp.data.url.toString())).then(
+      window.alert("Your image has been uploaded, refresh page to see updates!")
+    )
   }
 
 
@@ -150,33 +171,47 @@ export const Profile = () => {
             card-make-stencil.jpg_640x640.jpg" width="100" height="100"></img>
       </div>
       <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
-      <div className="topPro">
-        <div className="top-half">
-          <section className="welcomebtn">
+      <div className="topPro">  
             <div className="welcome-msg" >
-              &nbsp;&nbsp;&nbsp;&nbsp;<b>Welcome back,</b>
+              &nbsp;&nbsp;&nbsp;&nbsp;<h2><b>Welcome back,</b></h2>
               <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <b>{customer.name}</b></div><br></br><br></br><br></br><br></br><br></br>
             </div>
+        <div className="top-half">
+          <section className="welcomebtn">
             <FormGroup className="fileLoad">
-              <Label for="exampleFile"></Label>
-              &nbsp;&nbsp;
-              {/* ///////////////////////////////////////////////// */}
-              <div>
-                <input type="file" onChange={(event) => {
-                  setImageSelected(event.target.files[0]);
-                }} />
-              </div>
-              <button onClick={() => uploadImage()}>Upload</button>
               <FormText>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>..Track your Gainz..</b>
               </FormText>
             </FormGroup>
           </section>
-          <Image style={{ width: 570 }} className="profileObject" cloudName='stephensmithdev'
-            publicId={customerObject}
-          />
+          <div className="galleryi">
+              <div className="chooseFile">
+                <i><b>This is your gallery to easily track fitness data.</b></i>
+                <Label for="exampleFile"></Label>
+                &nbsp;&nbsp;
+                <input className="input" type="file" onChange={(event) => {
+                  setImageSelected(event.target.files[0]);
+                }} />
+                <button className="upload" onClick={() => uploadImage()}>Upload</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>..Track your Progress..</b>
+              </div>
+            <div className="gallery">
+            <Image style={{ width: 470 }} className="profileObject" cloudName='stephensmithdev'
+              publicId={customerObject}
+            />
+            <Image style={{ width: 470 }} className="profileObject" cloudName='stephensmithdev'
+              publicId={customerObject2}
+            />
+            <Image style={{ width: 470 }} className="profileObject" cloudName='stephensmithdev'
+              publicId={customerObject3}
+            />
+            <Image style={{ width: 470 }} className="profileObject" cloudName='stephensmithdev'
+              publicId={customerObject4}
+            />
+          </div>
+          </div>
         </div>
+
       </div>
       <div className="card__Element">
       </div>
@@ -243,7 +278,7 @@ export const Profile = () => {
             size="sm"
           >
             Loading...
-            </Spinner>
+          </Spinner>
         </Button>
         <img alt="" src="https://www.pngall.com/wp-content/uploads/11/Horizontal-Line-PNG-Image.png" width="100%" height="100em"></img>
         <h2 className="workoutList-Profile"><b><i>~</i>My Workout List<i>~</i></b></h2>

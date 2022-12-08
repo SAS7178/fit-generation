@@ -7,40 +7,81 @@
     background-color: rgb(116, 123, 123);
     border-bottom: 3px solid red;
 }
-.background{
+
+.background {
     background-image: url("https://www.pixelstalk.net/wp-content/uploads/images5/4K-White-Wallpaper-for-Desktop.jpg");
-} 
-.tit{
+}
+.input{
+    background-color: lightblue;
+    border: 1px dotted darkgrey;
+}
+.tit {
     font-size: 70px;
 }
-.slider-icon.right{
+.upload{
+    width: 6em;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    /* background-color: lightgray; */
+    margin: 4em;
+    flex-wrap: wrap;
+}
+
+.galleryi{
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    opacity: 90%;
+    /* border: 2px double black; */
+    /* border-radius: 6%; */
+    margin: 2em;
+    flex-wrap: wrap;
+}
+.chooseFile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+    padding: 1em;
+    /* background-color: lightgray; */
+}
+
+.slider-icon.right {
     transform: rotate(180deg);
 }
-.slider-icon.left{
+
+.slider-icon.left {
     transform: rotate(180deg);
 }
-#main-slider-container{
-width: 68%;
+
+#main-slider-container {
+    width: 68%;
 }
+
 .welcome__header {
     display: flex;
     justify-content: center;
     position: relative;
-   
+
 }
-.btn-UpdateImage{
+
+.btn-UpdateImage {
     width: 9em;
     margin-left: 2.5em;
     background-color: ghostwhite;
     color: goldenrod;
 }
 
-.profileObject{
+.profileObject {
     display: flex;
     justify-content: center;
-   margin: 2em;
-   margin-left: 9em;
+    margin: 2em;
+    border-radius: 5%;
+    margin-left: 9em;
 }
+
 .btn-primary {
     background-color: lightsteelblue;
     margin-bottom: 2em;
@@ -50,14 +91,15 @@ width: 68%;
     border: 2px solid blue;
 }
 
-.carousel{
+.carousel {
     display: flex;
 
     justify-content: center;
     width: 40%;
     height: 31em;
 }
-.carousel-inner{
+
+.carousel-inner {
     margin-top: 1em;
     width: 100%;
     height: 31em;
@@ -67,46 +109,55 @@ width: 68%;
     opacity: 95%;
 }
 
-#addImage{
+#addImage {
     padding-bottom: 30px;
     width: 16em;
     background-color: ghostwhite;
     color: blue;
 }
+
 .navbar__home {
     margin-left: 1em;
 }
+
 .navbar__generate {
-   margin-right: 1em;
-} 
-.topPro{
+    margin-right: 1em;
+}
+
+.topPro {
     opacity: 80%;
     border-style: ridge;
 }
-.max{
+
+.max {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.tools{
+
+.tools {
     display: flex;
     flex-direction: column;
 }
-.edu{
+
+.edu {
     display: flex;
     flex-direction: column;
 }
-.max-link{
+
+.max-link {
     background-color: ghostwhite;
     width: 12em;
     border: 3px solid black;
     color: blue;
 }
+
 .workout_name {
     font-style: oblique;
     color: blue;
 }
-.tracking{
+
+.tracking {
     border: 2px solid lightsteelblue;
     position: relative;
     margin-top: 5em;
@@ -115,34 +166,41 @@ width: 68%;
     height: 20em;
     width: 60%;
 }
+
 button {
     width: 20%;
 }
-.welcomebtn{
+
+.welcomebtn {
     margin-bottom: 3em;
     margin-left: 2em;
     padding: 1em;
 }
-.top-half{
+
+.top-half {
     display: flex;
-    margin-bottom:4em;
+    margin-bottom: 4em;
 }
-.tableLine{
+
+.tableLine {
     display: flex;
     justify-content: center;
     background-image: url("https://www.longrangelogistics.co.ke/wp-content/uploads/2017/12/vertical-line.png");
 }
+
 .profile__card {
     display: flex;
     justify-content: center;
     border: 3px solid aqua;
     width: 85%;
 }
-.InlineScan__link{
+
+.InlineScan__link {
     color: red;
     text-decoration: none;
 }
-.fileLoad{
+
+.fileLoad {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,40 +208,48 @@ button {
     align-items: start;
     margin: 1em;
 }
-.welcome-msg{
-    margin-top: 9em;
+
+.welcome-msg {
+    margin-left: 12em;
+    margin-top: 5em;
 }
+
 .customer-name {
     font-style: oblique;
     font-size: x-large;
     color: blue;
 }
-.pro-primary{
+
+.pro-primary {
     background-color: ghostwhite;
     width: 10em;
     font-weight: 700;
-     border: 2px solid red;
-     color: black;
+    border: 2px solid red;
+    color: black;
 }
-.save-primary{
+
+.save-primary {
     background-color: darkgrey;
-   width: 10em;
+    width: 10em;
     border: 2px solid black;
     color: black;
 }
-.edu-zone{
+
+.edu-zone {
     display: flex;
     margin-right: 3em;
 }
+
 .workout__btns {
     display: flex;
-   flex-wrap: wrap;
-   position: relative;
-   justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
     width: relative;
     width: 35rem;
 }
-.seperation-pro{
+
+.seperation-pro {
     display: flex;
     margin: 1em;
     background-image: radial-gradient(rgb(45, 59, 208), #FFF), radial-gradient(#CCC, #FFF);
@@ -193,22 +259,25 @@ button {
     height: 1em;
     width: 70%;
 }
-.generateNew{
-    display:flex;
+
+.generateNew {
+    display: flex;
     border: 1px solid black;
     color: ghostwhite;
-    background-color:grayscale;
+    background-color: grayscale;
     border-radius: 10%;
 }
+
 .workout__list {
     display: flex;
     justify-content: center;
     position: relative;
 }
+
 .w__Item {
     display: flex;
     flex-wrap: wrap;
-    background-color:azure;
+    background-color: rgb(248, 248, 250);
     justify-content: center;
     border: groove 3px red;
     border-radius: 20px 3px 20px 3px;
@@ -217,9 +286,11 @@ button {
     align-self: center;
     margin-top: 4em;
 }
-.workoutList-Profile{
+
+.workoutList-Profile {
     font-weight: bold;
 }
+
 .w__List {
     display: flex;
     flex-wrap: wrap;
@@ -228,14 +299,17 @@ button {
     align-items: center;
     align-self: center;
 }
-h3{
+
+h3 {
     display: flex;
     justify-content: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-.navbar__home{
+
+.navbar__home {
     color: black;
 }
-.navbar__generate{
+
+.navbar__generate {
     color: black;
 }
