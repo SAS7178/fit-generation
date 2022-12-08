@@ -31,7 +31,7 @@ export const Login = () => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <Link className="navbar__home" to="/">Home</Link>
+                    <Link className="navbar__home" to="/"><b>Home</b></Link>
                     <div className="login__header">
 
                         <h1>Fit Generation</h1><img alt="" className='nav__image' src="https://ae01.alicdn.com/kf/HTB1e2SGSbvpK1RjSZFqq6AXUVXax/Gym-fitness-
@@ -41,7 +41,7 @@ export const Login = () => {
                     <div className="login-fields">
                         <h2>Please sign in</h2>
                         <fieldset>
-                            <label htmlFor="inputEmail"> Email address </label>
+                            <label htmlFor="inputEmail"> <b>Email address</b> </label>
                             <input type="email"
                                 value={email}
                                 onChange={evt => set(evt.target.value)}
@@ -53,7 +53,7 @@ export const Login = () => {
                             <Link className="navbar__link" to="" onClick={(e) => {
                                 localStorage.getItem("fit_customer")
                                 handleLogin(e)
-                                navigate("/profile/:customerId")
+                                navigate("/")
                             }}>Login</Link>
                         </button>
                     </div>
