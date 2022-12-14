@@ -11,8 +11,8 @@ export const Register = () => {
     let navigate = useNavigate()
 
     const registerNewCustomer = () => {
-        // return fetch("http://localhost:8088/customers", {
-        return fetch("http://localhost:8088/customers", {
+        // return fetch("https://fitgeneration-api.glitch.me/customers", {
+        return fetch("https://fitgeneration-api.glitch.me/customers", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -34,8 +34,8 @@ export const Register = () => {
 
     const handleRegister = (e) => {
         e.preventDefault()
-        // return fetch(`http://localhost:8088/customers?email=${customer.email}`)
-        return fetch(`http://localhost:8088/customers?email=${customer.email}`)
+        // return fetch(`https://fitgeneration-api.glitch.me/customers?email=${customer.email}`)
+        return fetch(`https://fitgeneration-api.glitch.me/customers?email=${customer.email}`)
             .then(res => res.json())
             .then(response => {
                 if (response.length > 0) {

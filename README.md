@@ -58,4 +58,4 @@ Application GIF below
 
 - Fit-Generation-API: https://github.com/SAS7178/Fit-Generation-API  
 - Fit-Generation repository: https://github.com/SAS7178/fit-generation
-<br>(endpoints currently set to Glitch will need to replace(http://localhost:8088/) with http://localhost:8088/)
+<br>(endpoints currently set to Glitch will need to replace(https://fitgeneration-api.glitch.me/) with https://fitgeneration-api.glitch.me/)
