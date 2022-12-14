@@ -13,10 +13,11 @@
     background-image: url("https://e7.pngegg.com/pngimages/217/548/png-clipart-drop-down-list-computer-icons-arrow-menu-hamburger-button-arrow-angle-rectangle.png");
     border-radius: 50%;
 }
-.headerLogout{
+#headerLogout{
     display: flex;
     position: fixed;
     left: 0;
+    color: black;
     margin-left: 2em;
 }
 .welcome__home {
@@ -49,7 +50,7 @@
     position: relative;
 }
 .nav-link{
-    color:darkblue ;
+    color:black ;
     font-weight: 600;
 }
 .searching{

@@ -1,8 +1,8 @@
 
 
-// const _apiUrl = "https://fitgeneration-api.glitch.me//";
-const _apiUrl = "http://localhost:8088/";
+// const _apiUrl = "http://localhost:8088/";
+const _apiUrl = "https://fitgeneration-api.glitch.me/";
 
 export var config = () => {
-    _apiUrl
+     return _apiUrl
 } 

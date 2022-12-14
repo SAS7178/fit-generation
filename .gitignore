@@ -22,5 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# // const _apiUrl = "https://fitgeneration-api.glitch.me//";
-# const _apiUrl = "https://fitgeneration-api.glitch.me//";
+# // const _apiUrl = "https://fitgeneration-api.glitch.me/";
+# const _apiUrl = "https://fitgeneration-api.glitch.me/";

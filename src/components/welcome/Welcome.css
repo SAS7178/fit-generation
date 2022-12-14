@@ -23,7 +23,6 @@
     margin-top: -9em;
 }
 .gorilla-home{
-  
     padding-top: 6em;
     margin-bottom: -4em;
     height: 15em;
@@ -225,12 +224,12 @@
 .welcomeIframe{
     border-bottom: 6px solid black;
     border-radius: 140px 140px 10% 10%;
-    margin-left: 8em;
+    margin-left: 7em;
     margin-bottom: -2em;
     padding-top: 6em;
 }
 .welcomeTTIframe {
-    margin-right: 4em;
+    margin-right: 3em;
     border-bottom: 6px solid black;
     border-radius: 140px 140px 10% 10%;
     padding-top: 6em;
@@ -256,8 +255,14 @@
     .nonVids{
         display: flex;
         justify-content: center;
+        align-items: center;
         margin: 1em;
         flex-direction: column;
+    }
+    .gorilla-home{
+        padding-top: 3em;
+        margin-bottom: -4em;
+        height: 15em;
     }
     .welcome__headernon{
         display: flex;
@@ -265,7 +270,10 @@
         margin-left: 0;
     }
     .btn-games {
-        margin-top: 18em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 19em;
         background-color: rgb(24, 81, 151);
         color: ghostwhite;
         border-bottom: 3px solid black;
@@ -282,7 +290,7 @@
     .welcomeTTIframe {
         border-bottom: 6px solid black;
         border-radius: 140px 140px 10% 10%;
-        margin-left: 7em;
+        margin-left: 9em;
         padding-top: 6em;
     }
     .footer {
@@ -320,6 +328,10 @@
     
     }
     .font{
+        display: flex;
+        /* justify-content: center; */
+    }
+    .fontCI{
         display: flex;
         justify-content: center;
     }

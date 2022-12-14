@@ -14,8 +14,8 @@ export const ExerciseView = () => {
     //get workoutExercises set to var
     useEffect(
         () => {
-            // fetch(`https://fitgeneration-api.glitch.me//workoutExercises`)
-            fetch(`https://fitgeneration-api.glitch.me//workoutExercises`)
+            // fetch(`https://fitgeneration-api.glitch.me/workoutExercises`)
+            fetch(`https://fitgeneration-api.glitch.me/workoutExercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setWorkoutExercises(data)
@@ -26,8 +26,8 @@ export const ExerciseView = () => {
     //get exercises add to var
     useEffect(
         () => {
-            // fetch(`https://fitgeneration-api.glitch.me//exercises`)
-            fetch(`https://fitgeneration-api.glitch.me//exercises`)
+            // fetch(`https://fitgeneration-api.glitch.me/exercises`)
+            fetch(`https://fitgeneration-api.glitch.me/exercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
