@@ -20,7 +20,7 @@ export const WelcomeFooter = () => {
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
 
-                        <nav className="footer-features">&nbsp;&nbsp;&nbsp;&nbsp; <div className="font">
+                        <nav className="footer-features">&nbsp;&nbsp;&nbsp;&nbsp; <div className="fontCI">
                             <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 Contact & Info </b></div>
                             <div className="modals">

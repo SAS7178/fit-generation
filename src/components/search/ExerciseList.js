@@ -15,8 +15,8 @@ export const ExerciseList = ({ searchTermState }) => {
 
     useEffect(
         () => {
-            // fetch(`https://fitgeneration-api.glitch.me//exercises`)
-            fetch(`https://fitgeneration-api.glitch.me//exercises`)
+            // fetch(`http://localhost:8088/exercises`)
+            fetch(`http://localhost:8088/exercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
@@ -25,8 +25,8 @@ export const ExerciseList = ({ searchTermState }) => {
         [] // When this array is empty, you are observing initial component state
     )
     const getAllExercises = () => {
-        // fetch(`https://fitgeneration-api.glitch.me//Exercises`)
-        fetch(`https://fitgeneration-api.glitch.me//exercises`)
+        // fetch(`http://localhost:8088/Exercises`)
+        fetch(`http://localhost:8088/exercises`)
             .then(response => response.json())
             .then((ticketArray) => {
                 setExercises(ticketArray)

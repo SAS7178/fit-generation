@@ -7,7 +7,10 @@ import { WelcomeFooter } from "./WelcomeFooter.js";
 
 export const WelcomePage = () => {
   const navigate = useNavigate()
-  const [quote, setQoute] = useState({})
+  const [quote, setQoute] = useState({
+    Quote: "If you want something you’ve never had you must be willing to do something you’ve never done.",
+    Author: "Thomas Jefferson"
+  })
 
   const handleGenerateButtonClick = () => {
     navigate(`/generateWorkout`)
@@ -15,8 +18,8 @@ export const WelcomePage = () => {
 
   useEffect(
     () => {
-      // fetch(`https://fitgeneration-api.glitch.me//qoutes`)
-      fetch(`https://fitgeneration-api.glitch.me//qoutes`)
+      // fetch(`http://localhost:8088/qoutes`)
+      fetch(`http://localhost:8088/qoutes`)
        .then(response => response.json())
            .then(response => {setQoute(response[Math.floor(Math.random() * response.length)])
         })
@@ -111,14 +114,10 @@ export const WelcomePage = () => {
         </section>
         <div className="seperation"></div>
         <div className="taglinenon"><b>Where <strong>Fitness Generation</strong> is our Mission!</b></div>
-        
         <div className="nonVids">
         <iframe className="welcomeTTIframe" width="460" height="350" src="https://www.youtube.com/embed/BHY0FxzoKZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe className="welcomeIframe" width="460" height="350" src="https://www.youtube.com/embed/Kpbo9SXbGXE"
-          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe className="welcomeIframe" width="460" height="350" src="https://www.youtube.com/embed/Kpbo9SXbGXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        
         <section className="taglinenonb" >
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

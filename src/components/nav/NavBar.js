@@ -36,7 +36,7 @@ export const NavBar = (args) => {
     return (
       <>
         <div className='Header'>
-          <div className='headerLogout'>
+          <div id='headerLogout'>
                 <NavLink href="" onClick={() => {
                   localStorage.removeItem("fit_customer")
                   navigate("/login", { replace: true })

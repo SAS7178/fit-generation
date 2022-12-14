@@ -19,8 +19,8 @@ export const Exercise = () => {
     //fetch exercises set to var
     useEffect(
         () => {
-            // fetch(`https://fitgeneration-api.glitch.me//exercises`)
-            fetch(`https://fitgeneration-api.glitch.me//exercises`)
+            // fetch(`http://localhost:8088/exercises`)
+            fetch(`http://localhost:8088/exercises`)
                 .then(response => response.json())
                 .then((data) => {
                     setExercises(data)
@@ -31,8 +31,8 @@ export const Exercise = () => {
     //fetch customerWorkouts set var to customersWorkouts with queried customerId last index
     useEffect(
         () => {
-            // fetch(`https://fitgeneration-api.glitch.me//customerWorkouts?customerId=${customerId}`)
-            fetch(`https://fitgeneration-api.glitch.me//customerWorkouts?customerId=${customerId}`)
+            // fetch(`http://localhost:8088/customerWorkouts?customerId=${customerId}`)
+            fetch(`http://localhost:8088/customerWorkouts?customerId=${customerId}`)
                 .then(response => response.json())
                 .then((data) => {
                     const workoutLength = data.length - 1
@@ -45,8 +45,8 @@ export const Exercise = () => {
     //fetch workouts and set workout id to next workout id that will made 
     useEffect(
         () => {
-            // fetch(`https://fitgeneration-api.glitch.me//workouts`)
-            fetch(`https://fitgeneration-api.glitch.me//workouts`)
+            // fetch(`http://localhost:8088/workouts`)
+            fetch(`http://localhost:8088/workouts`)
                 .then(response => response.json())
                 .then((data) => {
                     const WObj = (data.slice(-1))
@@ -77,14 +77,14 @@ export const Exercise = () => {
             exerciseId: parseInt(exerciseId)
         }
         //post Object in this APi array
-        // return fetch(`https://fitgeneration-api.glitch.me//workoutExercises`, {
-        return fetch(`https://fitgeneration-api.glitch.me//workoutExercises`, {
+        // return fetch(`http://localhost:8088/workoutExercises`, {
+        return fetch(`http://localhost:8088/workoutExercises`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(exerciseToSendToApi)
-        })
+        }).then(window.alert("Exercise has been added to your workout."))
     }
     //func to map exercises info and tutorial button/add to workout butn
     const exerciseList = () => {
@@ -126,8 +126,8 @@ export const Exercise = () => {
             dateCompleted: date.toDateString()
         }
 
-        // return fetch(`https://fitgeneration-api.glitch.me//workouts`, {
-        return fetch(`https://fitgeneration-api.glitch.me//workouts`, {
+        // return fetch(`http://localhost:8088/workouts`, {
+        return fetch(`http://localhost:8088/workouts`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

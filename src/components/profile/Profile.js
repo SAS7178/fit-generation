@@ -27,8 +27,8 @@ export const Profile = () => {
   // fetches and set all workouts for cust sets to var to make available for iteration globally
   useEffect(
     () => {
-      // fetch(`https://fitgeneration-api.glitch.me//workouts`)
-      fetch(`https://fitgeneration-api.glitch.me//workouts`)
+      // fetch(`http://localhost:8088/workouts`)
+      fetch(`http://localhost:8088/workouts`)
         .then(response => response.json())
         .then((data) => {
           setworkoutExercises(data)
@@ -38,8 +38,8 @@ export const Profile = () => {
   )
   useEffect(
     () => {
-      // fetch(`https://fitgeneration-api.glitch.me//customers?id=${fitCustomerObject.id}`)
-      fetch(`https://fitgeneration-api.glitch.me//customers?id=${fitCustomerObject.id}`)
+      // fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
+      fetch(`http://localhost:8088/customers?id=${fitCustomerObject.id}`)
         .then(response => response.json())
         .then((data) => {
           setCustomers(data[0])
@@ -98,8 +98,8 @@ export const Profile = () => {
   )
   //func to reerender all workouts to be used where needed
   const getAllWorkouts = () => {
-    // fetch(`https://fitgeneration-api.glitch.me//workouts`)
-    fetch(`https://fitgeneration-api.glitch.me//workouts`)
+    // fetch(`http://localhost:8088/workouts`)
+    fetch(`http://localhost:8088/workouts`)
       .then(response => response.json())
       .then((workoutArray) => {
         setworkoutExercises(workoutArray)
@@ -107,8 +107,8 @@ export const Profile = () => {
   }
   //func to delete workout from database if has wworkoutid
   const deleteButton = (workoutId) => {
-    // fetch(`https://fitgeneration-api.glitch.me//workouts/${workoutId}`, {
-    fetch(`https://fitgeneration-api.glitch.me//workouts/${workoutId}`, {
+    // fetch(`http://localhost:8088/workouts/${workoutId}`, {
+    fetch(`http://localhost:8088/workouts/${workoutId}`, {
       method: "DELETE"
     })
       .then(() => { getAllWorkouts() })
@@ -121,8 +121,8 @@ export const Profile = () => {
       dateCompleted: new Date()
     }
 
-    // return fetch(`https://fitgeneration-api.glitch.me//customerProgress`, {
-    return fetch(`https://fitgeneration-api.glitch.me//customerProgress`, {
+    // return fetch(`http://localhost:8088/customerProgress`, {
+    return fetch(`http://localhost:8088/customerProgress`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -132,8 +132,8 @@ export const Profile = () => {
   }
 
   const updateImage = () => {
-    // fetch(`https://fitgeneration-api.glitch.me//customerProgress?customerId=${fitCustomerObject.id}`)
-    fetch(`https://fitgeneration-api.glitch.me//customerProgress?customerId=${fitCustomerObject.id}`)
+    // fetch(`http://localhost:8088/customerProgress?customerId=${fitCustomerObject.id}`)
+    fetch(`http://localhost:8088/customerProgress?customerId=${fitCustomerObject.id}`)
       .then(response => response.json())
       .then((data) => {
         let length = data.length - 1
@@ -142,7 +142,6 @@ export const Profile = () => {
         setCustomerObject(cust.image)
       })
   }
-
 
   const slides = [
     { image: "https://assets.website-files.com/6233518c68804f1e9ed11958/6233705d07c7252d292159dc_Homepage%20in%20Jacksonville%20Hero.jpg", title: "Get into Crossfit!", description: "Learn about Crossfit here.", clickEvent: () => { window.open(URL = "https://www.crossfit.com") } },
@@ -162,7 +161,6 @@ export const Profile = () => {
       window.alert("Your image has been uploaded, refresh page to see updates!")
     )
   }
-
 
   return (
     <article className="background">
