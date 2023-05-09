@@ -52,7 +52,7 @@ Application GIF below
             npm install
             npm start
 
-4.User Login
+4.My User Login for example application (or go to deployed site, register and create your own account.)
 
       stephen@gmail.com
 
