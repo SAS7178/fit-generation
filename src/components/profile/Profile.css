@@ -79,7 +79,12 @@
     border-radius: 5%;
     margin-left: 9em;
 }
-
+.inlineLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 .btn-primary {
     background-color: lightsteelblue;
     margin-bottom: 2em;
