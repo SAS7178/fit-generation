@@ -284,19 +284,22 @@ export const GenerateWorkoutForm = () => {
           </Progress>
         </div>
         <div className='gen-btns'>
-          <button
-            onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
-            className="btn-UpdateGen">
-            Update Data
-          </button>
-          Once your Data is Updated you can Generate your exercises!
-          <button
-            onClick={(evt) => handleGenerateButtonClick(evt)
-            }
-            className="btn-UpdateGen">
-            Generate Workout Exercises
-          </button>
-        </div>
+  <button
+    onClick={(clickEvent) => handleUpdateButtonClick(clickEvent)}
+    className="btn-UpdateGen">
+    Update Data
+  </button>
+  {updateTest ? (
+    <>
+      Once your Data is Updated you can Generate your exercises!
+      <button
+        onClick={(evt) => handleGenerateButtonClick(evt)}
+        className="btn-UpdateGen">
+        Generate Workout Exercises
+      </button>
+    </>
+  ) : null}
+</div>
       </section>
       <WelcomeFooter />
     </Form>

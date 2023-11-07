@@ -83,7 +83,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+}
+.InlineText{
+    display: flex;
+    justify-content: center;
+    text-shadow:
+    -1px -1px 0 #000, /* Top left shadow */
+    1px -1px 0 #000,  /* Top right shadow */
+    -1px 1px 0 #000,  /* Bottom left shadow */
+    1px 1px 0 #000;   /* Bottom right shadow */
+    color: aqua;
 }
 .btn-primary {
     background-color: lightsteelblue;

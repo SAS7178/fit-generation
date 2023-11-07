@@ -181,7 +181,7 @@ export const Profile = () => {
               <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <b>{customer.name}</b></div><br></br><br></br><br></br><br></br><br></br>
             </div>
-          <div className="inlineLink"><b>Find where to get a Inline Body Scan</b> <a href="https://inbodyusa.com/support/nearest-testing-location/">HERE</a></div>
+          <div className="inlineLink"><b>Find where to get your <div className="InlineText">InBody Scan</div></b> <a href="https://inbodyusa.com/support/nearest-testing-location/"><b>HERE</b></a></div>
         <div className="top-half">
           <section className="welcomebtn">
             <FormGroup className="fileLoad">
@@ -247,7 +247,7 @@ export const Profile = () => {
               </Button>
               <Button outline onClick={() => { window.open(URL = "https://youtu.be/PNeLRc3b3C8") }}
                 className="max-link">
-                InLine Body Scan
+                InBody Scan
               </Button>
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
