@@ -177,6 +177,7 @@ export const Profile = () => {
               <div className="customer-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <b>{customer.name}</b></div><br></br><br></br><br></br><br></br><br></br>
             </div>
+          <div className="inlineLink"><b>Find where to get a Inline Body Scan</b> <a href="https://inbodyusa.com/support/nearest-testing-location/">HERE</a></div>
         <div className="top-half">
           <section className="welcomebtn">
             <FormGroup className="fileLoad">
